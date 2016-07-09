@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section*.3}{License}{}% 1
+\BOOKMARK [1][-]{section*.5}{Overview}{}% 2
+\BOOKMARK [1][-]{section*.7}{Static Password Fail?}{}% 3
+\BOOKMARK [1][-]{section*.9}{Password Failing Stats}{}% 4
+\BOOKMARK [1][-]{section*.11}{Static Passwords Can Work}{}% 5
+\BOOKMARK [1][-]{section*.13}{Cracking History}{}% 6
+\BOOKMARK [1][-]{section*.15}{Cracking Tools}{}% 7
+\BOOKMARK [1][-]{section*.17}{Wordlists}{}% 8
+\BOOKMARK [1][-]{section*.19}{Multi-factor Authentication}{}% 9
+\BOOKMARK [1][-]{section*.21}{TOTP/HOTP}{}% 10
+\BOOKMARK [1][-]{section*.23}{TOTP/HOTP Vendor Support}{}% 11
+\BOOKMARK [1][-]{section*.25}{TOTP/HOTP Client Implementations}{}% 12
+\BOOKMARK [1][-]{section*.27}{TOTP/HOTP Design}{}% 13
+\BOOKMARK [1][-]{section*.29}{TOTP Internals}{}% 14
+\BOOKMARK [1][-]{section*.31}{TOTP Dynamic Truncation}{}% 15
+\BOOKMARK [1][-]{section*.33}{TOTP Example}{}% 16
+\BOOKMARK [1][-]{section*.35}{HOTP Difference}{}% 17
+\BOOKMARK [1][-]{section*.37}{TOTP/HOTP Security}{}% 18
+\BOOKMARK [1][-]{section*.39}{Software Implementation}{}% 19
+\BOOKMARK [1][-]{section*.41}{Software Implementation \(cont.\)}{}% 20
+\BOOKMARK [1][-]{section*.43}{Vendor Push}{}% 21
+\BOOKMARK [1][-]{section*.45}{SMS Observations}{}% 22
+\BOOKMARK [1][-]{section*.47}{Hardware Tokens}{}% 23
+\BOOKMARK [1][-]{section*.49}{Hardware Token Observations}{}% 24
+\BOOKMARK [1][-]{section*.51}{Phone, Email, and Other Factors}{}% 25
+\BOOKMARK [1][-]{section*.53}{Hardware Tokens}{}% 26
+\BOOKMARK [1][-]{section*.55}{Hardware Tokens \(cont.\)}{}% 27
+\BOOKMARK [1][-]{section*.57}{Hardware Tokens \(cont.\)}{}% 28
+\BOOKMARK [1][-]{section*.59}{Hardware Tokens \(cont.\)}{}% 29
+\BOOKMARK [1][-]{section*.61}{Conlusion}{}% 30

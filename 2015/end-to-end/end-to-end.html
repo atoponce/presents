@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>End-to-End Security</title>
+<meta name="author" content="Aaron Toponce" />
+<meta name="date" content="May 8, 2015" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/small-white/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/small-white/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/small-white/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/small-white/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/small-white/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>End-to-End Security</h1>
+
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">End-to-End Security</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Aaron Toponce</td></tr>
+<tr class="field"><th class="docinfo-name">Email:</th><td class="field-body"><a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a></td>
+</tr>
+<tr><th class="docinfo-name">Date:</th>
+<td>May 8, 2015</td></tr>
+</tbody>
+</table>
+<!-- Definitions of interpreted text roles (classes) for S5/HTML data. -->
+<!-- This data file has been placed in the public domain. -->
+<!-- Colours
+======= -->
+<!-- Text Sizes
+========== -->
+<!-- Display in Slides (Presentation Mode) Only
+========================================== -->
+<!-- Display in Outline Mode Only
+============================ -->
+<!-- Display in Print Only
+===================== -->
+<!-- Display in Handout Mode Only
+============================ -->
+<!-- Incremental Display
+=================== -->
+
+</div>
+<div class="slide" id="license">
+<h1>License</h1>
+<p>This presentation is licensed under the Creative Commons Attribution-ShareAlike
+license.</p>
+<p>See <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> for more details.</p>
+<div class="handout container">
+<p>This document is licensed under the CC:BY:SA
+Details to the license can be found here:
+http://creativecommons.org/licenses/by-sa/3.0/</p>
+<dl class="docutils">
+<dt>The licnese states the following:</dt>
+<dd><ul class="first last simple">
+<li>You are free to copy, distribute and tranmit this work.</li>
+<li>You are free to adapt the work.</li>
+</ul>
+</dd>
+<dt>Under the following conditions:</dt>
+<dd><ul class="first last simple">
+<li>You must attribute the work to the copyright holder.</li>
+<li>If you alter, transform, or build on this work, you may redistribute the
+work under the same, similar or compatible license.</li>
+</ul>
+</dd>
+<dt>With the understanding that:</dt>
+<dd><ul class="first last">
+<li><p class="first">Any conditions may be waived if you get written permission from the
+copyright holder.</p>
+</li>
+<li><p class="first">In no way are any of the following rights affected by the license:</p>
+<blockquote>
+<ul class="simple">
+<li>Your fair dealing or fair use rights;</li>
+<li>The author's moral rights;</li>
+<li>Rights other persons may have either in the work itself or
+in how the work is used, such as publicity or privacy rights.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">For any reuse or distribution, you must make clear to others the license
+terms of this work. The best way to do this is with a link to the web
+page provided above or below.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>The above is a human-readable summary of the license, and is not to be used
+as a legal substitute for the actual licnse. Please refer to the formal
+legal document provided here:
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a></p>
+</div>
+</div>
+<div class="slide" id="introduction">
+<h1>Introduction</h1>
+<ul class="simple">
+<li>Information Security</li>
+<li>CIA Triad</li>
+<li>Authenticated Encryption</li>
+<li>The Cryptographic Doom Principle</li>
+<li>Off-the-Record Messaging</li>
+<li>OpenPGP</li>
+<li>Tox</li>
+<li>Bitmessage</li>
+<li>RetroShare</li>
+</ul>
+</div>
+<div class="slide" id="information-security">
+<h1>Information Security</h1>
+<img alt="images/infosec.png" src="images/infosec.png" />
+</div>
+<div class="slide" id="the-cia-triad">
+<h1>The CIA Triad</h1>
+<img alt="images/cia_triad.png" src="images/cia_triad.png" />
+</div>
+<div class="slide" id="some-definitions">
+<h1>Some Definitions</h1>
+<dl class="docutils">
+<dt>Confidentiality</dt>
+<dd>Limits access or places restrictions on information.</dd>
+<dt>Integrity</dt>
+<dd>Maintaining and assuring the accuracy and consistency of data over its
+entire life-cycle.</dd>
+<dt>Availability</dt>
+<dd>The information must be available at all times when needed.</dd>
+</dl>
+</div>
+<div class="slide" id="more-definitions">
+<h1>More Definitions</h1>
+<dl class="docutils">
+<dt>Encryption</dt>
+<dd>Encoding information such that only authorized parties can read it.
+<em>Provides only confidentiality</em>.</dd>
+<dt>Authentication</dt>
+<dd>Keeping information tamper-resistant while also proving it originated
+from the sender. <em>Provides only integrity</em>.</dd>
+</dl>
+</div>
+<div class="slide" id="confidentiality-without-integrity">
+<h1>Confidentiality Without Integrity</h1>
+<ul>
+<li><p class="first">Vulnerable to a Man-In-The-Middle attack.</p>
+</li>
+<li><p class="first">Can send garbage/noise to recipient.</p>
+</li>
+<li><p class="first">CBC bit flipping attacks (a 1-bit error in a ciphertext block):</p>
+<blockquote>
+<ul class="simple">
+<li>Bypass filters by adding malicious characters.</li>
+<li>Elevate privileges in session cookies.</li>
+<li>Other miscreant activities.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="slide" id="cipher-block-chaining-cbc">
+<h1>Cipher Block Chaining (CBC)</h1>
+<img alt="images/cbc-1.png" src="images/cbc-1.png" />
+<img alt="images/cbc-2.png" src="images/cbc-2.png" />
+</div>
+<div class="slide" id="cbc-bit-flipping-explained">
+<h1>CBC Bit Flipping Explained</h1>
+<img alt="images/cbc-flip.png" src="images/cbc-flip.png" />
+</div>
+<div class="slide" id="confidentiality-integrity-w-o-authentication">
+<h1>Confidentiality &amp; Integrity w/o Authentication</h1>
+<ul class="simple">
+<li>Vulnerable to chosen prefix attacks.</li>
+<li>Vulnerable to length extension attacks.</li>
+<li>Vulnerable to replay attacks.</li>
+<li>Vulnerable to recation/oracle attacks.</li>
+</ul>
+</div>
+<div class="slide" id="confidentiality-authentication">
+<h1>Confidentiality &amp; Authentication</h1>
+<ul class="simple">
+<li>Plaintext encrypted and digitally signed.</li>
+<li>Hash function requires a private unique key.</li>
+<li>MAC-then-Encrypt</li>
+<li>MAC-and-Encrypt</li>
+<li>Encrypt-then-Mac</li>
+</ul>
+</div>
+<div class="slide" id="message-authentication-codes-mac">
+<h1>Message Authentication Codes (MAC)</h1>
+<ul class="simple">
+<li>An agreed-upon key (K) is determined.</li>
+<li>An artibrary-length message (M) is hashed with K.</li>
+<li>The resulting fixed-length digest is known as a &quot;tag&quot; (T).</li>
+<li>CBC-MAC: CBC block cipher MAC.</li>
+<li>HMAC: Hash-based MAC.</li>
+<li>OMAC: One-key cipher-based MAC. Similar to PMAC.</li>
+<li>PMAC: Parallelizable cipher-based MAC. Similar to OMAC.</li>
+<li>UMAC: Universal hash-based MAC (hash function agreed upon).</li>
+<li>VMAC: VHASH block cipher-based MAC.</li>
+<li>Poly1305-AES: AES-based MAC written by Daniel J. Bernstein (djb).</li>
+</ul>
+</div>
+<div class="slide" id="mac-then-encrypt">
+<h1>MAC-then-Encrypt</h1>
+<img alt="images/mte.png" class="align-right" src="images/mte.png" />
+<ul class="simple">
+<li>Plaintext hashed.</li>
+<li>MAC appended to plaintext.</li>
+<li>Plaintext and MAC encrypted.</li>
+<li>No ciphertext integrity.</li>
+<li>Plaintext integrity.</li>
+<li>Used in OpenSSL.</li>
+</ul>
+</div>
+<div class="slide" id="encrypt-and-mac">
+<h1>Encrypt-and-MAC</h1>
+<img alt="images/eam.png" class="align-right" src="images/eam.png" />
+<ul class="simple">
+<li>Plaintext encrypted.</li>
+<li>Plaintext hashed.</li>
+<li>MAC appended to ciphertext.</li>
+<li>No ciphertext integrity.</li>
+<li>Plaintext integrity.</li>
+<li>Used in OpenSSH.</li>
+</ul>
+</div>
+<div class="slide" id="encrypt-then-mac">
+<h1>Encrypt-then-MAC</h1>
+<img alt="images/etm.png" class="align-right" src="images/etm.png" />
+<ul class="simple">
+<li>Plaintext encrypted.</li>
+<li>Ciphertext hashed.</li>
+<li>MAC appended to ciphertext.</li>
+<li>Ciphertext integrity.</li>
+<li>Plaintext integrity.</li>
+<li>Defined in ISO/IEC 19772:2009</li>
+<li>Used in IPSec.</li>
+</ul>
+</div>
+<div class="slide" id="the-cryptographic-doom-principle">
+<h1>The Cryptographic Doom Principle</h1>
+<ul class="simple">
+<li>Doom! when verifying the message is <em>not the first execution</em>.</li>
+<li>MAC-then-Encrypt vulnerable to the padding oracle attack.</li>
+<li>Lucky Thirteen and POODLE in OpenSSL.</li>
+<li>MAC-and-Encrypt plaintext recovery attack in OpenSSH up to 5.1.</li>
+<li>Mac-and-Encrypt can reveal when messages repeat, if the MAC doesn't
+include a sequence number.</li>
+</ul>
+</div>
+<div class="slide" id="suggestion">
+<h1>Suggestion</h1>
+<img alt="images/etm.png" class="align-right" src="images/etm.png" />
+<img alt="images/verify-mac.png" class="align-right" src="images/verify-mac.png" />
+<ul class="simple">
+<li>Encrypt-then-MAC</li>
+<li>Use AES-GCM</li>
+<li>Or ChaCha20-Poly1305</li>
+<li>Or AES-HMAC-SHA-{256,512}</li>
+<li>Or AES-SHA3 (not finalized by NIST, yet)</li>
+</ul>
+</div>
+<div class="slide" id="off-the-record-messaging">
+<h1>Off-the-Record Messaging</h1>
+<ul class="simple">
+<li>AES-128 encrypted (confidentiality)</li>
+<li>SHA-1 hashed (integrity)</li>
+<li>Provides forward secrecy (temporary per-message AES keys).</li>
+<li>Provides deniable authentication (messages not digital signed).</li>
+<li>Authentication through the Socialist Millionaire Protocol.</li>
+<li>Does not support group chats.</li>
+<li>Does not support audio or video.</li>
+</ul>
+</div>
+<div class="slide" id="otr-support">
+<h1>OTR Support</h1>
+<ul class="simple">
+<li>Windows, OS X, GNU/Linux, BSD, Android, iOS</li>
+<li>Native:</li>
+<li>Adium, Bitlbee, ChatSecure, Cryptocat, Kopete, Mcabber, TextSecure,
+Xabber, ...</li>
+<li>Via plug-in:</li>
+<li>Gajim, Irssi, Pidgin, Psi, WeeChat, xchat, ...</li>
+</ul>
+</div>
+<div class="slide" id="otr-cryptocat">
+<h1>OTR - Cryptocat</h1>
+<img alt="images/cryptocat.png" class="align-right" src="images/cryptocat.png" />
+<ul class="simple">
+<li>Free Software client and server software.</li>
+<li>Browser-based client.</li>
+<li>Written in JavaScript.</li>
+<li>Previous versions have had security problems.</li>
+<li>Source code independently audited.</li>
+</ul>
+</div>
+<div class="slide" id="otr-weechat">
+<h1>OTR - WeeChat</h1>
+<img alt="images/weechat-otr.png" class="align-right" src="images/weechat-otr.png" />
+<ul class="simple">
+<li>Free Software plugin for WeeChat (not native).</li>
+<li>Written in Python.</li>
+<li>Supports SMP.</li>
+<li>Policy configuration support.</li>
+<li>Enable/disable logging.</li>
+<li>Supports only OTR protocol version 2.</li>
+</ul>
+</div>
+<div class="slide" id="openpgp">
+<h1>OpenPGP</h1>
+<ul class="simple">
+<li>Unencumbered PGP</li>
+<li>RFC 1991- PGP Message EXchange Formats</li>
+<li>RFC 2440- OpenPGP Message Format (obsolete)</li>
+<li>RFC 4880- OpenPGP Message Format (current)</li>
+<li>RFC 5581- The Camellia Cipher in OpenPGP</li>
+<li>RFC 2015- MIME Security with Pretty Good Privacy (PGP)</li>
+<li>RFC 2156- MIME Security with OpenPGP</li>
+<li>RFC 6637- Elliptic Curve Cryptography (ECC) in OpenPGP</li>
+<li>draft-koch-eddsa-for-openpgp-01- EdDSA for OpenPGP</li>
+</ul>
+</div>
+<div class="slide" id="gnu-privacy-guard-gpg">
+<h1>GNU Privacy Guard (GPG)</h1>
+<ul class="simple">
+<li>Command-line based.</li>
+<li>Maaintained in 3 branches: &quot;Stable&quot; (2.0), &quot;Modern&quot; (2.1), and &quot;Classic&quot; (1.4).</li>
+<li>Hybrid encryption software (public-key for KEX, and symmetric for speed).</li>
+<li>Stable and Classic support:</li>
+<li>Pubkey: RSA, ElGamal, DSA.</li>
+<li>Ciphers: IDEA, 3DES, CAST5, Blowfish, AES (128, 192, &amp; 256-bit), Twofish,
+Camellia (128, 192, &amp; 256-bit).</li>
+<li>Hash: MD5, SHA-1, RIPEMD-160, SHA-224, SHA-256, SHA-384, &amp; SHA-512.</li>
+<li>Compression: Uncompressed, ZIP, ZLIB, &amp; BZIP2.</li>
+</ul>
+</div>
+<div class="slide" id="gpg-support">
+<h1>GPG Support</h1>
+<ul class="simple">
+<li>Windows, OS X, GNU/Linux, BSD, Android, iOS</li>
+<li>Applications, frontends, and browser extensions include:</li>
+<li>APG, Claws mail, Enigform, Enigmail, Gajim, Gpg4win, GPGMail,
+GPGServices, GPGTools, KGPG, MCabber, Mutt, PSi, WinPT</li>
+</ul>
+</div>
+<div class="slide" id="tox">
+<h1>Tox</h1>
+<ul class="simple">
+<li>Windows, OS X, GNU/Linux, BSD, Android</li>
+<li>Text single/group and video chat client.</li>
+<li>Architecture separated into a core library, the protocol, and the clients.</li>
+<li>Uses NaCl for the crypto library.</li>
+<li>Curve25519 KEX, XSalso20 cipher (256-bit), Poly1305 MAC.</li>
+<li>Uses the Bittorrent DHT protocol for network traversal.</li>
+<li>No independent security audit.</li>
+</ul>
+</div>
+<div class="slide" id="tox-screenshot">
+<h1>Tox Screenshot</h1>
+<img alt="images/tox.png" src="images/tox.png" />
+</div>
+<div class="slide" id="bitmessage">
+<h1>Bitmessage</h1>
+<ul class="simple">
+<li>Windows, OS X, GNU/Linux, BSD, Android</li>
+<li>Decentralized, peer-to-peer, public-key encrypted, serverless &quot;email&quot;.</li>
+<li>Main client written in Python</li>
+<li>Every client attempts decrypting every broadcast message.</li>
+<li>Requires a proof-of-work to send a message to the network.</li>
+<li>All messages broadcast to the network.</li>
+<li>Bitmessage addresses resemble Bitcoin addresses, and aro compatible with
+Bitcoin keys.</li>
+<li>Messages are not archived in the network; removed on nodes after 2 days.</li>
+<li>Encrypted with 256-bit ECC.</li>
+<li>Acknowledgement system for the sender.</li>
+<li>No independent security audit.</li>
+</ul>
+</div>
+<div class="slide" id="bitmessage-screenshot">
+<h1>Bitmessage Screenshot</h1>
+<img alt="images/bitmessage.png" src="images/bitmessage.png" />
+</div>
+<div class="slide" id="retroshare">
+<h1>RetroShare</h1>
+<ul class="simple">
+<li>Decentralized, encrypted, peer-to-peer</li>
+<li>Supports filesharing, serverless email, IM, chatrooms, and BBS.</li>
+<li>Data at rest uses OpeNPGP.</li>
+<li>Network communication uses OpenSSL.</li>
+<li>Posts your IP/Port information via Bittorrent's DHT.</li>
+<li>2048-bit RSA and 256-bit AES encryption</li>
+<li>All files hashed with SHA-1</li>
+<li>No independent security audit.</li>
+</ul>
+</div>
+<div class="slide" id="restroshare-screenshot">
+<h1>RestroShare Screenshot</h1>
+<img alt="images/retroshare.png" src="images/retroshare.png" />
+</div>
+<div class="slide" id="conclusion">
+<h1>Conclusion</h1>
+<ul class="simple">
+<li>Questions?</li>
+<li>Comments?</li>
+<li>Rude Remarks?</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

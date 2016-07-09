@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Encryption and PGP Applications</title>
+		<!-- metadata -->
+		<meta name="generator" content="S5" />
+		<meta name="version" content="S5 1.1" />
+		<meta name="presdate" content="July 8, 2006" />
+		<meta name="author" content="Aaron Toponce" />
+		<!-- configuration parameters -->
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<!-- S5 JS -->
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<!-- Favicons -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="layout">
+			<div id="controls"><!-- DO NOT EDIT --></div>
+			<div id="currentSlide"><!-- DO NOT EDIT --></div>
+			<div id="header"></div>
+			<div id="footer">
+				<h1>Ubuntu-Utah, August 11, 2007</h1>
+				<h2>Encryption and GPG Applications</h2>
+			</div>
+		</div>
+		<div class="presentation">
+			<div class="slide">
+				<br/>
+				<h1>Encryption and GPG Applications</h1>
+				<h3>Aaron Toponce</h3>
+				<h4>OALUG President</h4>
+				<br/>
+				<p style="font-size: small; margin: 0">Best viewed with a standards-compliant browser (not IE).</p>
+			</div>
+			<div class="slide">
+				<h1>Outline</h1>
+				<ul class="incremental">
+					<li>Why should I use GPG/OpenPGP?</li>
+					<li>A brief history of cryptography.</li>
+					<li>Technical aspects of encryption, decryption and signatures.</li>
+					<li>Applications of encryption and decryption.</li>
+					<li>Applications of signatures.</li>
+					<li>Conclusion.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Why should I use GPG/OpenPGP?</h1>
+				<ul class="incremental">
+					<li>Why worry about my privacy?  I have nothing to hide.</li>
+					<li>Don't we have to relinquish some degree of privacy?</li>
+					<li>I only use encryption when I need it.  Only when I have something sensitive.</li>
+					<li>I like the idea, but it is too troublesome to use.  It isn't streamlined.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Why worry about my privacy?</h1>
+				<ul class="incremental">
+					<li>Privacy isn't just hiding things, but control, autonomy and integrity.</li>
+					<li>You are in control of what you want seen and available to the world.</li>
+					<li>It's about the woman researching breast cancer without the fear her employer will drop her coverage.</li>
+					<li>It's about being honest without the press being able to twist the truth.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Why worry about my privacy?</h1>
+				<ul class="incremental">
+					<li>How would you feel if someone was watching your every move, including email, web browsing, chats, etc.?</li>
+					<li>One word: Disneyland.  Being photographed and sold without your knowledge or permission.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>We have to give up a level of security</h1>
+				<ul class="incremental">
+					<li>A simple thought paradigm in the '50s.  Poison the water, so we can learn about cures.</li>
+					<li>Sustainable economic development depends on preserving the environment, not destroying it.</li>
+				</ul>
+				
+			</div>
+			<div class="slide">
+				<h1>I'll use encryption only when I need it.</h1>
+				<ul class="incremental">
+					<li>If you are being watched, encrypted messages stand out.</li>
+					<li>If you always encrypt, no big deal.</li>
+					<li>Can you be 100% sure that what you encrypt or protect now, be safe in 40-50 years?</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>It's just too much trouble.</h1>
+				<ul class="incremental">
+					<li>Do you lock your home or car?  How do you do it?</li>
+					<li>What precautions do you take to ensure safety for your children?</li>
+					<li>Really, is the extra minute or two really that valuable?  What are you losing through this?</li>
+					<li>Practice makes perfect.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>A Brief History Of Cryptography</h1>
+				<ul class="incremental">
+					<li>Egyptian hieroglyphs- 2500 BC</li>
+					<li>Hebrew Atbash substitution cipher (reversal)- 500 BC</li>
+					<li>Caesar's Cipher (fixed shift)- 100 BC
+						<ul class="incremental">
+							<li>Simple substitution</li>
+							<li>ROT13</li>
+							<li>No security</li>
+						</ul>
+					</li>
+					<li>Captain Crunch decoder ring- (Caesar) 1950s</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>A Brief History Of Cryptography</h1>
+				<ul class="incremental">
+					<li>Data Encryption Standard (DES)
+						<ul class="incremental">
+							<li>mid-1970s made public (non-secret)</li>
+							<li>single key block-cipher algorithm
+                <ul>
+                  <li><a href="http://www.cs.bc.edu/~straubin/cs381-05/blockciphers/rijndael_ingles2004.swf">Rijndael Block Cipher Animation (Flash)</a></li>
+                </ul>
+              </li>
+							<li>submitted by IBM</li>
+							<li>blessed by the National Security Agency (NSA)</li>
+							<li>shortened 56-bit key strength (24 hours)</li>
+							<li>possible NSA back-door</li>
+							<li>critics Diffie &amp; Hellman</li>
+							<li>obsolete</li>
+							<li>inspired public key cryptography</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>A Brief History Of Cryptography</h1>
+				<ul class="incremental">
+					<li>Advanced Encryption Standard (AES)
+						<ul class="incremental">
+							<li>recent (2001) adoption by National Institute of Standards and Technology (NIST)</li>
+							<li>superseded DES</li>
+							<li>block cipher cryptography</li>
+							<li>256-bit maximum key size</li>
+							<li>side attacks</li>
+							<li>NSA support, no backdoor</li>
+							<li>first public algorithm for TOP SECRET data</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Public Key Cryptography</h1>
+				<ul class="incremental">
+					<li>Introduced by Whitfield Diffie and Martin Hellman in 1976.</li>
+					<li>Previous cryptography was known as symmetric key exchange, or single-key.</li>
+					<li>Asymmetric key encryption- two mathematically related keys.</li>
+					<li>One key is private, the other public.</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- General</h1>
+				<ul class="incremental">
+					<li>Key pair cryptography</li>
+					<li>Private Key
+						<ul class="incremental">
+							<li>Kept secret</li>
+							<li>Used for creating digital signatures and decryption</li>
+							<li>Parent of the public key</li>
+						</ul>
+					</li>
+					<li>Public Key
+						<ul class="incremental">
+							<li>Handed out to others or uploaded to key servers.</li>
+							<li>Used for verifying digital signatures and encryption</li>
+							<li>Child of the private key</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- General</h1>
+				<ul class="incremental">
+					<li>Based on astronomically large prime factors.</li>
+					<li>A k-bit key is 2^k.  An attacker must generate 2^k keys to find the right one.</li>
+					<li>2^4 is twice as large as 2^3.  2^5 is eight times as large.</li>
+					<li>Some large numbers:
+						<ul class="incremental">
+							<li>Age of the planet : 2^30 years</li>
+							<li>Age of the universe : 2^34 years</li>
+							<li>Number of atoms in the planet : 2^170</li>
+							<li>Number of atoms in the sun : 2^190</li>
+							<li>Number of atoms in the galaxy : 2^223</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- General</h1>
+				<ul class="incremental">
+					<li>The keys are mathematically related algorithms</li>
+					<li>Easy to calculate, but hard to reverse.
+						<ul class="incremental">
+							<li>RSA uses the algorithm to create a large integer based on large prime numbers.  Finding those primes is difficult.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Encryption</h1>
+				<p style="text-align: center;">
+					<img src="./images/public_key_encryption.gif" alt="Public Key Encryption Image" title="Public Key Encryption"/>
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Encryption</h1>
+				<p style="text-align: center;">
+					<img src="./images/encryption_process.jpg" width="631" height="306" alt="Public Key Encryption Process Image" title="Public Key Encryption Process" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Decryption</h1>
+				<p style="text-align: center;">
+					<img src="./images/decryption_process.gif" width="631" height="306" alt="Decryption Process Image" title="Decryption Process" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Signatures</h1>
+				<p style="text-align: center;">
+					<img src="./images/signing_verifying.gif" alt="Signature Process Image" title="Signature Process" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Signatures</h1>
+				<p style="text-align: center;">
+					<img src="./images/signatures.gif" alt="Signature Process Image" title="Signature Process" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Technical Aspects- Signatures</h1>
+				<p style="text-align: center;">
+					<img src="./images/verifying.gif" alt="Verifying a Signature Image" title="Verifying a Signature" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Q&amp;A</h1>
+				<p>Any comments, questions or rude remarks?</p>
+			</div>
+		</div>
+	</body>
+</html>

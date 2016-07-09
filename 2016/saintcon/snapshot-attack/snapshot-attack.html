@@ -1,0 +1,1481 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>The Snapshot Attack</title>
+<meta name="author" content="Aaron Toponce" />
+<meta name="date" content="2016-10-11" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/default/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>The Snapshot Attack</h1>
+
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">The Snapshot Attack</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Aaron Toponce</td></tr>
+<tr class="field"><th class="docinfo-name">Email:</th><td class="field-body"><a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a></td>
+</tr>
+<tr><th class="docinfo-name">Date:</th>
+<td>2016-10-11</td></tr>
+</tbody>
+</table>
+<!-- Definitions of interpreted text roles (classes) for S5/HTML data. -->
+<!-- This data file has been placed in the public domain. -->
+<!-- Colours
+======= -->
+<!-- Text Sizes
+========== -->
+<!-- Display in Slides (Presentation Mode) Only
+========================================== -->
+<!-- Display in Outline Mode Only
+============================ -->
+<!-- Display in Print Only
+===================== -->
+<!-- Display in Handout Mode Only
+============================ -->
+<!-- Incremental Display
+=================== -->
+
+</div>
+<div class="slide" id="license">
+<h1>License</h1>
+<p>This presentation is licensed under the Creative Commons
+Attribution-ShareAlike License.</p>
+<p>See <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> for more details.</p>
+<div class="handout container">
+<p>This document is licensed under the CC:BY:SA
+Details to the license can be found here:
+http://creativecommons.org/licenses/by-sa/3.0/</p>
+<dl class="docutils">
+<dt>The licnese states the following:</dt>
+<dd><ul class="first last simple">
+<li>You are free to copy, distribute and tranmit this work.</li>
+<li>You are free to adapt the work.</li>
+</ul>
+</dd>
+<dt>Under the following conditions:</dt>
+<dd><ul class="first last simple">
+<li>You must attribute the work to the copyright holder.</li>
+<li>If you alter, transform, or build on this work, you may redistribute the
+work under the same, similar or compatible license.</li>
+</ul>
+</dd>
+<dt>With the understanding that:</dt>
+<dd><ul class="first last">
+<li><p class="first">Any conditions may be waived if you get written permission from the
+copyright holder.</p>
+</li>
+<li><dl class="first docutils">
+<dt>In no way are any of the following rights affected by the license:</dt>
+<dd><ul class="first last simple">
+<li>Your fair dealing or fair use rights;</li>
+<li>The author's moral rights;</li>
+<li>Rights other persons may have either in the work itself or
+in how the work is used, such as publicity or privacy rights.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">For any reuse or distribution, you must make clear to others the license
+terms of this work. The best way to do this is with a link to the web
+page provided above or below.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>The above is a human-readable summary of the license, and is not to be used
+as a legal substitute for the actual licnse. Please refer to the formal
+legal document provided here:
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a></p>
+</div>
+</div>
+<div class="slide" id="introduction">
+<h1>Introduction</h1>
+<ul class="slides simple">
+<li>Leaking Encrypted Information</li>
+<li>Information- Data Containing A Message</li>
+<li>Non-Information- Zero Information or Random Data/Garbage</li>
+</ul>
+<div class="handout container">
+<p>If you come across what appears to be encrypted data, how can you know
+for sure? Is there anything in the data that can leak information about
+how it was built or what it contains? What if you stumbled across what
+appears to be random data? Are there any tools to determine if the data
+is really encrypted data?</p>
+<p>To answer these questions, we need to setup some definitions. First,
+we'll define &quot;information&quot; as &quot;data containing a message&quot;. This message
+has some sort of value. Take the letters &quot;g&quot;, &quot;n&quot; followed by &quot;u&quot;.
+Together, they spell &quot;gnu&quot;, which should bring up images of African
+Wildebeast, or Richard Stallman. The order of the letters is important.
+They have meaning. They have value.</p>
+<p>Next, we'll define &quot;non-information&quot; as &quot;zero information&quot; or &quot;random
+data&quot;. This &quot;non-information&quot; does not contain a message. There is
+nothing of value in the message. Nothing can be determined from its
+arrangements of characters.</p>
+</div>
+</div>
+<div class="slide" id="encrypted-vs-random-data">
+<h1>Encrypted vs Random Data</h1>
+<ul class="slides incremental simple">
+<li><tt class="docutils literal">e600cb38cb2196c54be018f2de43d43f</tt></li>
+<li><tt class="docutils literal">7b4244d2e99f9e4997820bf4ac51c00d</tt></li>
+<li><tt class="docutils literal">echo &quot;UTOS&quot; | aespipe | xxd <span class="pre">-ps</span></tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> bs=1 count=16 | xxd <span class="pre">-ps</span></tt></li>
+</ul>
+<div class="handout container">
+<p>Given the following two strings of data, can you tell which is
+encrypted and which is random? Is there any way to leak any sort of
+information out of the strings to determine which is which?</p>
+<blockquote>
+<tt class="docutils literal">e600cb38cb2196c54be018f2de43d43f</tt>
+<tt class="docutils literal">7b4244d2e99f9e4997820bf4ac51c00d</tt></blockquote>
+<p>The first was generated with:</p>
+<blockquote>
+<tt class="docutils literal">echo &quot;UTOS&quot; | aespipe | xxd <span class="pre">-ps</span></tt></blockquote>
+<p>with the password '12345678901234567890', and the second string was
+generated with:</p>
+<blockquote>
+<tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> bs=1 count=16 | xxd <span class="pre">-ps</span></tt></blockquote>
+<p>So, in reality, both of them are &quot;encrypted&quot;, as the latter was
+generated using the Linux kernel pseudorandom number generator (PRNG),
+which uses mathematical equations to generate cryptographically secure
+data.</p>
+</div>
+</div>
+<div class="slide" id="a-few-points">
+<h1>A Few Points</h1>
+<ol class="slides arabic simple">
+<li>Knowing the cipher doesn't necessarily give you an advantage.</li>
+<li>The cipher can be announced in the header (EG: LUKS).</li>
+<li>Plausible deniability could be lost.</li>
+</ol>
+<p class="handout">A few points need to be addressed before moving on:</p>
+<p class="handout">1) An attacker who knows what encryption cipher was used on the message
+doesn't necessarily give him any advantage on breaking the message.
+While there may be weaknesses in some ciphers, most &quot;cryptographically
+strong&quot; ciphers have stood the test of time, and show few weaknesses.
+It's knowing the secret key that gives you ultimate access.</p>
+<p class="handout">2) As a result of #1, many utilities, such as LUKS, announce the cipher
+in some sort of header. This makes it easy for other utilities to take
+advantage of the cipher, and encrypt/decrypt data.</p>
+<p class="handout">3) As a result of #2, because a header exists that announces that the
+following data is actually encrypted, and how it was encrypted,
+plausible deniability is lost. Should the secret police want to
+investigate your hard drive, and discover that it is LUKS formatted,
+you cannot deny that you are encrypting data.</p>
+<p class="handout">So, rather than using the LUKS extensions, it would be preferrable to
+use loop-aes or dm-crypt, as no header is stored on disk. However, this
+makes it less convenient, as many tools will not know how to interact
+with the data. For example, the LUKS header can tell your operating
+system to prompt the user for the encrypted password when a USB drive
+is plugged in.</p>
+</div>
+<div class="slide" id="bitmap-cryptanalysis">
+<h1>Bitmap Cryptanalysis</h1>
+<ul class="slides simple">
+<li>Composition through subtraction</li>
+<li>Take advantage of the bitmap header</li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference img1.bmp img2.bmp diff.bmp</tt></li>
+</ul>
+<p class="handout">To help you understand many of these points, we will be using bitmaps
+for visualization. We will also be taking advantage of the bitmap
+header to create bitmaps out of binary files. We will be using
+ImageMagick to manipulate the images:</p>
+<blockquote class="handout">
+<tt class="docutils literal">$ composite <span class="pre">-compose</span> difference img1.bmp img2.bmp diff.bmp</tt></blockquote>
+</div>
+<div class="slide" id="image-composition">
+<h1>Image Composition</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="33%" />
+<col width="30%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/android.gif" class="first last align-center" src="pics/android.gif" />
+</td>
+<td><img alt="pics/blank.gif" class="first last align-center" src="pics/blank.gif" />
+</td>
+<td><img alt="pics/android-neg.gif" class="first last align-center" src="pics/android-neg.gif" />
+</td>
+</tr>
+<tr><td>android.bmp</td>
+<td>blank.bmp</td>
+<td>android-neg.bmp</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference android.bmp blank.bmp <span class="pre">android-neg.bmp</span></tt></li>
+</ul>
+<p class="handout">This was done using the following command:</p>
+<blockquote class="handout">
+<tt class="docutils literal">$ composite <span class="pre">-compose</span> difference android.bmp blank.bmp <span class="pre">android-neg.bmp</span></tt></blockquote>
+</div>
+<div class="slide" id="random-composition-code">
+<h1>Random Composition Code</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> of=random1.bmp bs=1 count=120054</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> of=random2.bmp bs=1 count=120054</tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp of=random1.bmp bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp of=random2.bmp bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference random1.bmp random2.bmp <span class="pre">random-neg.bmp</span></tt></li>
+</ul>
+</div>
+<div class="slide" id="random-composition-images">
+<h1>Random Composition Images</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="33%" />
+<col width="32%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/random1.gif" class="first last align-center" src="pics/random1.gif" />
+</td>
+<td><img alt="pics/random2.gif" class="first last align-center" src="pics/random2.gif" />
+</td>
+<td><img alt="pics/random-neg.gif" class="first last align-center" src="pics/random-neg.gif" />
+</td>
+</tr>
+<tr><td>random1.bmp</td>
+<td>random2.bmp</td>
+<td>random-neg.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">This should come as no surprise. Subtracting random data from random
+data should yield random data.</p>
+</div>
+<div class="slide" id="roadmap">
+<h1>Roadmap</h1>
+<ul class="slides simple">
+<li>Use bitmap composition</li>
+<li>Sart with worst case implementation</li>
+<li>End with best case implementation</li>
+<li>Images are not rigorous, but helpful</li>
+</ul>
+<p class="handout">Our plan for this presentation is to use bitmap difference composition
+throughout to help visualize what is going on. While using bitmaps is
+certainly not rigorous, it will give us a good idea as to what is going
+on. So, we'll start with the worst case implementation, and show how it
+falls apart, and work our way towards the best case implementation.</p>
+</div>
+<div class="slide" id="electronic-codeblock-ecb">
+<h1>Electronic Codeblock (ECB)</h1>
+<ul class="slides simple">
+<li>Simplest encryption mode</li>
+<li>Message is divided into blocks</li>
+<li>Each block encrypted separately</li>
+<li>Identical plaintext blocks are encrypted into identical ciphertext blocks</li>
+<li>Structure is not hidden well</li>
+</ul>
+<p class="handout">Electronic Codeblock, or ECB for short, is the simplest encryption mode
+for encrypting blocks. It divides the message into smaller blocks,
+usually 128- or 256-bits, then encrypts each bit using the provided key.
+Because the encryption algorithm is the same for each block, each
+identical plaintext block will be encrypted to identical ciphertext
+blocks. As a result, structured data such as images, videos and music is
+not hidden well.</p>
+<p class="handout">Because each block is not dependent on the other, ECB can be highly
+parallelized, which results in substantial speed encrypting and
+decrypting the blocks.</p>
+</div>
+<div class="slide" id="cipher-block-chaining-cbc">
+<h1>Cipher-block Chaining (CBC)</h1>
+<ul class="slides simple">
+<li>Initialization Vector used</li>
+<li>Message is divided into blocks</li>
+<li>Each plaintext block XORed with the previous ciphertext block</li>
+<li>Result encrypted</li>
+</ul>
+<p class="handout">Cipher-block Chaining, or CBC for short, requires need of an
+Initialization Vector (IV). This IV &quot;kickstarts&quot; the encryption process
+by XORing itself with the plaintext before encrypting each block. The
+resulting string is encrypted, and the ciphertext is saved to disk. It
+is also memory copied, and is XORed with the next plaintext block before
+encryption. This process continues for every block in the plaintext. As
+a result, identical plaintext blocks each receive a different ciphertext
+block. Thus, structure is not preserved, and the resulting message
+appears to be random.</p>
+<p class="handout">The IV is stored on disk, or in the encrypted message, to which the key
+provides access to. So decryption happens in reverse. The IV is
+decrypted with your key, the ciphertext is decrypted with the algorithm,
+and the result is XORed with the IV to produce the plaintext.</p>
+<p class="handout">Unfortunately, because of the chain, CBC cannot be parallelized. Due to
+the extra XOR operations as well, it is slower than non-parallelized
+ECB.</p>
+</div>
+<div class="slide" id="ecb-image">
+<h1>ECB Image</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">openssl enc <span class="pre">-aes-128-ecb</span> <span class="pre">-in</span> android.bmp <span class="pre">-out</span> <span class="pre">android-ecb.bmp</span></tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp <span class="pre">of=android-ecb.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="cbc-image">
+<h1>CBC Image</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">openssl enc <span class="pre">-aes-128-cbc</span> <span class="pre">-in</span> android.bmp <span class="pre">-out</span> <span class="pre">android-cbc.bmp</span></tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp <span class="pre">of=android-cbc.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="plaintext-vs-ecb-vs-cbc">
+<h1>Plaintext vs ECB vs CBC</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/android.gif" class="first last align-center" src="pics/android.gif" />
+</td>
+<td><img alt="pics/android-ecb.gif" class="first last align-center" src="pics/android-ecb.gif" />
+</td>
+<td><img alt="pics/android-cbc.gif" class="first last align-center" src="pics/android-cbc.gif" />
+</td>
+</tr>
+<tr><td>Plaintext</td>
+<td>ECB Encrypted</td>
+<td>CBC Encrypted</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Electronic_codebook_.28ECB.29">A better example at Wikipedia</a>.</p>
+<p class="handout">As you can clearly see with the ECB image, the structure of the Android
+logo is preserved, and is clearly visible. However, the CBC image
+appears to be completely random data, despite the fact that it is indeed
+an encrypted Android logo. CBC is not the only encryption mode that
+chains plaintext with ciphertext, but it is one of the more popular
+ones.</p>
+</div>
+<div class="slide" id="filesystem-bitmaps">
+<h1>Filesystem Bitmaps</h1>
+<ul class="slides simple">
+<li>Plaintext vs ECB vs CBC filesystems</li>
+<li>Pseudorandom layer first</li>
+<li>Illustrated with the following images</li>
+<li>Goal: appear as a random bitmap</li>
+</ul>
+</div>
+<div class="slide" id="source-and-goal">
+<h1>Source and Goal</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last align-center" src="pics/0.gif" />
+</td>
+<td><img alt="pics/random.gif" class="first last align-center" src="pics/random.gif" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>random.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">Many blogs and forums will instruct the user to put a pseudorandom layer
+of data down on the hard drive first, before encrypting and formatting
+with your filesystem, but few explain why. Hopefully, we'll illustrate
+that clearly with bitmaps.</p>
+</div>
+<div class="slide" id="plaintext-filesystem">
+<h1>Plaintext Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/zero</span> <span class="pre">of=ext2-0.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-0.bmp</span></tt></li>
+<li><tt class="docutils literal">mkfs.ext2 /dev/loop0</tt></li>
+<li><tt class="docutils literal">mount /dev/loop0 /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="ecb-filesystem">
+<h1>ECB Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/zero</span> <span class="pre">of=ext2-ecb-0.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-ecb-0.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup <span class="pre">-c</span> <span class="pre">aes-ecb</span> create <span class="pre">crypt-disk</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/crypt-disk</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/crypt-disk</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">crypt-disk</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-ecb-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="cbc-filesystem">
+<h1>CBC Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/zero</span> <span class="pre">of=ext2-cbc-0.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-cbc-0.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup <span class="pre">-c</span> <span class="pre">aes-cbc</span> create <span class="pre">crypt-disk</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/crypt-disk</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/crypt-disk</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">crypt-disk</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-cbc-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="no-pseudorandom-data">
+<h1>No Pseudorandom Data</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/ext2-0.gif" class="first last align-center" src="pics/ext2-0.gif" />
+</td>
+<td><img alt="pics/ext2-ecb-0.gif" class="first last align-center" src="pics/ext2-ecb-0.gif" />
+</td>
+<td><img alt="pics/ext2-cbc-0.gif" class="first last align-center" src="pics/ext2-cbc-0.gif" />
+</td>
+</tr>
+<tr><td>Plaintext Filesystem</td>
+<td>ECB Filesystem</td>
+<td>CBC Filesystem</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">It becomes clear that when you don't put random data down on the disk
+before your encrypt the filesystem, you cean clearly see where the
+encrypted data lies, and where it doesn't. As an attacker, where am I
+going to put my focus?</p>
+</div>
+<div class="slide" id="id1">
+<h1>Plaintext Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=ext2-r.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-r.bmp</span></tt></li>
+<li><tt class="docutils literal">mkfs.ext2 /dev/loop0</tt></li>
+<li><tt class="docutils literal">mount /dev/loop0 /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-r.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="id2">
+<h1>ECB Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=ext2-ecb-r.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-ecb-r.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup <span class="pre">-c</span> <span class="pre">aes-ecb</span> create <span class="pre">crypt-disk</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/crypt-disk</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/crypt-disk</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">crypt-disk</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-ecb-r.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="id3">
+<h1>CBC Filesystem</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=ext2-cbc-r.bmp</span> bs=1 count=480054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-cbc-r.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup <span class="pre">-c</span> <span class="pre">aes-cbc</span> create <span class="pre">cbc-disk</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/cbc-disk</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/cbc-disk</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">dmsetup remove <span class="pre">ext2-cbc-r.bmp</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-400x400.bmp</span> <span class="pre">of=ext2-cbc-r.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+</div>
+<div class="slide" id="pseudorandom-data">
+<h1>Pseudorandom Data</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/ext2-r.gif" class="first last align-center" src="pics/ext2-r.gif" />
+</td>
+<td><img alt="pics/ext2-ecb-r.gif" class="first last align-center" src="pics/ext2-ecb-r.gif" />
+</td>
+<td><img alt="pics/ext2-cbc-r.gif" class="first last align-center" src="pics/ext2-cbc-r.gif" />
+</td>
+</tr>
+<tr><td>Plaintext Filesystem</td>
+<td>ECB Filesystem</td>
+<td>CBC Filesystem</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">At this point, it should be clear that putting a pseudorandom data layer
+down on the disk first, before encrypting, makes it difficult for an
+attacker to identify where the pseudorandom data ends and the encrypted
+filesystem begins, when using CBC mode.</p>
+</div>
+<div class="slide" id="information-leak">
+<h1>Information Leak</h1>
+<ul class="slides">
+<li><p class="first">We have not met our goal.</p>
+</li>
+<li><p class="first">Introducing the Snapshot Attack</p>
+</li>
+<li><p class="first">CBC information leak</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Single key simple IV mode</li>
+<li>Multi-key-v3 mode</li>
+<li>128-bit aes-cbc-essiv:sha256</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p class="handout">Despite our dest efforts of using CBC and encrypting our data, we will
+still suffer from information leak through what is called the &quot;snapshot
+attack&quot;. This attack assumes that an attacker has physical access to
+your disk, and makes daily images of it. Through difference composition,
+we can remove similar bits betwen snapshots to reveal where the
+encrypted data is lying, and maybe even discover some data that it is
+designed to protect.</p>
+<p class="handout">So, let's look at three cheap ways of getting the task done. First,
+we'll look at single key simple IV mode, which is basically a way of
+saying to just provide a password to kickstart the encryption. The
+second way is muilt-key-v3 mode, which is a way of saying to provide
+both a password and a physical key to start the encryption process.
+Lastly, we'll look at the default of LUKS, and see how it compares.</p>
+<p class="handout">All three of these modes will reveal information about the data it's
+designed to protect.</p>
+</div>
+<div class="slide" id="single-key-simple-iv">
+<h1>Single Key Simple IV</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">aespipe &lt; 0.bmp &gt; aes0.bmp</tt></li>
+<li><tt class="docutils literal">aespipe &lt; blank.bmp &gt; <span class="pre">aes-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">dd if=0.bmp of=aes0.bmp bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp <span class="pre">of=aes-blank.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference aes0.bmp <span class="pre">aes-blank.bmp</span> <span class="pre">aes-diff.bmp</span></tt></li>
+</ul>
+</div>
+<div class="slide" id="single-key-bitmaps">
+<h1>Single Key Bitmaps</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="30%" />
+<col width="36%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/aes0.gif" class="first last align-center" src="pics/aes0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-blank.gif" class="first last align-center" src="pics/aes-blank.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-diff.gif" class="first last align-center" src="pics/aes-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>aes0.bmp</td>
+<td>aes-blank.bmp</td>
+<td>aes-diff.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">CBC has completely failed us. With our 'aes-diff.bmp' I can clearly see
+the underlying structure of the 0.bmp image. This is only because the
+password is the same between files. Our password becomes our
+Initialization Vector (IV). If the password was different, then we have
+success, but this isn't very likely, as for filesystems, you likely use
+the same password to unlock your hard drive.</p>
+</div>
+<div class="slide" id="single-key-bitmap-comparison">
+<h1>Single Key Bitmap Comparison</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="29%" />
+<col width="35%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last align-center" src="pics/0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-diff.gif" class="first last align-center" src="pics/aes-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/random-400.gif" class="first last align-center" src="pics/random-400.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>aes-diff.bmp</td>
+<td>random.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">We want our goal to be random.bmp, but we're not quite there. We have
+more work to do.</p>
+</div>
+<div class="slide" id="multi-key-v3-mode">
+<h1>Multi-key-v3 Mode</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">head <span class="pre">-c</span> 2925 /dev/urandom | uuencode <span class="pre">-m</span> - | head <span class="pre">-n</span> 66 | tail <span class="pre">-n</span> 65 | gpg <span class="pre">--symmetric</span> <span class="pre">-a</span> &gt; key.gpg</tt></li>
+<li><tt class="docutils literal">aespipe <span class="pre">-K</span> key.gpg &lt; 0.bmp &gt; <span class="pre">aes0-v3.bmp</span></tt></li>
+<li><tt class="docutils literal">aespipe <span class="pre">-K</span> key.gpg &lt; blank.bmp &gt; <span class="pre">aes-blank-v3.bmp</span></tt></li>
+<li><tt class="docutils literal">dd if=0.bmp <span class="pre">of=aes0-v3.bmp</span> count=54 bs=1 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd if=blank.bmp <span class="pre">of=aes-blank-v3.bmp</span> count=54 bs=1 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference <span class="pre">aes0-v3.bmp</span> <span class="pre">aes-blank-v3.bmp</span> <span class="pre">aes-diff-v3.bmp</span></tt></li>
+</ul>
+</div>
+<div class="slide" id="multi-key-bitmaps">
+<h1>Multi Key Bitmaps</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/aes0-v3.gif" class="first last align-center" src="pics/aes0-v3.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-blank-v3.gif" class="first last align-center" src="pics/aes-blank-v3.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-diff-v3.gif" class="first last align-center" src="pics/aes-diff-v3.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>aes0-v3.bmp</td>
+<td>aes-blank-v3.bmp</td>
+<td>aes-diff-v3.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">This looks substantially better than our single key mode, and this
+should probably be a best practice. That is, to provide both something
+that you have and something that you know. Unfortunately, the geometry
+of my zero is setting the boundaries of the encrypted bits. Even though
+the data being leaked isn't significant, and we should probably use
+multi-key mode whenever possible, we can still do better.</p>
+</div>
+<div class="slide" id="multi-key-bitmap-comparison">
+<h1>Multi Key Bitmap Comparison</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="28%" />
+<col width="37%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last align-center" src="pics/0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-diff-v3.gif" class="first last align-center" src="pics/aes-diff-v3.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/random-400.gif" class="first last align-center" src="pics/random-400.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>aes-diff-v3.bmp</td>
+<td>random.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">This better shows how the geometry of my 0.bmp is affecting the
+encryption boundaries of aes-diff-v3.bmp. We are getting closer to
+random.bmp, however.</p>
+</div>
+<div class="slide" id="bit-aes-cbc-essiv-sha256">
+<h1>128-bit aes-cbc-essiv:sha256</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=aes-cbc-0.bmp</span> bs=1 count=1080054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-0.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup luksFormat <span class="pre">-s</span> 128 <span class="pre">--align-payload=8</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">cryptsetup luksOpen /dev/loop0 <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/aes-crypt</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup luksClose <span class="pre">/dev/mapper/aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+</ul>
+</div>
+<div class="slide" id="id4">
+<h1>128-bit aes-cbc-essiv:sha256</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">cp <span class="pre">aes-cbc-0.bmp</span> <span class="pre">aes-cbc-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup luksOpen /dev/loop0 <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp blank.bmp /mnt/0.bmp</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup luksClose <span class="pre">/dev/mapper/aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-blank.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference <span class="pre">aes-cbc-0.bmp</span> <span class="pre">aes-cbc-blank.bmp</span> <span class="pre">aes-cbc-diff.bmp</span></tt></li>
+</ul>
+<p class="handout">First, notice that we are now working on a full-blown filesystem, versus
+just encrypting files. The result will be a bit different as a result.</p>
+<p class="handout">Second, notice that I'm NOT reformating the disk with a new LUKS format.
+This is because your password encrypts the initialization vector at
+first setup, and it's that IV that is responsible for encrypting and
+decrypting the data on/off your disk. We need to imitate thata here. We
+do so by copying the filesystem to another file, then modifying that
+filesystem, just as we would if we were working on our computer.</p>
+</div>
+<div class="slide" id="bit-aes-cbc-essiv-bitmaps">
+<h1>128-bit aes-cbc-essiv Bitmaps</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/aes-cbc-0.gif" class="first last align-center" src="pics/aes-cbc-0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-blank.gif" class="first last align-center" src="pics/aes-cbc-blank.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-diff.gif" class="first last align-center" src="pics/aes-cbc-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>aes-cbc-0.bmp</td>
+<td>aes-cbc-blank.bmp</td>
+<td>aes-cbc-diff.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">This shouldn't be surprising, actually. Because we're not reformatting
+the disk between snapshots, nor changing our password, and reencrypting
+our disk as a result, all of the identical bits go away in the
+composition, and we can make out what LUKS is trying to hide.</p>
+<p class="handout">It would be nice if LUKS supported multi-key-v3, as we could get the
+increased benefits of actually hiding th edata, but unfortunately, and
+this time, it does not.</p>
+</div>
+<div class="slide" id="best-practice">
+<h1>Best Practice</h1>
+<ul class="slides">
+<li><p class="first">Encryption leaks data</p>
+</li>
+<li><p class="first">Recommendations for avoiding the snapshot attack</p>
+<blockquote>
+<ul class="simple">
+<li>Filling the disk with data</li>
+<li>Intentional fragmentation</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p class="handout">Because LUKS is the default encrypted container for most GNU/Linux
+installations, we'll stick with that for the rest of this document.
+Because LUKS also does not support multi-key-v3 mode, we will be stuck
+with single key, simple IV mode. However, this isn't necessarily a bad
+thing, and we can do some extra steps to hide the data rather
+effectively, thus creating a &quot;best practice&quot;.</p>
+<p class="handout">First, will fill any remaining space with random data, day in and day
+out. Second, we could also intentionally fragment the disk, and see if
+that buys us any security with the filesystem snapshots.</p>
+</div>
+<div class="slide" id="filling-motivation">
+<h1>Filling Motivation</h1>
+<ul class="slides simple">
+<li>Mount, remove waste file, work, add waste file</li>
+<li>Wash, rinse, repeat</li>
+<li>Snapshot attack less effective</li>
+</ul>
+<p class="handout">The motivation is simple. When you are finished working at your
+computer, you create a &quot;waste&quot; file that fills the disk with random
+data, then leave for the day. When you get back to work, you remove the
+waste file, so you have space on your hard drive, then work. As you are
+done for the day, again you create the waste file, and go home.</p>
+<p class="handout">Because we're creating a random waste file every day, then removing it
+every day, we're constantly flipping the bits on the hard drive. This
+will make the snapshot attack less effective, because composing a
+difference of two random bits results in random bits, as we already
+discovered. So, let's see what happens.</p>
+</div>
+<div class="slide" id="filling-the-disk">
+<h1>Filling The Disk</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=aes-cbc-filled-0.bmp</span> bs=1 count=1080054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-filled-0.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup create <span class="pre">aes-crypt</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">/dev/mapper/aes-crypt</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/waste</span></tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+</ul>
+</div>
+<div class="slide" id="id5">
+<h1>Filling The Disk</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">cp <span class="pre">aes-cbc-filled-0.bmp</span> <span class="pre">aes-cbc-filled-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-filled-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup create <span class="pre">aes-crypt</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">cp blank.bmp /mnt/0.bmp</tt></li>
+<li><tt class="docutils literal">rm /mnt/waste</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/waste</span></tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-filled-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-filled-blank.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference <span class="pre">aes-cbc-filled-0.bmp</span> <span class="pre">aes-cbc-filled-blank.bmp</span> <span class="pre">aes-cbc-filled-diff.bmp</span></tt></li>
+</ul>
+</div>
+<div class="slide" id="disk-filling-bitmaps">
+<h1>Disk Filling Bitmaps</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/aes-cbc-filled-0.gif" class="first last align-center" src="pics/aes-cbc-filled-0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-filled-blank.gif" class="first last align-center" src="pics/aes-cbc-filled-blank.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-filled-diff.gif" class="first last align-center" src="pics/aes-cbc-filled-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>aes-cbc-filled-0.bmp</td>
+<td>aes-cbc-filled-blank.bmp</td>
+<td>aes-cbc-filled-diff.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">Much better, although I can still make out my 0.bmp on the filesystem.
+We already know why this is showing up, as we saw this previously. So,
+what can we do to prevent this data leak?</p>
+</div>
+<div class="slide" id="disk-filling-bitmap-comparison">
+<h1>Disk Filling Bitmap Comparison</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="26%" />
+<col width="42%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last align-center" src="pics/0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-filled-diff.gif" class="first last align-center" src="pics/aes-cbc-filled-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/random-600.gif" class="first last align-center" src="pics/random-600.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>aes-cbc-filled-diff.bmp</td>
+<td>random.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">We are gettintg much, much closer to our target, but we still have data
+leak that we need to address. Let's address that with fragmenting the
+filesystem.</p>
+</div>
+<div class="slide" id="fragmenting-motivations">
+<h1>Fragmenting Motivations</h1>
+<ul class="slides simple">
+<li>SSDs, such as USB thumb drives, don't suffer</li>
+<li>What can we gain encryption-wise with fragmentation?</li>
+</ul>
+<p class="handout">Generally speaking, fragmentation is a bad thing, when your hard drive
+consists of moving parts that need to access the data, such as platter
+drives. But, with the growth of SSDs, USB thumb drives, SD cards, and
+other solid state media, fragmentation is less of an issue. We can
+intentionally fragment the filesystem, and see what gains we achieve
+with encryption.</p>
+</div>
+<div class="slide" id="simple-fragmentation-example">
+<h1>Simple Fragmentation Example</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=ext2-frag.bmp</span> bs=1 count=1080054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">ext2-frag.bmp</span></tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">-N</span> 1024 /dev/loop0</tt></li>
+<li><tt class="docutils literal">mount /dev/loop0 /mnt</tt></li>
+<li><tt class="docutils literal">for i in <span class="pre">{1..1024};</span> do dd <span class="pre">if=/dev/zero</span> <span class="pre">of=/mnt/$i.waste</span> bs=1k count=1; done</tt></li>
+<li><tt class="docutils literal">rm <span class="pre">-f</span> <span class="pre">/mnt/*7.waste</span> <span class="pre">/mnt/?7?.waste</span></tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=ext2-frag.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+</ul>
+<p class="handout">Notice that I'm creating a filesystem with 1024 inodes. This is because
+the filesystem is only 1MB in size, and ext2 doesn't generate enough
+inodes by default. I need more if I'm going to intentionally fragment
+the filesystem. Because if I run out of inodes, I run out of the ability
+to create new files.</p>
+<p class="handout">I fragment the filesystem by creating 1024 files, then removing some of
+them. By doing so, I make just enough room to save my 0.bmp file, which
+will be fragmented when placed on disk.</p>
+</div>
+<div class="slide" id="fragmented-bitmap">
+<h1>Fragmented Bitmap</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="43%" />
+<col width="57%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last" src="pics/0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/ext2-frag.gif" class="first last" src="pics/ext2-frag.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>ext2-frag.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">As exected, my 0.bmp is highly fragmented. This is what we'll be after
+with encrypting the data.</p>
+</div>
+<div class="slide" id="fragmenting-the-disk">
+<h1>Fragmenting The Disk</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=aes-cbc-frag-0.bmp</span> bs=1 count=1080054</tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-frag-0.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup create <span class="pre">aes-crypt</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mkfs.ext2 <span class="pre">-N</span> 1024 <span class="pre">/dev/mapper/aes-crypt</span></tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">for i in <span class="pre">{1..1024};</span> do dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/$i.waste</span> count=1 bs=1k; done</tt></li>
+<li><tt class="docutils literal">rm <span class="pre">/mnt/*{4,7}.waste</span></tt></li>
+<li><tt class="docutils literal">cp 0.bmp /mnt</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/waste</span></tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+</ul>
+<p class="handout">Notice that I'm also filling the disk with random data. This is because
+we already learned that this is a &quot;best practice&quot;, so I might as well
+continue doing it. So, we are both fragmenting the filesystem, and
+filling it with random data.</p>
+</div>
+<div class="slide" id="id6">
+<h1>Fragmenting The Disk</h1>
+<ul class="slides tiny simple">
+<li><tt class="docutils literal">cp <span class="pre">aes-cbc-frag-0.bmp</span> <span class="pre">aes-cbc-frag-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">losetup /dev/loop0 <span class="pre">aes-cbc-frag-blank.bmp</span></tt></li>
+<li><tt class="docutils literal">cryptsetup create <span class="pre">aes-crypt</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">mount <span class="pre">/dev/mapper/aes-crypt</span> /mnt</tt></li>
+<li><tt class="docutils literal">for i in <span class="pre">{1..1024};</span> do dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/$i.waste</span> count=1 bs=1k; done</tt></li>
+<li><tt class="docutils literal">cp blank.bmp /mnt/0.bmp</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=/dev/urandom</span> <span class="pre">of=/mnt/waste</span></tt></li>
+<li><tt class="docutils literal">umount /mnt</tt></li>
+<li><tt class="docutils literal">cryptsetup remove <span class="pre">aes-crypt</span></tt></li>
+<li><tt class="docutils literal">losetup <span class="pre">-d</span> /dev/loop0</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-frag-0.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">dd <span class="pre">if=0-600x600.bmp</span> <span class="pre">of=aes-cbc-frag-blank.bmp</span> bs=1 count=54 conv=notrunc</tt></li>
+<li><tt class="docutils literal">composite <span class="pre">-compose</span> difference <span class="pre">aes-cbc-frag-0.bmp</span> <span class="pre">aes-cbc-frag-blank.bmp</span> <span class="pre">aes-cbc-frag-diff.bmp</span></tt></li>
+</ul>
+<p class="handout">Notice that on this second filesystem, I am overwriting the fragmented
+bits. Remember in the snapshot attack, any similar data gets composed
+out. So, I need to change these bits. This could be an expensive
+operation, if your disk is large, and you have a lot of fragmented
+files. I am also overwriting the waste file, for the same reasons.</p>
+</div>
+<div class="slide" id="fragmented-bitmaps">
+<h1>Fragmented Bitmaps</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/aes-cbc-frag-0.gif" class="first last align-center" src="pics/aes-cbc-frag-0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-frag-blank.gif" class="first last align-center" src="pics/aes-cbc-frag-blank.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-frag-diff.gif" class="first last align-center" src="pics/aes-cbc-frag-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>aes-cbc-frag-0.bmp</td>
+<td>aes-cbc-frag-blank.bmp</td>
+<td>aes-cbc-frag-diff.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">At this point, this is about as good as we can get with LUKS. It took a
+bit of work getting here, but it wasn't too bad. All we had to do was
+fragment the filesystem, and fill the remaining free space. If we keep
+on top of this on a daily basis, the snapshot attack becomes virtually
+ineffective.</p>
+</div>
+<div class="slide" id="final-bitmap-comparison">
+<h1>Final Bitmap Comparison</h1>
+<table border="1" class="slides docutils">
+<colgroup>
+<col width="27%" />
+<col width="41%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="pics/0.gif" class="first last align-center" src="pics/0.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/aes-cbc-frag-diff.gif" class="first last align-center" src="pics/aes-cbc-frag-diff.gif" style="width: 400px; height: 400px;" />
+</td>
+<td><img alt="pics/random-600.gif" class="first last align-center" src="pics/random-600.gif" style="width: 400px; height: 400px;" />
+</td>
+</tr>
+<tr><td>0.bmp</td>
+<td>aes-cbc-frag-diff.bmp</td>
+<td>random.bmp</td>
+</tr>
+</tbody>
+</table>
+<p class="handout">The lines and strides you see in the fragmented filesystem are likely
+due to filesystem metadata, which there isn't much we can do about. This
+is fairly close to our result of random.bmp. If LUKS supported
+multi-key-v3, then we wouldn't need to do as much work, but until that
+fix is implemented, this is what we need to do to prevent this attack.</p>
+</div>
+<div class="slide" id="some-considerations">
+<h1>Some Considerations</h1>
+<ul class="slides simple">
+<li>RAID (Level 0 or Parity)</li>
+<li>LVM (physical extent distribution)</li>
+<li>COW such as ZFS or Btrfs</li>
+<li>Snapshots</li>
+<li>Compression</li>
+<li>Deduplication</li>
+</ul>
+<p class="handout">We've only been been discussing single use filesystems. There are other
+storage considerations that we need to take into account. Things such as
+RAID and the various levels. How would the snapshot attack look with
+striping, such as RAID0 or RAID10? How would the snapshot attack look
+with parity-based RAID5 or RAID6?</p>
+<p class="handout">Logical volume management can align blocks to physical extents, and you
+can decide where to place those physical extents. How would this look
+with the snapshot attack? What if LVM is combined with RAID?</p>
+<p class="handout">Copy-on-write filesystems, such as ZFS or Btrfs add a new dimension to
+storage with the copy-on-write approach to storing data. Combined with a
+great deal of metadata on the disk, such as Btrees or Merkle trees, how
+does this affect the snapshot attack?</p>
+<p class="handout">LVM or ZFS/Btrfs snapshots store the snapshot in metadata pointers, and
+as data changes, is copied to the new volume/filesystem. How would these
+sort of changes look?</p>
+<p class="handout">Compression is highly used in encryption to add entropy to the encrypted
+information. It is also used in modern filesystems to increase available
+storage. How would this thwart the snapshot attack? How would the images
+look?</p>
+<p class="handout">Deduplication could be per file, or per block. If per block, how would
+files that have been deduplicated look? If combined with compression,
+how would that affect the result?</p>
+<p class="handout">These questions haven't been investigated in this document, obviously,
+but might be worth the reader's time to do so. The tools and steps have
+already been discussed in this decument, so it should be fairly trivial
+to investigate these.</p>
+</div>
+<div class="slide" id="conclusion">
+<h1>Conclusion</h1>
+<ul class="slides">
+<li><p class="first">ECB vs CBC</p>
+</li>
+<li><p class="first">Random data filesystem prep</p>
+</li>
+<li><p class="first">King attack- the Snapshot Attack</p>
+</li>
+<li><p class="first">Daily Routine:</p>
+<blockquote>
+<ol class="arabic simple" start="0">
+<li>Start with fragmentation</li>
+<li>Overwrite fragmented bits with random data</li>
+<li>Work</li>
+<li>Fill remaining space with random data</li>
+<li>Repeat steps 1-3 daily</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="slide" id="acknowledgement">
+<h1>Acknowledgement</h1>
+<ul class="slides simple">
+<li>Thanks to Dr. A. G. Basile at D'Youville college for his PDF</li>
+<li><a class="reference external" href="http://opensource.dyc.edu/sites/default/files/random-vs-encrypted.pdf">http://opensource.dyc.edu/sites/default/files/random-vs-encrypted.pdf</a></li>
+</ul>
+</div>
+<div class="slide" id="fin">
+<h1>Fin</h1>
+<ul class="slides simple">
+<li>Questions, comments, rude remarks?</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

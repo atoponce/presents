@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>Crypto 1010</title>
+<meta name="author" content="Aaron Toponce" />
+<meta name="date" content="May 7, 2015" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/small-white/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/small-white/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/small-white/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/small-white/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/small-white/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>Crypto 1010</h1>
+
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">Crypto 1010</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Aaron Toponce</td></tr>
+<tr class="field"><th class="docinfo-name">Email:</th><td class="field-body"><a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a></td>
+</tr>
+<tr><th class="docinfo-name">Date:</th>
+<td>May 7, 2015</td></tr>
+</tbody>
+</table>
+<!-- Definitions of interpreted text roles (classes) for S5/HTML data. -->
+<!-- This data file has been placed in the public domain. -->
+<!-- Colours
+======= -->
+<!-- Text Sizes
+========== -->
+<!-- Display in Slides (Presentation Mode) Only
+========================================== -->
+<!-- Display in Outline Mode Only
+============================ -->
+<!-- Display in Print Only
+===================== -->
+<!-- Display in Handout Mode Only
+============================ -->
+<!-- Incremental Display
+=================== -->
+
+</div>
+<div class="slide" id="license">
+<h1>License</h1>
+<p>This presentation is licensed under the Creative Commons Attribution-ShareAlike
+license.</p>
+<p>See <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> for more details.</p>
+<div class="handout container">
+<p>This document is licensed under the CC:BY:SA
+Details to the license can be found here:
+http://creativecommons.org/licenses/by-sa/3.0/</p>
+<dl class="docutils">
+<dt>The licnese states the following:</dt>
+<dd><ul class="first last simple">
+<li>You are free to copy, distribute and tranmit this work.</li>
+<li>You are free to adapt the work.</li>
+</ul>
+</dd>
+<dt>Under the following conditions:</dt>
+<dd><ul class="first last simple">
+<li>You must attribute the work to the copyright holder.</li>
+<li>If you alter, transform, or build on this work, you may redistribute the
+work under the same, similar or compatible license.</li>
+</ul>
+</dd>
+<dt>With the understanding that:</dt>
+<dd><ul class="first last">
+<li><p class="first">Any conditions may be waived if you get written permission from the
+copyright holder.</p>
+</li>
+<li><p class="first">In no way are any of the following rights affected by the license:</p>
+<blockquote>
+<ul class="simple">
+<li>Your fair dealing or fair use rights;</li>
+<li>The author's moral rights;</li>
+<li>Rights other persons may have either in the work itself or
+in how the work is used, such as publicity or privacy rights.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">For any reuse or distribution, you must make clear to others the license
+terms of this work. The best way to do this is with a link to the web
+page provided above or below.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>The above is a human-readable summary of the license, and is not to be used
+as a legal substitute for the actual licnse. Please refer to the formal
+legal document provided here:
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a></p>
+</div>
+</div>
+<div class="slide" id="introduction">
+<h1>Introduction</h1>
+<ul class="simple">
+<li>Symmetric Encryption</li>
+<li>Asymmetric Encryption</li>
+<li>Encryption &amp; Decryption</li>
+<li>Signatures &amp; Verification</li>
+<li>The Diffie-Hellman Key Exchange</li>
+<li>The SSL Handshake</li>
+<li>SSL 1.0, 2.0, 3.0</li>
+<li>TLS 1.0, 1.1, 1.2</li>
+<li>OpenSSH Concepts</li>
+<li>OpenPGP Concepts</li>
+</ul>
+</div>
+<div class="slide" id="symmetric-encryption">
+<h1>Symmetric Encryption</h1>
+<ul class="simple">
+<li>Shared key secret</li>
+<li>Rotational ciphers</li>
+<li>Substitution ciphers</li>
+<li>Classical &quot;field/hand&quot; ciphers</li>
+<li>One-time pad</li>
+<li>AES, 3DES, Blowfish</li>
+</ul>
+</div>
+<div class="slide" id="symmetric-encryption-visually">
+<h1>Symmetric Encryption Visually</h1>
+<img alt="images/symmetric_cryptography.png" src="images/symmetric_cryptography.png" />
+</div>
+<div class="slide" id="block-cipher-modes">
+<h1>Block Cipher Modes</h1>
+<ul class="simple">
+<li>Electronic Code Block (ECB)</li>
+<li>Cipher Block Chaining (CBC)</li>
+<li>Cipher Feedback (CFB)</li>
+<li>Output Feedback (OFB)</li>
+<li>Counter (CTR)</li>
+<li>Counter with CBC (CCM)</li>
+<li>Carter-Wegman + CTR mode (CWC)</li>
+<li>Offset Codebook Mode (OCM)</li>
+<li>Galois/Counter Mode (GCM)</li>
+<li>EAX (Embrace And eXtend?)</li>
+</ul>
+</div>
+<div class="slide" id="ecb-visually">
+<h1>ECB Visually</h1>
+<img alt="images/ecb-1.png" src="images/ecb-1.png" />
+<img alt="images/ecb-2.png" src="images/ecb-2.png" />
+</div>
+<div class="slide" id="cbc-visually">
+<h1>CBC Visually</h1>
+<img alt="images/cbc-1.png" src="images/cbc-1.png" />
+<img alt="images/cbc-2.png" src="images/cbc-2.png" />
+</div>
+<div class="slide" id="cfb-visually">
+<h1>CFB Visually</h1>
+<img alt="images/cfb-1.png" src="images/cfb-1.png" />
+<img alt="images/cfb-2.png" src="images/cfb-2.png" />
+</div>
+<div class="slide" id="ofb-visually">
+<h1>OFB Visually</h1>
+<img alt="images/ofb-1.png" src="images/ofb-1.png" />
+<img alt="images/ofb-2.png" src="images/ofb-2.png" />
+</div>
+<div class="slide" id="ctr-visually">
+<h1>CTR Visually</h1>
+<img alt="images/ctr-1.png" src="images/ctr-1.png" />
+<img alt="images/ctr-2.png" src="images/ctr-2.png" />
+</div>
+<div class="slide" id="problms-with-ecb-mode">
+<h1>Problms with ECB Mode</h1>
+<ul class="simple">
+<li><tt class="docutils literal">$ openssl enc <span class="pre">-aes-128-ecb</span> <span class="pre">-in</span> openwest.bmp <span class="pre">-out</span> <span class="pre">openwest-ecb.bmp</span></tt></li>
+<li><tt class="docutils literal">$ openssl enc <span class="pre">-aes-128-cbc</span> <span class="pre">-in</span> openwest.bmp <span class="pre">-out</span> <span class="pre">openwest-cbc.bmp</span></tt></li>
+<li><tt class="docutils literal">$ dd bs=1 count=54 conv=notrunc if=openwst.bmp <span class="pre">of=openwst-ecb.bmp</span></tt></li>
+<li><tt class="docutils literal">$ dd bs=1 count=54 conv=notrunc if=openwst.bmp <span class="pre">of=openwst-cbc.bmp</span></tt></li>
+<li><tt class="docutils literal">$ convert openwest.bmp openwest.png</tt></li>
+<li><tt class="docutils literal">$ convert <span class="pre">openwest-ecb.bmp</span> <span class="pre">openwest-ecb.png</span></tt></li>
+<li><tt class="docutils literal">$ convert <span class="pre">openwest-cbc.bmp</span> <span class="pre">openwest-cbc.png</span></tt></li>
+</ul>
+</div>
+<div class="slide" id="problems-with-ecb-mode-visually">
+<h1>Problems with ECB Mode Visually</h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="34%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="images/openwest-logo.png" class="first last" src="images/openwest-logo.png" />
+</td>
+<td><img alt="images/openwest-logo-ecb.png" class="first last" src="images/openwest-logo-ecb.png" />
+</td>
+<td><img alt="images/openwest-logo-cbc.png" class="first last" src="images/openwest-logo-cbc.png" />
+</td>
+</tr>
+<tr><td>The original OpenWest logo</td>
+<td>Encrypted using ECB mode</td>
+<td>Modes other than ECB result in
+pseudo-randomness</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="slide" id="asymmetric-encryption">
+<h1>Asymmetric Encryption</h1>
+<ul class="simple">
+<li>Private and public keys.</li>
+<li>Public keys distributed.</li>
+<li>RSA, ECC, Diffie-Hellman.</li>
+</ul>
+</div>
+<div class="slide" id="encryption-decryption">
+<h1>Encryption &amp; Decryption</h1>
+<ul class="simple">
+<li>Encryption: plaintext -&gt; ciphertext.</li>
+<li>Decryption: ciphertext -&gt; plaintext.</li>
+<li>Encryption requires public key.</li>
+<li>Decrytpion requires private key.</li>
+</ul>
+</div>
+<div class="slide" id="asymmetric-encryption-visually">
+<h1>Asymmetric Encryption Visually</h1>
+<img alt="images/public_key_cryptography.png" src="images/public_key_cryptography.png" />
+</div>
+<div class="slide" id="signatures-verification">
+<h1>Signatures &amp; Verification</h1>
+<ul class="simple">
+<li>Nonrepudiates data.</li>
+<li>Like a physical signature, but stronger.</li>
+<li>Signing requires the private key.</li>
+<li>Verification requires the public key.</li>
+</ul>
+</div>
+<div class="slide" id="signatures-verification-visually">
+<h1>Signatures &amp; Verification Visually</h1>
+<img alt="images/digital_signature.png" src="images/digital_signature.png" />
+</div>
+<div class="slide" id="the-diffie-hellman-key-exchange">
+<h1>The Diffie-Hellman Key Exchange</h1>
+<ul class="simple">
+<li>Symmetric key exchange.</li>
+<li>Vulnerable to MITM attack.</li>
+<li>Both parties A &amp; B generate a secret.</li>
+<li>A encrypts a message with his secret.</li>
+<li>A sends ciphertext to B.</li>
+<li>B encrypts the ciphertext with his secret.</li>
+<li>B sends ciphertext to A.</li>
+<li>A decrypts ciphertext.</li>
+<li>A sends to B.</li>
+<li>B decrypts ciphertext- has A message.</li>
+</ul>
+</div>
+<div class="slide" id="diffie-hellman-kex-visually">
+<h1>Diffie-Hellman KEX Visually</h1>
+<img alt="images/diffie_hellman.png" src="images/diffie_hellman.png" />
+</div>
+<div class="slide" id="the-ssl-handshake">
+<h1>The SSL Handshake</h1>
+<ul class="simple">
+<li>Client issues &quot;HELLO&quot;.</li>
+<li>Server sends public certificate.</li>
+<li>Client authenticates certificate.</li>
+<li>Client generates secret.</li>
+<li>Client encrypts secret with cert.</li>
+<li>Client sends ciphertext to server.</li>
+<li>Server decrypts ciphertext.</li>
+<li>Secret used at symmetric key.</li>
+</ul>
+</div>
+<div class="slide" id="ssl-1-0">
+<h1>SSL 1.0</h1>
+<ul class="simple">
+<li>Developed by Netscape in 1993.</li>
+<li>Never actually released.</li>
+<li>No data integrity. Later added CRC.</li>
+<li>RC4 for encryption.</li>
+<li>Vulnerable to replay attacks.</li>
+<li>No RFC documents.</li>
+<li>Broken in 10 minutes during a presentation by Vint Cerf.</li>
+</ul>
+</div>
+<div class="slide" id="ssl-2-0">
+<h1>SSL 2.0</h1>
+<ul class="simple">
+<li>Developed by Netscape in 1994.</li>
+<li>First public release.</li>
+<li>RSA and MD5-only.</li>
+<li>40-bit &quot;export&quot; and 128-bit RC2.</li>
+<li>40-bit &quot;export&quot; and 128-bit RC4 .</li>
+<li>64-bit DES.</li>
+<li>128-bit IDEA.</li>
+<li>192-bit 3DES.</li>
+<li>CBC mode only.</li>
+</ul>
+</div>
+<div class="slide" id="ssl-2-0-weaknesses">
+<h1>SSL 2.0 Weaknesses</h1>
+<ul class="simple">
+<li>Vulnerable to MITM attacks.</li>
+<li>Vulnerable to a cipher suite attack.</li>
+<li>Vulnerable to a truncaction attack.</li>
+<li>Uses weak MAC construction.</li>
+<li>Client handshake cannot be interrupted.</li>
+<li>No certificate chaining.</li>
+</ul>
+</div>
+<div class="slide" id="ssl-3-0">
+<h1>SSL 3.0</h1>
+<ul class="simple">
+<li>Released in 1996 due to flaws in 2.0.</li>
+<li>Complete redesign.</li>
+<li>Defined in RFC 6101.</li>
+<li>MD5 asd SHA-1.</li>
+<li>DES, 3DES, and RC4.</li>
+<li>40-bit export.</li>
+<li>Backward compatible with 2.0.</li>
+<li>Supports cert chaining.</li>
+<li>RSA, Diffie-Hellman, and Fortezza key exchanges.</li>
+<li>Allows for compression &amp; decompression.</li>
+<li>Different cipher specifications.</li>
+<li>CBC mode only.</li>
+</ul>
+</div>
+<div class="slide" id="ssl-3-0-weaknesses">
+<h1>SSL 3.0 Weaknesses</h1>
+<ul class="simple">
+<li>RC4 biases.</li>
+<li>CBC not authenticated (padding oracle attacks abound).</li>
+<li>BEAST attack (CBC padding non-deterministic).</li>
+<li>Lucky 13 attack (CBC timing attack).</li>
+<li>POODLE attack (MITM attack forcing SSL 3.0 downgrade).</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-0">
+<h1>TLS 1.0</h1>
+<ul class="simple">
+<li>Released in 1999 as an upgrade to SSL 3.0.</li>
+<li>TLS 1.0 is NOT SSL 3.0.</li>
+<li>Defined in RFC 2246.</li>
+<li>Same cipher suite as SSL 3.0.</li>
+<li>Added ephemeral Diffie-Hellman (authenticated with DSA or RSA).</li>
+<li>Authenticated CBC.</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-0-weaknesses">
+<h1>TLS 1.0 Weaknesses</h1>
+<ul class="simple">
+<li>Hashing algorithms MD5 and SHA-1.</li>
+<li>No known pseudorandom function weaknesses.</li>
+<li>Ciphers RC2, RC4, and DES.</li>
+<li>Supports 40-bit &quot;export&quot; mode.</li>
+<li>Support anonymous ciphers (MITM attack).</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-1">
+<h1>TLS 1.1</h1>
+<ul class="simple">
+<li>Released in April 2006.</li>
+<li>Defined in RFC 4346.</li>
+<li>Dropped RC2 support.</li>
+<li>MD5, SHA-1, and SHA-256.</li>
+<li>AES, DES, 3DES, and RC4.</li>
+<li>DHE with DSA or RSA.</li>
+<li>Authenticated CBC.</li>
+<li>Explicit Initialization Vector (vs. implicit IV).</li>
+<li>Change in handling of padding errors.</li>
+<li>Support for IANA registration of parameters.</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-1-weaknesses">
+<h1>TLS 1.1 Weaknesses</h1>
+<ul class="simple">
+<li>No real flaw found in TLS 1.1.</li>
+<li>MD5 and SHA-1 support.</li>
+<li>DES and RC4 support.</li>
+<li>No known pseudorandom function weaknesses.</li>
+<li>No authenticated encryption modes (improved performance).</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-2">
+<h1>TLS 1.2</h1>
+<ul class="simple">
+<li>Released in August 2008</li>
+<li>Defined in RFC 5246.</li>
+<li>Dropped RC4, IDEA and DES cipher support.</li>
+<li>Dropped 40-bit &quot;export&quot; mode.</li>
+<li>PRF MD5-SHA1 combination replaced by SHA-256.</li>
+<li>MD5 support only on RSA certificate signatures.</li>
+<li>Mandated support for AES.</li>
+<li>Agreement on hash and ciphers between server and client.</li>
+<li>Authenticated encryption with associated data (AEAD) GCM and CCM added.</li>
+<li>Never negotiate SSL 2.0</li>
+</ul>
+</div>
+<div class="slide" id="tls-1-3-draft">
+<h1>TLS 1.3 (draft)</h1>
+<ul class="simple">
+<li>All further TLS version refined in RFC 6176.</li>
+<li>Dropped compression support (CRIME, BREACH, etc).</li>
+<li>Dropped renegotiation support (new params, new keys, etc).</li>
+<li>Dropped non-AEAD ciphers (no CBC).</li>
+<li>Dropped RSA and anonymous DH KEX.</li>
+<li>Dropped backwards compatibility support for SSL or RC4.</li>
+</ul>
+</div>
+<div class="slide" id="openssh-history">
+<h1>OpenSSH History</h1>
+<ul class="simple">
+<li>Created by the OpenBSD as an alternative to SSH by Tatu Ylönen.</li>
+<li>Forked from OSSH, which itself was a fork of Ylönen's original SSH 1.2.12 release.</li>
+<li>First appeared in OpenBSD 2.6.</li>
+<li>First portable release in October 1999.</li>
+<li>Developers threatened by Tatu Ylönen for trademark violation in 2001.</li>
+<li>Defined in RFCs 4250-4256, 4335, 4344, 4345, 4419, 4432, 4462, 4716, 4819, 5647, 5656, 6187, 6239, 6594, &amp; 6668.</li>
+</ul>
+</div>
+<div class="slide" id="openssh-concepts">
+<h1>OpenSSH Concepts</h1>
+<ul class="simple">
+<li>OpenSSH 6.8 released March 18, 2015.</li>
+<li>3DES, AES, Blowfish, CAST128, &quot;arcfour&quot;, ChaCha20 Ciphers.</li>
+<li>SHA-1, SHA-256, SHA-512, MD5, RIPEMD160 MACS.</li>
+<li>DH, DH group, ECDH NIST &quot;p-curves&quot;, Curve25519 KEX.</li>
+<li>CBC and arcfour disabled by default.</li>
+<li>Supports building against LibreSSL.</li>
+<li>Supports Kerberos tickets.</li>
+<li>Supports password and key-based authentication.</li>
+<li>Provides SSH, secure FTP, and secure copy.</li>
+<li>Supports tunneling.</li>
+<li>Supports X11 forwarding.</li>
+</ul>
+</div>
+<div class="slide" id="conclusion">
+<h1>Conclusion</h1>
+<ul class="simple">
+<li>Questions?</li>
+<li>Comments?</li>
+<li>Rude Remarks?</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

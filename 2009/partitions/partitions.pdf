@@ -1,0 +1,2500 @@
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 4 0 R
+ /F4 9 0 R
+ /F5 10 0 R
+ /F6 12 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F3': class PDFType1Font 
+4 0 obj
+% Font Times-Roman
+<< /BaseFont /Times-Roman
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+5 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://creativecommons.org/license/by-sa/3.0/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 153.7323
+ 697.7669
+ 526.5827
+ 709.7669 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER2': class PDFDictionary 
+6 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://creativecommons.org/licenses/by-sa/3.0/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 62.69291
+ 541.7669
+ 532.5827
+ 553.7669 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER3': class PDFDictionary 
+7 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://creativecommons.org/licenses/by-sa/3.0/legalcode) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 62.69291
+ 223.7669
+ 532.5827
+ 235.7669 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page1': class PDFPage 
+8 0 obj
+% Page dictionary
+<< /Annots [ 5 0 R
+ 6 0 R
+ 7 0 R ]
+ /Contents 43 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F4': class PDFType1Font 
+9 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F5': class PDFType1Font 
+10 0 obj
+% Font Courier-Bold
+<< /BaseFont /Courier-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page2': class PDFPage 
+11 0 obj
+% Page dictionary
+<< /Contents 44 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F6': class PDFType1Font 
+12 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F6
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page3': class PDFPage 
+13 0 obj
+% Page dictionary
+<< /Contents 45 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page4': class PDFPage 
+14 0 obj
+% Page dictionary
+<< /Contents 46 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page5': class PDFPage 
+15 0 obj
+% Page dictionary
+<< /Contents 47 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page6': class PDFPage 
+16 0 obj
+% Page dictionary
+<< /Contents 48 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page7': class PDFPage 
+17 0 obj
+% Page dictionary
+<< /Contents 49 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page8': class PDFPage 
+18 0 obj
+% Page dictionary
+<< /Contents 50 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page9': class PDFPage 
+19 0 obj
+% Page dictionary
+<< /Contents 51 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page10': class PDFPage 
+20 0 obj
+% Page dictionary
+<< /Contents 52 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 42 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R21': class PDFCatalog 
+21 0 obj
+% Document Root
+<< /Outlines 23 0 R
+ /PageMode /UseNone
+ /Pages 42 0 R
+ /Type /Catalog >>
+endobj
+% 'R22': class PDFInfo 
+22 0 obj
+<< /Author (Aaron Toponce)
+ /CreationDate (D:20090509145540+07'00')
+ /Keywords ()
+ /Producer (ReportLab http://www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (Partitions, Filesystems, RAID and LVM) >>
+endobj
+% 'R23': class PDFOutlines 
+23 0 obj
+<< /Count 18
+ /First 24 0 R
+ /Last 41 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+24 0 obj
+<< /Dest [ 8 0 R
+ /Fit ]
+ /Next 25 0 R
+ /Parent 23 0 R
+ /Title (License) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+25 0 obj
+<< /Dest [ 8 0 R
+ /Fit ]
+ /Next 26 0 R
+ /Parent 23 0 R
+ /Prev 24 0 R
+ /Title (Partition Planning) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+26 0 obj
+<< /Dest [ 11 0 R
+ /Fit ]
+ /Next 27 0 R
+ /Parent 23 0 R
+ /Prev 25 0 R
+ /Title (Linux Partitions) >>
+endobj
+% 'Outline.3': class OutlineEntryObject 
+27 0 obj
+<< /Dest [ 11 0 R
+ /Fit ]
+ /Next 28 0 R
+ /Parent 23 0 R
+ /Prev 26 0 R
+ /Title (Filesystem Creation) >>
+endobj
+% 'Outline.4': class OutlineEntryObject 
+28 0 obj
+<< /Dest [ 13 0 R
+ /Fit ]
+ /Next 29 0 R
+ /Parent 23 0 R
+ /Prev 27 0 R
+ /Title (Filesystem Tools) >>
+endobj
+% 'Outline.5': class OutlineEntryObject 
+29 0 obj
+<< /Dest [ 13 0 R
+ /Fit ]
+ /Next 30 0 R
+ /Parent 23 0 R
+ /Prev 28 0 R
+ /Title (Mounting Tools) >>
+endobj
+% 'Outline.6': class OutlineEntryObject 
+30 0 obj
+<< /Dest [ 14 0 R
+ /Fit ]
+ /Next 31 0 R
+ /Parent 23 0 R
+ /Prev 29 0 R
+ /Title (The /etc/fstab) >>
+endobj
+% 'Outline.7': class OutlineEntryObject 
+31 0 obj
+<< /Dest [ 14 0 R
+ /Fit ]
+ /Next 32 0 R
+ /Parent 23 0 R
+ /Prev 30 0 R
+ /Title (Other Mounting) >>
+endobj
+% 'Outline.8': class OutlineEntryObject 
+32 0 obj
+<< /Dest [ 15 0 R
+ /Fit ]
+ /Next 33 0 R
+ /Parent 23 0 R
+ /Prev 31 0 R
+ /Title (Software RAID) >>
+endobj
+% 'Outline.9': class OutlineEntryObject 
+33 0 obj
+<< /Dest [ 15 0 R
+ /Fit ]
+ /Next 34 0 R
+ /Parent 23 0 R
+ /Prev 32 0 R
+ /Title (Linux kernel RAID Levels) >>
+endobj
+% 'Outline.10': class OutlineEntryObject 
+34 0 obj
+<< /Dest [ 16 0 R
+ /Fit ]
+ /Next 35 0 R
+ /Parent 23 0 R
+ /Prev 33 0 R
+ /Title (Software RAID - mdadm) >>
+endobj
+% 'Outline.11': class OutlineEntryObject 
+35 0 obj
+<< /Dest [ 16 0 R
+ /Fit ]
+ /Next 36 0 R
+ /Parent 23 0 R
+ /Prev 34 0 R
+ /Title (Introducing LVM) >>
+endobj
+% 'Outline.12': class OutlineEntryObject 
+36 0 obj
+<< /Dest [ 17 0 R
+ /Fit ]
+ /Next 37 0 R
+ /Parent 23 0 R
+ /Prev 35 0 R
+ /Title (Why LVM?) >>
+endobj
+% 'Outline.13': class OutlineEntryObject 
+37 0 obj
+<< /Dest [ 17 0 R
+ /Fit ]
+ /Next 38 0 R
+ /Parent 23 0 R
+ /Prev 36 0 R
+ /Title (Practical LVM) >>
+endobj
+% 'Outline.14': class OutlineEntryObject 
+38 0 obj
+<< /Dest [ 18 0 R
+ /Fit ]
+ /Next 39 0 R
+ /Parent 23 0 R
+ /Prev 37 0 R
+ /Title (RAID / LVM Example) >>
+endobj
+% 'Outline.15': class OutlineEntryObject 
+39 0 obj
+<< /Dest [ 18 0 R
+ /Fit ]
+ /Next 40 0 R
+ /Parent 23 0 R
+ /Prev 38 0 R
+ /Title (Resizing LVMs) >>
+endobj
+% 'Outline.16': class OutlineEntryObject 
+40 0 obj
+<< /Dest [ 19 0 R
+ /Fit ]
+ /Next 41 0 R
+ /Parent 23 0 R
+ /Prev 39 0 R
+ /Title (Advanced LVM) >>
+endobj
+% 'Outline.17': class OutlineEntryObject 
+41 0 obj
+<< /Dest [ 20 0 R
+ /Fit ]
+ /Parent 23 0 R
+ /Prev 40 0 R
+ /Title (Fin) >>
+endobj
+% 'R42': class PDFPages 
+42 0 obj
+% page tree
+<< /Count 10
+ /Kids [ 8 0 R
+ 11 0 R
+ 13 0 R
+ 14 0 R
+ 15 0 R
+ 16 0 R
+ 17 0 R
+ 18 0 R
+ 19 0 R
+ 20 0 R ]
+ /Type /Pages >>
+endobj
+% 'R43': class PDFStream 
+43 0 obj
+% page stream
+<< /Length 7727 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 779.1969 cm
+Q
+q
+1 0 0 1 62.69291 755.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 9.64 Tm /F2 20 Tf 24 TL 51.56488 0 Td (Partitions, Filesystems, RAID and LVM) Tj T* -51.56488 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 727.1969 cm
+0 0 0 rg
+BT /F3 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 36.93937 0 Td (Author:) Tj T* -36.93937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Aaron Toponce) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 709.1969 cm
+0 0 0 rg
+BT /F3 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 48.03937 0 Td (Date:) Tj T* -48.03937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (2009-05-09) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 691.1969 cm
+0 0 0 rg
+BT /F3 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 32.46937 0 Td (License:) Tj T* -32.46937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (http://creativecommons.org/license/by-sa/3.0/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 691.1969 cm
+Q
+q
+1 0 0 1 62.69291 691.1969 cm
+Q
+q
+1 0 0 1 62.69291 658.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (License) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 640.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You are free to copy, distribute and transmit this work.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 622.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You are free to adapt the work.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 604.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You must attribute the work to the copyright holder.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 574.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td .272209 Tw (If you alter, transform, or build on this work, you may redistribute the work under the same, similar or) Tj T* 0 Tw -9.5 0 Td (compatible license.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 556.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (This document is licensed under the CC:BY-SA. Details to the license can be found here:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 538.1969 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (http://creativecommons.org/licenses/by-sa/3.0/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 520.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (The license states the following:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 502.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You are free to copy, distribute and tranmit this work.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 484.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You are free to adapt the work.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 466.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Under the following conditions:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 448.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (You must attribute the work to the copyright holder.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 418.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td .272209 Tw (If you alter, transform, or build on this work, you may redistribute the work under the same, similar or) Tj T* 0 Tw -9.5 0 Td (compatible license.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 400.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (With the understanding that:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 382.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Any conditions may be waived if you get written permission from the copyright holder.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 364.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (In no way are any of the following rights affected by the license:) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 346.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Your fair dealing or fair use rights;) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 328.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (The author's moral rights;) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 298.1969 cm
+q
+BT 1 0 0 1 24 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 16.82 Tm /F1 10 Tf 12 TL 1.935542 Tw (Rights other persons may have either in the work itself or in how the work is used, such as) Tj T* 0 Tw (publicity or privacy rights.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 268.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td .456654 Tw (For any reuse or distribution, you must make clear to others the license terms of this work. The best) Tj T* 0 Tw -9.5 0 Td (way to do this is with a link to the web page provided above or below.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 238.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .121488 Tw (The above is a human-readable summary of the license, and is not to be used as a legal substitute for the) Tj T* 0 Tw (actual licnse. Please refer to the formal legal document provided here:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 220.1969 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (http://creativecommons.org/licenses/by-sa/3.0/legalcode) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 220.1969 cm
+Q
+q
+1 0 0 1 62.69291 220.1969 cm
+Q
+q
+1 0 0 1 62.69291 187.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Partition Planning) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 169.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Primary use? Data needs? I/O speeds? Sizes?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 151.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (RAID? LVM? Raw devices? Partitions?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 133.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/, /var, /tmp, /usr, /home, /opt) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 91.19685 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL 2.11936 Tw (When setting up a system from scratch, it's imperative that you spend some time planning out your) Tj T* 0 Tw .609984 Tw (partitioning structure, whether it be flat partitions, RAID, LVM or any mix. Common questions that should) Tj T* 0 Tw (be asked are:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 73.19685 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (What is the primary use of this system?) Tj T* -9.5 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R44': class PDFStream 
+44 0 obj
+% page stream
+<< /Length 8408 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 767.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (What data needs to be stored?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 749.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (What I/O am I looking for on reads and writes?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 731.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (How much storage will be needed for various applications? Users?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 713.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Popular mount points include:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/ - Bare minimum for system installation.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 677.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/var - Contains variable data, such as logs, spools, etc.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 659.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/tmp - Contains temporary data, not crucial to persistence.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 641.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/usr - Genearally the largest dir structure containing binaries.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 623.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/home - Useful for keeping user data separate.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 605.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (/opt - 3rd party utilities, usually binaries.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 605.1969 cm
+Q
+q
+1 0 0 1 62.69291 605.1969 cm
+Q
+q
+1 0 0 1 62.69291 572.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Linux Partitions) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 554.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (4 primary partitions max) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 536.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (1 primary can be an extended partition) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 518.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (63 for IDE drives / 15 for SCSI drives) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 500.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F4 10 Tf 0 0 0 rg (fdisk) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (sfdisk) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 482.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F4 10 Tf 0 0 0 rg (parted) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (gparted) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 416.1969 cm
+q
+BT 1 0 0 1 0 52.82 Tm .793984 Tw 12 TL /F1 10 Tf 0 0 0 rg (By default, Linux uses the partition scheme defined by Microsoft and IBM. This partitioning scheme only) Tj T* 0 Tw .76561 Tw (allowed a maximum of 4 primary partitions. It wasn't long before they realized the serious limitation, and) Tj T* 0 Tw .257765 Tw (gave the ability for one of the primary partitions to be an extended partition. In this extended partition, you) Tj T* 0 Tw .720514 Tw (can have more ") Tj (logical partitions) Tj (") Tj (. If this is the case, because the partition table is only 64 bytes in size,) Tj T* 0 Tw (four 16-byte segments, one partition each, the extended partition is a pointer to another partition table.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 350.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL .537209 Tw (Linux does have limitations on the number of physical partitons that can reside on a single system. If the) Tj T* 0 Tw .247356 Tw (kernel is using the PATA driver and recognizes your disk as an IDE disk, then you have have a maximum) Tj T* 0 Tw 1.403876 Tw (of 63 partitions. If the kernel is using the SATA driver for SCSI or SCSI look-a-like hardware, such as) Tj T* 0 Tw 1.821098 Tw (SATA or SAS disks, then Linux can only address up to 15 total partitions. We'll later learn that LVM) Tj T* 0 Tw (addresses this limitation rather nicely.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 248.1969 cm
+q
+BT 1 0 0 1 0 88.82 Tm .831751 Tw 12 TL /F1 10 Tf 0 0 0 rg (Of the utilities available for editing disk partitions, GNU parted is the most robust. It can create, destroy,) Tj T* 0 Tw .77936 Tw (resize and copy partition, and the filesystems on them. The GNU parted utility can operate in interactive) Tj T* 0 Tw 2.274651 Tw (mode, bugging the user for input as they go along, or non-interactive mode, requiring switches and) Tj T* 0 Tw 1.794651 Tw (command line arguments. One nice utility that people mention as a strength with Windows Vista and) Tj T* 0 Tw .18936 Tw (Windows 7 is the ability to resize their existing partitions without rebooting the box. GNU parted supportes) Tj T* 0 Tw 1.524983 Tw (the functionality, although I would recommend going offline for read-only support. There is a graphical) Tj T* 0 Tw .577765 Tw (utility called ") Tj (gparted) Tj (" which provides a slick GUI with a bootable CD for using GNU parted on your disk.) Tj T* 0 Tw (Most distributions ship these by default.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 248.1969 cm
+Q
+q
+1 0 0 1 62.69291 248.1969 cm
+Q
+q
+1 0 0 1 62.69291 215.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Filesystem Creation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 197.1969 cm
+q
+BT 1 0 0 1 12 5.74 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.74 Tm /F5 10 Tf 12 TL 9.5 0 Td (mkfs -t filesystem_type) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 185.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 36 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (executes ) Tj /F4 10 Tf (mkfs.ext2) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkfs.ext3) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkfs.xfs) Tj /F1 10 Tf (, etc.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 169.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Filesystem-specific utilities) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 157.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 36 4.82 Tm 12 TL /F4 10 Tf 0 0 0 rg (mke2fs) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkreiserfs) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkdosfs) Tj /F1 10 Tf (, etc) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 115.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 1.519986 Tw 12 TL /F1 10 Tf 0 0 0 rg (The standard utility that exists on all Linux and Unix operating systems is the ) Tj /F4 10 Tf (mkfs ) Tj /F1 10 Tf (utility. This utility) Tj T* 0 Tw 1.543735 Tw (requires the appropriate switches for telling the system which filesystem you want to put down on the) Tj T* 0 Tw (partition. For example, ) Tj /F4 10 Tf (mkfs -t ext3 /dev/hda1 ) Tj /F1 10 Tf (would create an ) Tj /F4 10 Tf (ext3 ) Tj /F1 10 Tf (filesystem on ) Tj /F4 10 Tf (/dev/hda1) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 73.19685 cm
+q
+BT 1 0 0 1 0 28.82 Tm .97436 Tw 12 TL /F1 10 Tf 0 0 0 rg (However, ) Tj /F4 10 Tf (mkfs ) Tj /F1 10 Tf (does not actually do any work creating the filesystem. Rather, it's a wrapper utility that) Tj T* 0 Tw 1.23784 Tw (calls filesystem-specific utilities. So, in your previous example, ) Tj /F4 10 Tf (mkfs -t ext. ) Tj /F1 10 Tf (would actually call the) Tj T* 0 Tw /F4 10 Tf (mke2fs -j) Tj /F1 10 Tf (, as the ) Tj /F4 10 Tf (ext3 ) Tj /F1 10 Tf (filesystem is just the ) Tj /F4 10 Tf (ext2 ) Tj /F1 10 Tf (filesystem with an online journal.) Tj T* ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R45': class PDFStream 
+45 0 obj
+% page stream
+<< /Length 8290 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 743.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 4.288863 Tw 12 TL /F1 10 Tf 0 0 0 rg (Many filesystem-specific utilities exist, such as ) Tj /F4 10 Tf (mkfs.ext2) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkfs.ext3) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkfs.xfs) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkfs.jfs) Tj /F1 10 Tf (,) Tj T* 0 Tw .040651 Tw /F4 10 Tf (mkfs.reiserfs) Tj /F1 10 Tf (, and so forth. There are also other utilites with more granular control over the placement) Tj T* 0 Tw (of the filesystem with ) Tj /F4 10 Tf (mke2fs) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mkreiserfs) Tj /F1 10 Tf (, ) Tj /F4 10 Tf (mxdosfs ) Tj /F1 10 Tf (and so on.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 743.1969 cm
+Q
+q
+1 0 0 1 62.69291 743.1969 cm
+Q
+q
+1 0 0 1 62.69291 710.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Filesystem Tools) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 692.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (e2label device [fslabel]) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 674.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (blkid) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 656.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mount LABEL=fslabel mount_point) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 638.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (tune2fs device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 620.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (dumpe2fs) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL 1.076651 Tw (Many tools exist in a system administrator's tool belt that is crucial for filesystem maintenance. Looking) Tj T* 0 Tw .351654 Tw (over the ext2/ext3 tools, there are a few tools that can be verbose in what parameters the filesystem has,) Tj T* 0 Tw (such as block size, number of inodes, filesystem label, and default mount options, just to name a few.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 476.1969 cm
+q
+BT 1 0 0 1 0 88.82 Tm 1.091163 Tw 12 TL /F1 10 Tf 0 0 0 rg (Labeling a filesystem is useful to refer to that filesystem by another name than the default device path.) Tj T* 0 Tw .919985 Tw (Most distributions have moved from using device paths to using either labels or UUIDs. This provides a) Tj T* 0 Tw 1.919983 Tw (major advantage that hit sysadmins in the 2.6.20 kernel change. The kernel developers changed the) Tj T* 0 Tw .244104 Tw (default driver used for recognizing IDE drives to the SATA driver rather than the PATA driver. This means) Tj T* 0 Tw .938876 Tw (that the IDE drives now have the 15 total partition limit restriction that SCSI drives have, and they have) Tj T* 0 Tw 1.776651 Tw (been renamed from ) Tj /F4 10 Tf (/dev/hd* ) Tj /F1 10 Tf (to ) Tj /F4 10 Tf (/dev/sd*) Tj /F1 10 Tf (. This was a problem for the ) Tj /F4 10 Tf (/etc/fstab) Tj /F1 10 Tf (, as you box) Tj T* 0 Tw .875542 Tw (might not boot, due to the kernel looking for a different device than was now being recognized. If labels) Tj T* 0 Tw (were used in the ) Tj /F4 10 Tf (/etc/fstab) Tj /F1 10 Tf (, then this wasn't as big a deal.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 422.1969 cm
+q
+BT 1 0 0 1 0 40.82 Tm .046905 Tw 12 TL /F4 10 Tf 0 0 0 rg (e2label ) Tj /F1 10 Tf (is used for creating, changing, and displaying filesystem labels on ext2/ext3 filesystems. ) Tj /F4 10 Tf (blkid) Tj T* 0 Tw .414431 Tw /F1 10 Tf (is a more generic tool that can be used to show labels on other filesystem types, including swap devices.) Tj T* 0 Tw .054104 Tw (The ) Tj /F4 10 Tf (mount ) Tj /F1 10 Tf (command, discussed later, can be used for mounting the device by referring to its label rather) Tj T* 0 Tw (than the device path itself.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 380.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 1.543059 Tw 12 TL /F1 10 Tf 0 0 0 rg (Adjusting or displaying filesystem parameters on ext2/ext3 filesystems is done with the ) Tj /F4 10 Tf (tune2fs ) Tj /F1 10 Tf (and) Tj T* 0 Tw 7.117976 Tw /F4 10 Tf (dumpe2fs ) Tj /F1 10 Tf (commands. These commands should be executed before doing any filesystem) Tj T* 0 Tw (adiminastration, such as resizing, tuning or changing parameters.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 380.1969 cm
+Q
+q
+1 0 0 1 62.69291 380.1969 cm
+Q
+q
+1 0 0 1 62.69291 347.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Mounting Tools) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 329.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Mounting filesystems) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 317.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (mount device mount_point) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 305.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 36 4.82 Tm 12 TL /F6 10 Tf 0 0 0 rg (device ) Tj /F1 10 Tf (can be by device path, ) Tj /F4 10 Tf (LABEL=) Tj /F1 10 Tf (, or ) Tj /F4 10 Tf (UUID=) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 289.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Unmounting) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 277.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (umount device|mount_point) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 265.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 36 4.82 Tm 12 TL /F6 10 Tf 0 0 0 rg (device ) Tj /F1 10 Tf (can be by device path, ) Tj /F4 10 Tf (LABEL=) Tj /F1 10 Tf (, or ) Tj /F4 10 Tf (UUID=) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 253.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (fuser mount_pont|device) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 199.1969 cm
+q
+BT 1 0 0 1 0 40.82 Tm 1.337318 Tw 12 TL /F1 10 Tf 0 0 0 rg (Mounting and unmounting filesystems is done with the ) Tj /F4 10 Tf (mount ) Tj /F1 10 Tf (and ) Tj /F4 10 Tf (umount ) Tj /F1 10 Tf (commands. A bit of trivia) Tj T* 0 Tw .16332 Tw (why ) Tj /F4 10 Tf (umount ) Tj /F1 10 Tf (and not ) Tj /F4 10 Tf (unmount) Tj /F1 10 Tf (. The reason is historical, as commands on Unix could not be more than 6) Tj T* 0 Tw .077209 Tw (characters. Of course, this was shortly lived, but many core utilities from Unix still exist on Linux today that) Tj T* 0 Tw (had this limitation.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 121.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 64.82 Tm /F1 10 Tf 12 TL 2.201412 Tw (Mounting filesystems is referred to as grafting a filesystem into another. Because Linux/Unix uses a) Tj T* 0 Tw .147633 Tw (reverse tree hierarchy for its filesystem, this means that devices are just files within the filesystem. When I) Tj T* 0 Tw .116179 Tw (put a new filesystem on this device, I need a place on my already existing filesystem to get to the data. As) Tj T* 0 Tw .341163 Tw (such, we mount this device to an already existing directory. So, rather than C:, D:, etc residing separately) Tj T* 0 Tw 1.266235 Tw (from each other in Windows, we have one global filesystem /, with possible multiple nested, or grafted) Tj T* 0 Tw (filesystems beneath.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 79.19685 cm
+q
+BT 1 0 0 1 0 28.82 Tm 1.314431 Tw 12 TL /F1 10 Tf 0 0 0 rg (If the device is already setup in your ) Tj /F4 10 Tf (/etc/fstab) Tj /F1 10 Tf (, which we'll cover on the next slide, then you don't) Tj T* 0 Tw .336457 Tw (need to give both the ) Tj /F4 10 Tf (device ) Tj /F1 10 Tf (and ) Tj /F4 10 Tf (mount_point) Tj /F1 10 Tf (. One or the other will work, and the ) Tj /F4 10 Tf (mount ) Tj /F1 10 Tf (command) Tj T* 0 Tw (will read the ) Tj /F4 10 Tf (/etc/fstab ) Tj /F1 10 Tf (file, and find the appropriate entry, where to mount it and how.) Tj T* ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R46': class PDFStream 
+46 0 obj
+% page stream
+<< /Length 8185 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 755.1969 cm
+q
+BT 1 0 0 1 0 16.82 Tm .958651 Tw 12 TL /F1 10 Tf 0 0 0 rg (If devices are defined in your ) Tj /F4 10 Tf (/etc/fstab) Tj /F1 10 Tf (, and some devices aren't mounted, running ) Tj /F4 10 Tf (mount -a ) Tj /F1 10 Tf (will) Tj T* 0 Tw (mount any filesystems in that file that currently are present but not mounted.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 713.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 1.459398 Tw 12 TL /F1 10 Tf 0 0 0 rg (Lastly, some filesystems refuse to be unmounted, even as root. As such, the ) Tj /F4 10 Tf (fuser ) Tj /F1 10 Tf (utility is used to) Tj T* 0 Tw .307356 Tw (discover why the filesystem is in use. ) Tj /F4 10 Tf (man fuser ) Tj /F1 10 Tf (will show the keys and values to the syntax that might) Tj T* 0 Tw (be displayed on the output.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 713.1969 cm
+Q
+q
+1 0 0 1 62.69291 713.1969 cm
+Q
+q
+1 0 0 1 62.69291 680.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (The /etc/fstab) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 662.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (device) Tj /F1 10 Tf (: The device path, LABEL or UUID) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 644.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (mount_point) Tj /F1 10 Tf (: The path on the filesystem) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 626.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (fs_type) Tj /F1 10 Tf (: The type of filesystem to mount) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 608.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (options) Tj /F1 10 Tf (: The filesystem options comma-separated) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 590.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (dump_freq) Tj /F1 10 Tf (: Level 0 dump frequency: 1=daily, 2=every other day, etc.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 572.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F6 10 Tf 0 0 0 rg (fsck_order) Tj /F1 10 Tf (: Filesystem check order. 0=ignore, 1-9 valid) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 530.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm .655984 Tw 12 TL /F1 10 Tf 0 0 0 rg (The ) Tj /F4 10 Tf (/etc/fstab ) Tj /F1 10 Tf (file is used to make mounting devices persistent across reboots. This file should only) Tj T* 0 Tw 2.319983 Tw (be used for non-removable media or removable media on headless boxes. GNOME and KDE have) Tj T* 0 Tw (automount abilities where plugging in a USB drive, CD/DVDROM, etc will be auto-mounted to ) Tj /F4 10 Tf (/media) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 500.1969 cm
+q
+BT 1 0 0 1 0 16.82 Tm .406235 Tw 12 TL /F1 10 Tf 0 0 0 rg (The syntax for the ) Tj /F4 10 Tf (/etc/fstab ) Tj /F1 10 Tf (file contains 6 columnns, and the description is fairly straight forward. A) Tj T* 0 Tw (breakdown of the column descriptions is here:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 470.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td 1.131488 Tw (1st: This is the special device file name. It can be referred to by the full device path as the kernel) Tj T* 0 Tw -9.5 0 Td (recognizes it, the LABEL= syntax, or UUID=.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 452.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (2nd: This is the mount point on the filesystem where the device will be ounted and its data accessed.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 422.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td .123516 Tw (3rd: This is the type of filesystem to mount. The kernel when mounting he filesystem must know what) Tj T* 0 Tw -9.5 0 Td (driver to use for the filesystem.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 392.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 16.82 Tm 9.5 0 Td .685318 Tw 12 TL /F1 10 Tf 0 0 0 rg (4th: These are the mount options that you want applied when mounted. The ) Tj /F4 10 Tf (defaults ) Tj /F1 10 Tf (option can) Tj T* 0 Tw -9.5 0 Td (be seen using ) Tj /F4 10 Tf (tune2fs -l device | grep ptions) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 350.1969 cm
+q
+BT 1 0 0 1 12 28.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 28.82 Tm 9.5 0 Td .415868 Tw 12 TL /F1 10 Tf 0 0 0 rg (5th: This is the dump frequency for backing up the filesystem. If using he dump command to backup) Tj T* 0 Tw -9.5 0 Td .703145 Tw (your data, it will read the ) Tj /F4 10 Tf (/etc/fstab ) Tj /F1 10 Tf (file nd apply the dump frequency options here. 0 or 1 are the) Tj T* 0 Tw (most common.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 320.1969 cm
+q
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 16.82 Tm /F1 10 Tf 12 TL 9.5 0 Td 1.451235 Tw (6th: This tells the kernel which order to do filesystem checks. enerally, the / filesystem should be) Tj T* 0 Tw -9.5 0 Td (checked first, then each additional ilesystem in order following. 3-9 are rarely, if ever used.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 254.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL 2.613318 Tw (Common mount options are ro \(read-only\), rw \(read-write\), nosuid \(suid or sgid file modes are not) Tj T* 0 Tw .17784 Tw (honored\), dev \(device files permitted\), noexec \(do not allow permission of executable binaries\), async \(file) Tj T* 0 Tw 2.219982 Tw (changes managed asynchronously\), acl \(Posix ACLs are honored\), uid/gid= \(all files of the mounted) Tj T* 0 Tw .897633 Tw (filesystem are owned by uid or gid\), loop \(mount the filesystem over a loopback device\) and owner \(the) Tj T* 0 Tw (mount request and device must be owner by the same EUID\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 254.1969 cm
+Q
+q
+1 0 0 1 62.69291 254.1969 cm
+Q
+q
+1 0 0 1 62.69291 221.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Other Mounting) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 203.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F4 10 Tf 0 0 0 rg (udev ) Tj /F1 10 Tf (is kernel level device creation and destruction) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 185.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Automounter with autofs) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 167.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Network mounting with NFS, SMB, SSHFS \(fuse\), etc.) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 125.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm .112927 Tw 12 TL /F1 10 Tf 0 0 0 rg (This is just scraping the tip of the ice berg with mounting and filesystems. The kernel auto-creates devices) Tj T* 0 Tw .701163 Tw (based on discovery with help of the ) Tj /F4 10 Tf (udev ) Tj /F1 10 Tf (system. These devices are also removed when the kernel no) Tj T* 0 Tw (longer needs them, or they've been removed from the system.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 71.19685 cm
+q
+BT 1 0 0 1 0 40.82 Tm .013876 Tw 12 TL /F1 10 Tf 0 0 0 rg (There is also the automounter which is useful for mounting filesystems on the fly just by entering a specific) Tj T* 0 Tw 1.107485 Tw (directory. The automounter will keep an eye on a directory that you specify in the ) Tj /F4 10 Tf (/etc/auto.* ) Tj /F1 10 Tf (files.) Tj T* 0 Tw .200651 Tw (Then, when you enter that watched directory, the device is automatically mounted. It remains mounted for) Tj T* 0 Tw (a default of 5 minutes, then unmounts.) Tj T* ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R47': class PDFStream 
+47 0 obj
+% page stream
+<< /Length 7465 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 743.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL 1.927674 Tw (Of course, filesystem mounting isn't limited to local filesystems. Network filesystems can be mounted) Tj T* 0 Tw .943318 Tw (locally, and treated as local data. Such network filesystems include, but not necessarily limited to, NFS,) Tj T* 0 Tw (Samba and SSH.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 743.1969 cm
+Q
+q
+1 0 0 1 62.69291 743.1969 cm
+Q
+q
+1 0 0 1 62.69291 710.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Software RAID) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 692.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Advantages) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 680.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Cost) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 668.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Speed) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 656.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Reliability) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 640.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Disadvantages) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 628.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Platform dependent) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 616.1969 cm
+q
+BT 1 0 0 1 24 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 4.82 Tm /F1 10 Tf 12 TL (Speed) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 502.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 100.82 Tm /F1 10 Tf 12 TL 3.07284 Tw (Linux software RAID has three main advantages and two main disadvantages. Of the three main) Tj T* 0 Tw .415697 Tw (advantages, cost is probably the biggest factor. Hardware RAID controller cards can be extremely pricey.) Tj T* 0 Tw 1.161235 Tw (Especially if you want a controller card that can meet the processing power and caching capabilities of) Tj T* 0 Tw .125984 Tw (your CPU and motherboard. Which bring about another advantage of Linux software RAID- speed. Due to) Tj T* 0 Tw .929398 Tw (the ever increasing bus speeds, the amount of cores packed into a CPU, and increasing RAM sizes for) Tj T* 0 Tw .533318 Tw (pennies on the dollar, finding a capable hardware controller card can be very expensive. Lastly, because) Tj T* 0 Tw 2.269398 Tw (Linux software RAID does not employ extra silicone, it is not a potential failure point. In fact, Linux) Tj T* 0 Tw 2.726235 Tw (software RAID is So reliable, that many hardware companies are using it for the fimware on their) Tj T* 0 Tw (controller cards.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 400.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 88.82 Tm /F1 10 Tf 12 TL 1.48784 Tw (Linux software RAID also employs two major disadvantages. Because Linux software RAID is a Linux) Tj T* 0 Tw .884985 Tw (kernel module, this means that the RAID array is only visible to a Linux-based operating system. Unlike) Tj T* 0 Tw 2.499984 Tw (hardware RAID, which presents a disk to any operating system, regardless. Speed is also a major) Tj T* 0 Tw 2.123516 Tw (disadvantage of Linux software RAID. Wait, how can that be if it's an advantage? Well, if you have) Tj T* 0 Tw 1.425318 Tw (multiple arrays that will be doing some serious I/O, then you could completely consume your frontside) Tj T* 0 Tw .352765 Tw (bus, leaving no room for other applications to communicate with the CPU, or take advantage of RAM in a) Tj T* 0 Tw 1.24936 Tw (timely manner. As such, even if the cards aren't as specked out, having dedicated silicone does mean) Tj T* 0 Tw (taking the stress of your motherboard, for other applications to move about freely.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 400.1969 cm
+Q
+q
+1 0 0 1 62.69291 400.1969 cm
+Q
+q
+1 0 0 1 62.69291 367.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Linux kernel RAID Levels) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 349.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Linear) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 331.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (0 or striping) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 313.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (1 or mirroring) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 295.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (5 or striping with distributed parity) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 277.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (6 or striping with dual distributed parity) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 259.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (10 or striping with mirroring \(experimental\)) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 205.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .123988 Tw (Linear RAID is contiguous disk storage. An array is built from the first disk, and the size is calculated in an) Tj T* 0 Tw 1.200465 Tw (adjacent manner from the start of the first disk, to the end of the last. More disks can be added to the) Tj T* 0 Tw 1.176655 Tw (array, and data is written to the disks in a linear fashion. One disk is the minimum for this level, and it) Tj T* 0 Tw (offers NO redundancy.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 151.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL 1.467209 Tw (RAID 0 or striping requires a minimum of 2 disks. This RAID level was an after thought when system) Tj T* 0 Tw .321654 Tw (administrators wanted to increase the read and write speeds to their disk. So, to stripe the date across all) Tj T* 0 Tw 1.12686 Tw (the disks means each hard drive can write the same data in an asynchronous manner. Performance is) Tj T* 0 Tw (optimal if drives of the same size are used.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 109.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .806303 Tw (RAID 1 or mirroring requires a minimum of 2 disks as well. However, unlike Linear and RAID 0, RAID 1) Tj T* 0 Tw 1.061163 Tw (offers redundancy. When data is written to the array, every disk receives a copy. Read and write times) Tj T* 0 Tw (should be comparable to reading and writing to a single local disk.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 67.19685 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .014198 Tw (RAID 5 requires a minimum of 3 devices. Every disk except for one, and any spare disks you explicitly set,) Tj T* 0 Tw .514751 Tw (gets a striped version of the data, much like RAID 0. However, the last disk is used to write a parity. The) Tj T* 0 Tw .249488 Tw (parity is meta-information about the data that exists on the rest of the array's disks. In a 3 disk scenario, if) Tj T* 0 Tw ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R48': class PDFStream 
+48 0 obj
+% page stream
+<< /Length 7735 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 743.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .916807 Tw (a disk were to go bad, the other two could rebuild the data using the data on one and the parity on the) Tj T* 0 Tw .895868 Tw (other. This RAID level gives a good balance of performance and reliability, and seems to be the default) Tj T* 0 Tw (level in many a large corporation. The sweet spot for this level is 7 active disks + 1 parity, or 8 total disks.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 689.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .514274 Tw (RAID 6 is the same as RAID 5, except that rather than just having an parity disk, we have 2 parity disks.) Tj T* 0 Tw .607262 Tw (This does mean that we lose a full disk size in our array, at the cost of extra reliability. This level isn't as) Tj T* 0 Tw .401488 Tw (good a performer as level 5. The minimum amount of disks needed for this level is 4, and with that array,) Tj T* 0 Tw (can suffer 2 disk failures, and still be operational, although degraded.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 575.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 100.82 Tm /F1 10 Tf 12 TL .99528 Tw (RAID 10 is marked experimental in the Linux kernel, and is not available by default unless you compile) Tj T* 0 Tw .509431 Tw (from scratch and enable it. This is the case for most distributions. This level can operate with a minimum) Tj T* 0 Tw .82104 Tw (of 3 disks, despite what many websites will tell you. However, it's best visualized with 4 disks. If 4 disks) Tj T* 0 Tw .754431 Tw (are in the array, then 2 disks are mirrored together and the other two disks are mirrored together. Then,) Tj T* 0 Tw 1.030574 Tw (those two mirrors are striped. This is known as a plaid array. This level gives much better performance) Tj T* 0 Tw 3.243735 Tw (over level 5 and 6 due to increased striping and no parity calculation. It even offers exceptional) Tj T* 0 Tw .694269 Tw (redundancy, allowing for multiple disk failure scenarios. As long as the mirrored set remains operational,) Tj T* 0 Tw 1.177045 Tw (this array can fail any series of disks. It's becoming the hotness in system administration, due to these) Tj T* 0 Tw (reasons.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 575.1969 cm
+Q
+q
+1 0 0 1 62.69291 575.1969 cm
+Q
+q
+1 0 0 1 62.69291 542.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Software RAID - mdadm) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 524.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Create an array) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 512.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (mdadm -C /dev/md0 -l 5 -n 5 -x 1 devices) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 496.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Format the array with a filesystem) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 484.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (mke2fs -j /dev/md0) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 468.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F2 10 Tf 12 TL 9.5 0 Td (Information of the array) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 72.69291 456.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (mdadm --detail /dev/md0) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72.69291 444.1969 cm
+q
+BT 1 0 0 1 24 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 36 5.71 Tm /F4 10 Tf 12 TL (cat /proc/mdstat) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 402.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 1.229983 Tw 12 TL /F1 10 Tf 0 0 0 rg (Creating RAID arrayis is done using eth ) Tj /F4 10 Tf (mdadm ) Tj /F1 10 Tf (utility. ) Tj /F4 10 Tf (mdadm ) Tj /F1 10 Tf (stands for Multiple Disk ADMinistration.) Tj T* 0 Tw .285984 Tw (Familiarizing yourself with the documentation on ) Tj /F4 10 Tf (mdadm ) Tj /F1 10 Tf (will be beneficial. Here are some of the common) Tj T* 0 Tw (options:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 384.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (-C /dev/md0 - Creating device /dev/md0) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 366.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (-n 5 - Five active decices will be in the array) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 348.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (-l 6 - Uing RAID level 6 for the array) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 330.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (-x 2 - Two hot spares will be available should one of the other 5 die) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 312.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (-a part - Make a partitionable array) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 270.1969 cm
+q
+BT 1 0 0 1 0 28.82 Tm 2.277633 Tw 12 TL /F1 10 Tf 0 0 0 rg (Now that your RAID array is being constructed, you can watch the status of the array with ) Tj /F4 10 Tf (mdadm) Tj T* 0 Tw 2.043318 Tw (--detail /dev/md0 ) Tj /F1 10 Tf (or ) Tj /F4 10 Tf (cat /proc/mdstat) Tj /F1 10 Tf (. You can watch the build of the arry, see the active) Tj T* 0 Tw (devices, failed devices, hot spares, and other useful information regarding the array.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 228.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .432765 Tw (When the array is finished building, you'll need to put a filesystem down on your array with the filesystem) Tj T* 0 Tw 1.067488 Tw (utility of your choice. Then of course, at this point, you treat the array just like ayn other device in your) Tj T* 0 Tw (system, by mounting it to a mount point, putting a label on the filesystem, and so forth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 228.1969 cm
+Q
+q
+1 0 0 1 62.69291 228.1969 cm
+Q
+q
+1 0 0 1 62.69291 195.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Introducing LVM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 177.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (No partitions!) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 159.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Physical Volumes) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 141.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Volume Groups) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 123.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Logical Volumes) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 105.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Physical Extents) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 87.19685 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Logical Extents) Tj T* -9.5 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R49': class PDFStream 
+49 0 obj
+% page stream
+<< /Length 7307 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 731.1969 cm
+q
+BT 1 0 0 1 0 40.82 Tm 2.119461 Tw 12 TL /F1 10 Tf 0 0 0 rg (The first thing to note about LVM is that it provides flexibility to what is normally a chore with plain) Tj T* 0 Tw 1.177126 Tw (partitioning schemes. Rather than moving and resizing partitions, I can take the ") Tj (moving) Tj (" aspect away.) Tj T* 0 Tw .513322 Tw (There might be times when I need to do some resizing, but I never need to move a logical volume on an) Tj T* 0 Tw (individual volume group.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 665.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL 1.058735 Tw (First, physical volumes are created on a one-to-one ratio with your devices or partitions. This creates a) Tj T* 0 Tw 2.387984 Tw (low-level formatted filesystem on the device, which means that LVM cannot be applied to drives or) Tj T* 0 Tw 1.85561 Tw (partitions that already have data, as you will lose the data. On the physical volume, resides physical) Tj T* 0 Tw .845488 Tw (extents. Think of these the same way you think or blocks on a filesystem. If each extent is 1MB in size,) Tj T* 0 Tw (and I have a 1GB device, then I can have a physical volume with 1024 extents.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 599.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL .136098 Tw (After all the physical volumes are created, they are pooled together in any manner to creat a large volume) Tj T* 0 Tw .393672 Tw (group. Think of this volume group as a massive disk of storage, or a local SAN. Physical volumes can be) Tj T* 0 Tw .939984 Tw (added and removed from the volume group at anytime, without destroying data, provided you typed the) Tj T* 0 Tw 1.386303 Tw (commands correctly and in the proper order. If I had four 500GB drives, I could add these to a single) Tj T* 0 Tw (volume group that would total 2TB in size, or 2 volume groups of 1TB in size, and so forth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 521.1969 cm
+q
+BT 1 0 0 1 0 64.82 Tm .544987 Tw 12 TL /F1 10 Tf 0 0 0 rg (Now that my volume group is created, I can ") Tj (slice) Tj (" up the group, to create my individual data containers.) Tj T* 0 Tw .397132 Tw (It's best to think of LVM in terms of containers actually, as it will help you sort out the order of commands) Tj T* 0 Tw .274724 Tw (that you need to perform. One this container is created, I can put my filesystem on the container, mount it) Tj T* 0 Tw 1.755984 Tw (to a directory, and begin modifying and accessing the data. These logical volumes also have extents) Tj T* 0 Tw 1.581318 Tw (called ") Tj (logical extents) Tj (" similar to to the physical volumes. These exents behave the same as physical) Tj T* 0 Tw (extents, but can be smaller, larger or the same size as the physical extents.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 467.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .81686 Tw (In relation to extents, it's important to understand that you don't know where you data physically resides) Tj T* 0 Tw 1.070465 Tw (on the harddrive. LVM is tracking this for you. This means that if you were to lose a disk, it could spell) Tj T* 0 Tw 1.128876 Tw (trouble for your data. While LVM does offer limited redundancy if built in that manner, it's best if you're) Tj T* 0 Tw (using many disks, to use software or hardware RAID before applying LVM.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 449.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Notice, I never mentioned the word 'partition' anywhere.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 449.1969 cm
+Q
+q
+1 0 0 1 62.69291 449.1969 cm
+Q
+q
+1 0 0 1 62.69291 416.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Why LVM?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 398.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Flexibility) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 380.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Low overhead) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 362.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Jenga anyone?) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 296.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL 2.609318 Tw (The number one reason any system administrator choosed LVM over flat partitions are due to the) Tj T* 0 Tw .41784 Tw (flexibility LVM provides. Creating, resizing, and moving filesystems are really quite trivial, and can usually) Tj T* 0 Tw .833672 Tw (be done with the root filesystem onilne, if you kept / small on install. LVM also comes with very minimal) Tj T* 0 Tw 1.369318 Tw (overhead, making it suitable for everyday use that isn't I/O intensive. Benchmarks put the overhead of) Tj T* 0 Tw (LVM about 1% slower in sheer speed than filesystems, and about 5% sloewer than raw devices.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 230.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL 2.65152 Tw (However, with the extensive flexibility that LVM provides, it doesn't ship with extensive redundancy) Tj T* 0 Tw .05784 Tw (capabilities, and most system administrators use external RAID with LVM, rather than the redundancy that) Tj T* 0 Tw 1.987765 Tw (LVM provides. As such, if redundancy is not being used, then if a drive goes south, the entire LVM) Tj T* 0 Tw .15436 Tw (structure collapses. Very similar to the way the wooden tower game Jenga behaves. Pull the wrong block,) Tj T* 0 Tw (and the tower falls.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 230.1969 cm
+Q
+q
+1 0 0 1 62.69291 230.1969 cm
+Q
+q
+1 0 0 1 62.69291 197.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Practical LVM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 179.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (pvcreate devices) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 161.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgcreate VGname devices) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 143.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvcreate VGname) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 113.1969 cm
+q
+BT 1 0 0 1 0 16.82 Tm .484488 Tw 12 TL /F1 10 Tf 0 0 0 rg (First, there are only 3 letter pairs that you need to remember: pv, vg and lv. Using tab completion in your) Tj T* 0 Tw (shell, you can see the rest of the commands that follow. Such as ) Tj /F4 10 Tf (pvdisplay ) Tj /F1 10 Tf (or ) Tj /F4 10 Tf (lvremove ) Tj /F1 10 Tf (and so forth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 71.19685 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .39686 Tw (When building an LVM structure, the order is first creating each physical device, then adding the physical) Tj T* 0 Tw 1.163318 Tw (devices do a volume group, then finally chopping up the group creating individual logical volumes. You) Tj T* 0 Tw 1.321163 Tw (can either use up the entire volume group space with logical volumes, or you can leave some unused) Tj T* 0 Tw ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R50': class PDFStream 
+50 0 obj
+% page stream
+<< /Length 7758 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 767.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (space for later, assigning just what you need now.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 737.1969 cm
+q
+BT 1 0 0 1 0 16.82 Tm .293516 Tw 12 TL /F4 10 Tf 0 0 0 rg (pvcreate ) Tj /F1 10 Tf (is run first to create the physical volumes. ) Tj /F4 10 Tf (pvcreate ) Tj /F1 10 Tf (is a low level formatter, and will destroy) Tj T* 0 Tw (an existing filesystem on the device if it already exists.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 683.1969 cm
+q
+BT 1 0 0 1 0 40.82 Tm .804431 Tw 12 TL /F4 10 Tf 0 0 0 rg (vgcreate ) Tj /F1 10 Tf (is used to create a pool of disk space with the physical volumes called a volume group. You) Tj T* 0 Tw .435988 Tw (must give the volume group a name. I tend to shy away from ") Tj (VG00) Tj (" or similar silly names, and prefer to) Tj T* 0 Tw 2.757318 Tw (give it a more meaningful name that represents the data on the physical volumes. Something like) Tj T* 0 Tw (") Tj (personal) Tj (" and ") Tj (business) Tj (" or using the hostname are more appropriate.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 629.1969 cm
+q
+BT 1 0 0 1 0 40.82 Tm .624104 Tw 12 TL /F4 10 Tf 0 0 0 rg (lvcreate ) Tj /F1 10 Tf (is finally used to create logical volumes from the volume group. It makes sense to also name) Tj T* 0 Tw .662209 Tw (the logical volume, although this is not required like it is for the volume group. Some useful switches are) Tj T* 0 Tw 4.753953 Tw /F4 10 Tf (-l LogicalExtentsNumber[%{VG|PVS|FREE}] ) Tj /F1 10 Tf (or ) Tj /F4 10 Tf (-L LogicalVolumeSize[kKmMgGtT] ) Tj /F1 10 Tf (for) Tj T* 0 Tw (sizing the volumes and -s for creating an LVM snapshot \(covered later\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 629.1969 cm
+Q
+q
+1 0 0 1 62.69291 629.1969 cm
+Q
+q
+1 0 0 1 62.69291 596.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (RAID / LVM Example) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mdadm -C /dev/md0 -a yes -n 5 -l 6 -x 2 /dev/sd{a..g}) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 560.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (pvcreate /dev/md0) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 542.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgcreate personal /dev/md0) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 524.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvcreate -L 50G -n music personal) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 506.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvcreate -L 100G -n videos personal) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 488.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mke2fs -j /dev/personal/music) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 470.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mke2fs -j /dev/personal/videos) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 452.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mount /dev/personal/music /media/music) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 434.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mount /dev/personal/videos /media/videos) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 380.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .387318 Tw (Because of the limited redundancy support that LVM offers, it is not uncommon for system administrators) Tj T* 0 Tw .907984 Tw (to use RAID separate from LVM. Because LVM offers extreme flexibility with resizing your volumes, but) Tj T* 0 Tw .435868 Tw (not the needed redundancy, if you lose a disk, you could lose your data, wherease putting RAID beneath) Tj T* 0 Tw (LVM could lessen that chance greatly.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 314.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.82 Tm /F1 10 Tf 12 TL .150988 Tw (The above is an example of creating a RAID-6 array with 5 active drives and 2 hot spares. Once the array) Tj T* 0 Tw .104431 Tw (is created, the array is turned into a physical volume and added to a volume group. Supposing the volume) Tj T* 0 Tw 2.235542 Tw (group is 1TB in size, we have then created two mount points from the group. We called the group) Tj T* 0 Tw 2.142651 Tw ('personal' and two logical volumes called 'music' and 'videos'. We created an ext3 filesystem on the) Tj T* 0 Tw (devices then mounted them to their respective locations, so we could access the data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 314.1969 cm
+Q
+q
+1 0 0 1 62.69291 314.1969 cm
+Q
+q
+1 0 0 1 62.69291 281.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Resizing LVMs) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 263.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (LVM is a container- a bucket) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 245.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (The filesystem resides inside - water) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 227.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Reduce Order: 1\) Filesystem, 2\) Logical Volume) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 209.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Extend Order: 1\) Logical Volume 2\) Filesystem) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 191.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (pvmove device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 173.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgextend VGname device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 155.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgreduce VGname device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 137.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvextend -l|-L size device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 119.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvreduce -l|-L size device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 101.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (resize2fs device [size]) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 71.19685 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 1.906651 Tw (As mentioned extensively through out this presentation, LVM make is trivial to resize volumes. So, it) Tj T* 0 Tw 1.432765 Tw (would be draconian to not introduce a slide on it. When resizing logical volumes, you need to think in) Tj T* 0 Tw ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R51': class PDFStream 
+51 0 obj
+% page stream
+<< /Length 7298 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 731.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .014985 Tw (terms containment. Think of the logical volume itself as a data contained, and the filesystem resides inside) Tj T* 0 Tw .216303 Tw (the container, much like water in a bucket. When you want to make the volume bigger, you would need to) Tj T* 0 Tw .743735 Tw (extend the size of the container \(bucket\) before adding more filesystem \(water\). If you wanted to reduce) Tj T* 0 Tw (the volume, then you would need to displace some filesystem before making the container smaller.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 689.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL 1.630651 Tw (Extending volumes can be done while the volume is currently mounted if it's an ext-based filesystem.) Tj T* 0 Tw .397485 Tw (Other filesystems might require you to unmount them. The order for extending an ext-based volume is as) Tj T* 0 Tw (follows:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 671.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvextend -L size[kKmMgGtT|%|FREE] device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 653.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (resize2fs device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 599.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .81436 Tw (Reducing volumes can not be done while the volume is currently mountes as data might reside towards) Tj T* 0 Tw .120988 Tw (the end of the volume, and reducing it would mean truncating the data. As such, we need to make sure all) Tj T* 0 Tw .069988 Tw (data resides at the front of the filesystem first. In order to do this, the filesystem must be unmounted. Then) Tj T* 0 Tw (we can reduce our filesytme to the appropriate size, the shrink the container:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 581.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (umount device|mount_point) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 563.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (e2fsck -f device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 545.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (resize2fs devise size[kKmMgG]) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 527.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (lvreduce -L size[kKmMgGtT] device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 509.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (mount device mount_point) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 419.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 76.82 Tm /F1 10 Tf 12 TL .539431 Tw (Not only can you resize the logical volumes, but resizing volume groups is also possible. This is done by) Tj T* 0 Tw 2.351984 Tw (adding or removing physical volumes. Adding physical volumes is trivial, but care must be taken to) Tj T* 0 Tw 1.266654 Tw (removing physical volumes. LVM is keeping track of where you data is stored, and it's not always in a) Tj T* 0 Tw .993516 Tw (contiguous manner. Which means that your data could reside on the disk that you want to remove. So,) Tj T* 0 Tw 2.169986 Tw (before removing this disk, you need to make sure that there is enough space residing on the other) Tj T* 0 Tw .029987 Tw (physical volumes to store your data. If not, you'll need to add more physical volumes, or delete some data.) Tj T* 0 Tw (At any event, here is the path you must take when removing a physical volume from the volume group:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 401.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (pvchange device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 383.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgreduce VGname device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 353.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 1.555984 Tw (Notice that you didn't need to worry about filesystem checks, or unmounting any filesystems. You are) Tj T* 0 Tw (operating on devices at a much more lower level.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 323.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .622488 Tw (Extending the volume is just as easy. All you need to do is turn your device into a physical volume, then) Tj T* 0 Tw (add the device to the volume group. This would be handled in this manner:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 305.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (pvcreate device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 287.1969 cm
+q
+BT 1 0 0 1 12 5.71 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 5.71 Tm /F4 10 Tf 12 TL 9.5 0 Td (vgextend VGname device) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 257.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .674985 Tw (Now you should have more storage in your volume group to create additional logical volumes, or extend) Tj T* 0 Tw (existing volumes with.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 257.1969 cm
+Q
+q
+1 0 0 1 62.69291 257.1969 cm
+Q
+q
+1 0 0 1 62.69291 224.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Advanced LVM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 206.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F1 10 Tf 0 0 0 rg (LVM RAID level 0 & 1) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 188.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 12 4.82 Tm 9.5 0 Td 12 TL /F1 10 Tf 0 0 0 rg (Snapshots with ) Tj /F4 10 Tf (lvcreate -s) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 170.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (LVM with GFS2, OCFS2 and Lustre) Tj T* -9.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 140.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .904651 Tw (Lastly, without going into extensive detail, LVM does have some advance feature sets, such as minimal) Tj T* 0 Tw (striping and mirroring redundancy, snapshot capability and clustered filesystems.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 86.19685 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 40.82 Tm /F1 10 Tf 12 TL .480514 Tw (In regards to striping and mirroring, LVM can take advantage of RAID level 0 and 1. As we already know) Tj T* 0 Tw .29061 Tw (by know, level 0 offers no redundancy, but instead offers speed through asynchronouly writing the data in) Tj T* 0 Tw 1.229985 Tw (stripes. This can provide enhanced performance to LVM. With level 1 RAID, you can take adantage of) Tj T* 0 Tw (mirroring, providing highly redundant data.) Tj T* ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R52': class PDFStream 
+52 0 obj
+% page stream
+<< /Length 2439 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 635.1969 cm
+q
+BT 1 0 0 1 0 136.82 Tm 1.531567 Tw 12 TL /F1 10 Tf 0 0 0 rg (LVM snapshots work much the way a photograph does. If I were to stand at the freeway, and take a) Tj T* 0 Tw 1.204488 Tw (picture of the cars on the road, I would have a representation of the data at that specific point in time,) Tj T* 0 Tw .044692 Tw (even though the data is changing constantly. LVM snapshots behave much the same way. First, I create a) Tj T* 0 Tw .31811 Tw (new logical volume, which really cany be any size. I pass the ) Tj /F4 10 Tf (-s|--snapshot ) Tj /F1 10 Tf (switch to the ) Tj /F4 10 Tf (lvcreate) Tj T* 0 Tw .802093 Tw /F1 10 Tf (command to tell LVM that this volume is a snapshot of an already existing volume. At that point in time,) Tj T* 0 Tw .62832 Tw (LVM has a representation of what the data looks like through the use of pointers no inodes and physical) Tj T* 0 Tw 2.09811 Tw (extents mapped through logical extents. This makes it great to perform backups, even if the data is) Tj T* 0 Tw .190488 Tw (changing, because I don't care about any new data at all, only the data that existed exactly at that point in) Tj T* 0 Tw .318876 Tw (time. However, if any data that belongs to the snapshot were to be removed, then I would need adequate) Tj T* 0 Tw .649488 Tw (space on my new logical volume to hold the removed data, asd I might need it for the backup. Once the) Tj T* 0 Tw .534692 Tw (backup has been performed, the volume can be removed safely, without any concern for the data on the) Tj T* 0 Tw (other volumes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 593.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28.82 Tm /F1 10 Tf 12 TL .258735 Tw (LVM can also take advantage of clustered filesystems, such as the Global FileSystem, GFS or the Oracle) Tj T* 0 Tw .884985 Tw (Clustered FileSystem OCFS2. This means that LVM can not only span multiple disks on a single hosts,) Tj T* 0 Tw (but multiple disks over multiple hosts, creating a SAN-like implementation.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 593.1969 cm
+Q
+q
+1 0 0 1 62.69291 593.1969 cm
+Q
+q
+1 0 0 1 62.69291 560.1969 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 8.435 Tm /F2 17.5 Tf 21 TL (Fin) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 542.1969 cm
+q
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
+0 0 0 rg
+BT 1 0 0 1 12 4.82 Tm /F1 10 Tf 12 TL 9.5 0 Td (Comments, questions, rude remarks?) Tj T* -9.5 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+xref
+0 53
+0000000000 65535 f
+0000000113 00000 n
+0000000271 00000 n
+0000000436 00000 n
+0000000611 00000 n
+0000000792 00000 n
+0000001055 00000 n
+0000001319 00000 n
+0000001578 00000 n
+0000001895 00000 n
+0000002056 00000 n
+0000002226 00000 n
+0000002508 00000 n
+0000002688 00000 n
+0000002968 00000 n
+0000003248 00000 n
+0000003528 00000 n
+0000003808 00000 n
+0000004088 00000 n
+0000004368 00000 n
+0000004649 00000 n
+0000004930 00000 n
+0000005068 00000 n
+0000005330 00000 n
+0000005456 00000 n
+0000005597 00000 n
+0000005764 00000 n
+0000005930 00000 n
+0000006099 00000 n
+0000006265 00000 n
+0000006429 00000 n
+0000006593 00000 n
+0000006757 00000 n
+0000006920 00000 n
+0000007095 00000 n
+0000007267 00000 n
+0000007433 00000 n
+0000007592 00000 n
+0000007756 00000 n
+0000007925 00000 n
+0000008089 00000 n
+0000008252 00000 n
+0000008374 00000 n
+0000008563 00000 n
+0000016391 00000 n
+0000024900 00000 n
+0000033291 00000 n
+0000041577 00000 n
+0000049143 00000 n
+0000056979 00000 n
+0000064387 00000 n
+0000072246 00000 n
+0000079645 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\253\327`\306-\367\024\361q\345-\025\372h]\356) (\253\327`\306-\367\024\361q\345-\025\372h]\356)] 
+
+ /Info 22 0 R
+ /Root 21 0 R
+ /Size 53 >>
+startxref
+82158
+%%EOF

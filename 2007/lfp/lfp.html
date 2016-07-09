@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.4.1: http://docutils.sourceforge.net/" />
+    <meta name="version" content="S5 1.1" />
+    <title>Linux File Permissions 101</title>
+    <!-- configuration parameters -->
+    <meta name="defaultView" content="slideshow" />
+    <meta name="controlVis" content="hidden" />
+    <!-- style sheet links -->
+    <script src="ui/default/slides.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+    <link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+    <link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+    <link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+    
+    <style type="text/css">
+      #currentSlide {display: none;}
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div id="controls">&nbsp;</div>
+      <div id="currentSlide">&nbsp;</div>
+      <div id="header">&nbsp;</div>
+      <div id="footer">
+        <h1><em>Linux File Permissions 101</em></h1>
+      </div>
+    </div>
+    <div class="presentation">
+      <div class="slide" id="slide0">
+        <h1 class="title"><em>Linux File Permissions 101</em></h1>
+      </div>
+
+      <div class="slide" id="everything-is-a-file">
+        <h1><em>Everything is a file</em></h1>
+        <ul class="simple">
+          <li>Photos, music, video, text, etc</li>
+          <li>Monitor</li>
+          <li>Printer</li>
+          <li>Hard Drive</li>
+          <li>Network card</li>
+          <li>Directory</li>
+        </ul>
+      </div>
+      
+      <div class="slide" id="linux-is-a-multi-user-os">
+        <h1><em>Linux is a multi-user OS</em></h1>
+        <ul class="simple">
+          <li><p class="first">Simultaneos multiple user access</p></li>
+          <li>
+            <dl class="first docutils">
+              <dt>Security definitions built</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>Defined as: user, group, other</li>
+                  <li>Defined with: read, write, execute</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="slide" id="users-groups-and-others">
+        <h1><em>Users, groups and others</em></h1>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Only two accounts:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>Many limited user accounts</li>
+                  <li>One administrator account (root)</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li><p class="first">Access to files is granted via permissions</p></li>
+          <li><p class="first">Group is a collection of users</p></li>
+          <li><p class="first">Everyone else 'other'</p></li>
+        </ul>
+      </div>
+
+      <div class="slide" id="read-write-execute">
+        <h1><em>Read, Write &amp; Execute</em></h1>
+        <ul class="simple">
+          <li>Read: access &amp; view the contents of the file and list the contents of a directory</li>
+          <li>Write: create, modify and delete files</li>
+          <li>Execute: run program/script and enter directories</li>
+        </ul>
+      </div>
+  
+      <div class="slide" id="implementation">
+        <h1><em>Implementation</em></h1>
+        <pre class="literal-block">
+          aaron&#64;kratos:~/tmp$ ls -l
+          -rw-r--r--  1 aaron web        15 Sep 20 19:39 bar.html
+          -rwxr-xr--  1 aaron aaron     510 Sep 20 19:39 foo.sh
+          drwxr-xr-x  2 aaron admin    4096 Sep 20 19:39 stuff
+        </pre>
+      </div>
+
+      <div class="slide" id="id1">
+        <h1><em>Implementation</em></h1>
+        <pre class="literal-block">
+          -rw-r--r--   1 aaron web       15 Sep 20 19:39 bar.html
+  
+            -      rw-    r--     r--
+          (type) (user) (group) (other)
+        </pre>
+        <p>Type:</p>
+        <ul class="simple">
+          <li>-: regular file</li>
+          <li>b: block/buffer device</li>
+          <li>c: character device</li>
+          <li>d: directory</li>
+          <li>l: symbolic link</li>
+          <li>p: named pipe</li>
+          <li>s: socket</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="id2">
+        <h1><em>Implementation</em></h1>
+        <pre class="literal-block">
+          -rw-r--r--   1 aaron web       15 Sep 20 19:39 bar.html
+  
+            -      rw-    r--     r--
+          (type) (user) (group) (other)
+        </pre>
+        <p>Access:</p>
+        <ul class="simple">
+          <li>User: read and write</li>
+          <li>Group: read only</li>
+          <li>Other: read only</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="id3">
+        <h1><em>Implementation</em></h1>
+        <pre class="literal-block">
+          -rw-r--r--   1 aaron web       15 Sep 20 19:39 bar.html
+  
+            1     aaron    web
+         (links)  (user) (group)
+        </pre>
+        <p>Links:</p>
+        <ul class="simple">
+          <li>The number of links to that file</li>
+        </ul>
+        <p>Owners:</p>
+        <ul class="simple">
+          <li>'aaron' is the owner of the file</li>
+          <li>'web' group has access</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="id4">
+        <h1><em>Implementation</em></h1>
+        <pre class="literal-block">
+          -rw-r--r--   1 aaron web       15 Sep 20 19:39 bar.html
+  
+              15       Sep 20 19:39    bar.html
+          (byte size) (modified date) (filename)
+        </pre>
+        <p>Size:</p>
+        <ul class="simple">
+          <li>Size of the file/directory in bytes</li>
+        </ul>
+        <p>Date:</p>
+        <ul class="simple">
+          <li>Last date timestamp the file was modified</li>
+        </ul>
+        <p>Filename:</p>
+        <ul class="simple">
+          <li>The actualy name of the file</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="change-permissions">
+        <h1><em>Change permissions</em></h1>
+        <p>chmod:</p>
+        <ul class="simple">
+          <li>Change specific permissions of a file/directory</li>
+        </ul>
+        <p>chown:</p>
+        <ul class="simple">
+          <li>Change the owner of a file/directory</li>
+        </ul>
+        <p>chgrp:</p>
+        <ul class="simple">
+          <li>Change the group of a file/directory</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="id5">
+        <h1><em>Change permissions</em></h1>
+        <p>chmod:</p>
+        <ul class="simple">
+          <li>user (u), group (g), other (o), all (a)</li>
+          <li>add (+), remove (-), set (=)</li>
+          <li>read (r), write (w), execute (x)</li>
+        </ul>
+        <pre class="literal-block">
+          -rw-r--r--  1 aaron aaron     15 Sep 20 19:39  file1.txt
+        </pre>
+        <p>Demonstration</p>
+      </div>
+
+      <div class="slide" id="id6">
+        <h1><em>Change permissions</em></h1>
+        <p>chmod:</p>
+        <ul class="simple">
+          <li><p class="first">read (4), write (2), execute (1), none (0)</p></li>
+          <li>
+            <dl class="first docutils">
+              <dt>Just add the numbers:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>(0-7) (0-7) (0-7)</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <pre class="literal-block">
+          -rw-r--r--  1 aaron aaron     15 Sep 20 19:39  file1.txt
+        </pre>
+        <p>Demonstration</p>
+      </div>
+
+      <div class="slide" id="id7">
+        <h1><em>Change permissions</em></h1>
+        <p>chown:</p>
+        <ul class="simple">
+          <li>Change the ownership of the file</li>
+          <li>Must be root</li>
+        </ul>
+        <pre class="literal-block">
+          -rw-r--r--  1 aaron aaron     15 Sep 20 19:39  file1.txt
+          chown bob file1.txt
+          -rw-r--r--  1 bob   aaron     15 Sep 20 19:39  file1.txt
+        </pre>
+      </div>
+
+      <div class="slide" id="id8">
+        <h1><em>Change permissions</em></h1>
+        <p>chgrp:</p>
+        <ul class="simple">
+          <li>Change the group access to the file</li>
+          <li>Don't have to be root- just in both groups</li>
+        </ul>
+        <pre class="literal-block">
+          -rw-r--r--  1 aaron aaron     15 Sep 20 19:39  file1.txt
+          chgrp web file1.txt
+          -rw-r--r--  1 aaron web       15 Sep 20 19:39  file1.txt
+        </pre>
+      </div>
+
+      <div class="slide" id="quiz-time">
+        <h1><em>Quiz Time!</em></h1>
+        <ol class="arabic incremental">
+          <li>
+            <dl class="first docutils">
+              <dt>What is the numerical chmod of <tt class="docutils literal"><span class="pre">-rwxrw-r-x</span></tt>?</dt>
+              <dd>
+                <ul class="first last incremental">
+                  <li>Answer: 765</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="first docutils">
+              <dt>Using chmod, how do I change permissions so owner has read/write, group has read and other has no permissions?</dt>
+              <dd>
+                <ul class="first last incremental">
+                  <li>Answer: chomd 640</li>
+                  <li>Answer: chmod u+rw,g+r,o-rwx</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide" id="quiz-time-2">
+        <h1><em>Quiz Time!</em></h1>
+        <ol start="3" class="arabic incremental">
+          <li>
+            <dl class="first docutils">
+              <dt>Can an 'other' user create a file if its parent directory permissions are <tt class="docutils literal"><span class="pre">drwxrw-r--</span></tt>?</dt>
+              <dd>
+                <ul class="first last incremental">
+                  <li>Answer: no</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="first docutils">
+              <dt>Given the permissions <tt class="docutils literal"><span class="pre">----rwxrwx</span></tt>, can the owner of the file read, write and/or execute the file?</dt>
+              <dd>
+                <ul class="first last incremental">
+                  <li>Answer: no</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ol>
+      </div>
+
+      <div class="slide" id="priorities">
+        <h1><em>Priorities</em></h1>
+        <pre class="literal-block">
+          ----rwxrwx  1 aaron aaron     15 Sep 20 19:39  file1.txt
+        </pre>
+        <ol class="arabic simple">
+          <li>Owner FIRST</li>
+          <li>Group SECOND</li>
+          <li>Other LAST</li>
+        </ol>
+        <p>Demonstration</p>
+      </div>
+
+      <div class="slide" id="th-permission">
+        <h1><em>4th Permission</em></h1>
+        <ul class="simple">
+          <li>chmod 4 file1.txt</li>
+          <li>chmod 04 file1.txt</li>
+          <li>chmod 004 file.txt</li>
+          <li>chmod 0004 file1.txt</li>
+        </ul>
+        <pre class="literal-block">
+          aaron&#64;kratos:~$ ls -l
+          -------r--  1 aaron aaron      5 Sep 20 19:39  file1.txt
+        </pre>
+      </div>
+
+      <div class="slide" id="sticky-bit">
+        <h1><em>Sticky Bit</em></h1>
+        <ul class="simple">
+          <li>Designed initially to &quot;stick&quot; a process in memory</li>
+          <li>Keep from deleting other files</li>
+          <li>'t' is applied in the other executable location</li>
+          <li>Set on directories</li>
+        </ul>
+        <pre class="literal-block">
+          aaron&#64;kratos:~$ ls -l /
+          ...
+          drwxrwxrwt 16 root  root    4096 Sep 20 19:39  tmp
+          ...
+        </pre>
+      </div>
+
+      <div class="slide" id="setting-sticky-bit">
+        <h1><em>Setting Sticky Bit</em></h1>
+        <p>4th permission:</p>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Change:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>chmod 1754 foo</li>
+                  <li>chmod +t foo</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <p>Demonstration</p>
+      </div>
+
+      <div class="slide" id="sgid">
+        <h1><em>SGID</em></h1>
+        <ul class="simple">
+          <li>Set group identification on a file or directory</li>
+          <li>Execute as set group</li>
+          <li>Create files under set group</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="setting-sgid">
+        <h1><em>Setting SGID</em></h1>
+        <p>4th permission:</p>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Change:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>chmod 2777 file.txt</li>
+                  <li>chmod g+s file.txt</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <pre class="literal-block">
+          root&#64;kratos:/home/aaron/tmp# ls -l
+          drwxr-xr-x  2 root  root    4096 Sep 20 19:39  foo
+          root&#64;kratos:/home/aaron/tmp# chmod 2777 foo
+          root&#64;kratos:/home/aaron/tmp# ls -l
+          drwxrsxrwx  2 root  root    4096 Sep 20 19:39  foo
+          root&#64;kratos:/home/aaron/tmp# su aaron
+          aaron&#64;kratos:~/tmp$ touch file.txt
+          aaron&#64;kratos:~/tmp$ ls -l
+          -rw-r--r--  1 aaron root       0 Sep 20 19:22  file.txt
+        </pre>
+      </div>
+
+      <div class="slide" id="suid">
+        <h1><em>SUID</em></h1>
+        <ul class="simple">
+          <li>Set user identification on files</li>
+          <li>Execute as set user</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="setting-suid">
+        <h1><em>Setting SUID</em></h1>
+      <p>4th permission:</p>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Change:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>chmod 4777 file.txt</li>
+                  <li>chmod u+s file.txt</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <pre class="literal-block">
+          root&#64;kratos:/home/aaron/tmp# ls -l
+          drwxr-xr-x  2 root  root    4096 Sep 20 19:39  foo
+          root&#64;kratos:/home/aaron/tmp# chmod 4777 foo
+          root&#64;kratos:/home/aaron/tmp# ls -l
+          drsxrwxrwx  2 root  root    4096 Sep 20 19:39  foo
+          root&#64;kratos:/home/aaron/tmp# su aaron
+          aaron&#64;kratos:~/tmp$ touch file.txt
+          aaron&#64;kratos:~/tmp$ ls -l
+          -rw-r--r--  1 aaron aaron      0 Sep 20 19:22  file.txt
+        </pre>
+      </div>
+
+      <div class="slide" id="suid-what-s-the-point">
+        <h1><em>SUID- What's the point?</em></h1>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Execute a program as another user</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>programs owned by root are run as root</li>
+                  <li>you execute the file normally</li>
+                  <li>you <em>must</em> have execute permissions</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="first docutils">
+              <dt>Isn't this dangerous?</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>backup scenario</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide" id="umask">
+        <h1><em>Umask</em></h1>
+        <ul class="simple">
+          <li><p class="first">User file creation mode mask</p></li>
+          <li><p class="first">Affects default permissions on new files/directories</p></li>
+          <li>
+            <dl class="first docutils">
+              <dt>Set in /etc/profile</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>Typically 'umask 022' or 'umask 002'</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="first docutils">
+              <dt>Numerically same as chmod:</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>1 = execute</li>
+                  <li>2 = write</li>
+                  <li>4 = read</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li><p class="first">Acts as a filter rather than a setter</p></li>
+          <li><p class="first">Calculated using chmod - umask = value</p></li>
+        </ul>
+      </div>
+
+      <div class="slide" id="id8">
+        <h1><em>Umask</em></h1>
+        <ul class="simple">
+          <li>777 default permissions for directories</li>
+          <li>666 default permissions for files</li>
+          <li>umask = 022</li>
+          <li>777 - 022 = 755 (new directories)</li>
+          <li>666 - 022 = 644 (new files)</li>
+        </ul>
+        <pre class="literal-block">
+          aaron&#64;kratos:~$ mkdir foo
+          aaron&#64;kratos:~$ touch bar
+          aaron&#64;kratos:~$ ls -l
+          -rw-r--r--  1 aaron aaron      0 Sep 20 19:22  bar
+          drw-r-xr-x  2 aaron aaron   4096 Sep 20 19:22  foo
+        </pre>
+      </div>
+
+      <div class="slide" id="umask-watch-out">
+        <h1><em>Umask- watch out!</em></h1>
+        <ul class="simple">
+          <li>umask = 174</li>
+          <li>777 - 174 = 603 (new directories)</li>
+          <li>666 - 174 = 602 (new files)</li>
+        </ul>
+        <pre class="literal-block">
+          aaron&#64;kratos:~$ mkdir foo
+          aaron&#64;kratos:~$ touch bar
+          aaron&#64;kratos:~$ ls -l
+          -rw-----w-  1 aaron aaron      0 Sep 20 19:22  bar
+          drw-----wx  2 aaron aaron   4096 Sep 20 19:22  foo
+        </pre>
+      </div>
+
+      <div class="slide" id="umask-what-s-happening">
+        <h1><em>Umask- what's happening?</em></h1>
+        <ul class="simple">
+          <li>
+            <dl class="first docutils">
+              <dt>Linux won't set +x on files, so it rounds up</dt>
+              <dd>
+                <ul class="first last simple">
+                  <li>umask = 122</li>
+                  <li>777 - 122 = 655</li>
+                  <li>666 - 122 = 644 (5 means +rx, so 6 is set)</li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide" id="that-s-all-folks">
+        <h1><em>That's All Folks!</em></h1>
+        <p>Any questions, thoughts, comments or rude remarks?</p>
+      </div>
+
+      <div class="slide" id="contact-me">
+        <h1><em>Contact me</em></h1>
+        <p>Aaron Toponce</p>
+        <div class="line-block">
+          <div class="line"><a class="reference" href="mailto://aaron.toponce&#64;gmail.com">mailto://aaron.toponce&#64;gmail.com</a></div>
+          <div class="line"><a class="reference" href="xmpp://aaron&#64;aarontoponce.org">xmpp://aaron&#64;aarontoponce.org</a></div>
+          <div class="line"><a class="reference" href="http://aarontoponce.org">http://aarontoponce.org</a></div>
+          <div class="line">GnuPG 1024D/8086060F</div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

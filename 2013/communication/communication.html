@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>Emergency Communications</title>
+<meta name="author" content="Aaron Toponce" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/small-white/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/small-white/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/small-white/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/small-white/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/small-white/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>Emergency Communications</h1>
+
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">Emergency Communications</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Aaron Toponce</td></tr>
+<tr class="field"><th class="docinfo-name">Email:</th><td class="field-body"><a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a></td>
+</tr>
+</tbody>
+</table>
+<!-- Definitions of interpreted text roles (classes) for S5/HTML data. -->
+<!-- This data file has been placed in the public domain. -->
+<!-- Colours
+======= -->
+<!-- Text Sizes
+========== -->
+<!-- Display in Slides (Presentation Mode) Only
+========================================== -->
+<!-- Display in Outline Mode Only
+============================ -->
+<!-- Display in Print Only
+===================== -->
+<!-- Display in Handout Mode Only
+============================ -->
+<!-- Incremental Display
+=================== -->
+
+</div>
+<div class="slide" id="contact-and-details">
+<h1>Contact and Details</h1>
+<p>You can find the source code, PDF, compressed tarball and HTML presentation
+at <a class="reference external" href="http://aarontoponce.org/presents/communication">http://aarontoponce.org/presents/communication</a>.</p>
+<p>My email address: <a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a>.</p>
+</div>
+<div class="slide" id="license">
+<h1>License</h1>
+<p>This presentation is licensed under the Creative Commons
+Attribution-ShareAlike license.</p>
+<p>See <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> for more details.</p>
+<div class="handout container">
+<p>This document is licensed under the CC:BY:SA
+Details to the license can be found here:
+http://creativecommons.org/licenses/by-sa/3.0/</p>
+<dl class="docutils">
+<dt>The licnese states the following:</dt>
+<dd><ul class="first last simple">
+<li>You are free to copy, distribute and tranmit this work.</li>
+<li>You are free to adapt the work.</li>
+</ul>
+</dd>
+<dt>Under the following conditions:</dt>
+<dd><ul class="first last simple">
+<li>You must attribute the work to the copyright holder.</li>
+<li>If you alter, transform, or build on this work, you may redistribute
+the work under the same, similar or compatible license.</li>
+</ul>
+</dd>
+<dt>With the understanding that:</dt>
+<dd><ul class="first last">
+<li><p class="first">Any conditions may be waived if you get written permission from the
+copyright holder.</p>
+</li>
+<li><p class="first">In no way are any of the following rights affected by the license:</p>
+<blockquote>
+<ul class="simple">
+<li>Your fair dealing or fair use rights;</li>
+<li>The author's moral rights;</li>
+<li>Rights other persons may have either in the work itself or
+in how the work is used, such as publicity or privacy rights.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">For any reuse or distribution, you must make clear to others the
+license terms of this work. The best way to do this is with a link
+to the web page provided above or below.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>The above is a human-readable summary of the license, and is not to be
+used as a legal substitute for the actual licnse. Please refer to the
+formal legal document provided here:
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a></p>
+</div>
+</div>
+<div class="slide" id="types-of-communication">
+<h1>Types of Communication</h1>
+<ul class="simple">
+<li>Cell phone</li>
+<li>Internet</li>
+<li>Radio</li>
+<li>Television</li>
+</ul>
+</div>
+<div class="slide" id="television">
+<h1>Television</h1>
+<ul class="simple">
+<li>The Weather Channel</li>
+<li>Local News (2, 5, 13)</li>
+<li>National News (ABC, NBC, Fox, CNN)</li>
+<li>Global News (BBC, Al Jazeera)</li>
+</ul>
+</div>
+<div class="slide" id="internet">
+<h1>Internet</h1>
+<ul class="simple">
+<li><a class="reference external" href="http://www.ready.gov">http://www.ready.gov</a></li>
+<li><a class="reference external" href="http://liveatc.net">http://liveatc.net</a></li>
+<li><a class="reference external" href="http://weather.gov">http://weather.gov</a></li>
+<li><a class="reference external" href="http://alerts.weather.gov">http://alerts.weather.gov</a> (RSS)</li>
+<li><a class="reference external" href="https://sslearthquake.usgs.gov/ens/">https://sslearthquake.usgs.gov/ens/</a></li>
+<li>Twitter, Facebook, other social networking sites</li>
+</ul>
+</div>
+<div class="slide" id="cell-phone">
+<h1>Cell Phone</h1>
+<ul class="simple">
+<li>WEA - Wireless Emergency Alerts</li>
+<li>E911 - location aware</li>
+<li>Smartphone apps (Scanner Radio, LiveATC)</li>
+</ul>
+</div>
+<div class="slide" id="wea-wireless-emergency-alerts">
+<h1>WEA - Wireless Emergency Alerts</h1>
+<ul class="simple">
+<li>Presidential, extreme, severe and Amber alerts</li>
+<li>Most phones are capable</li>
+<li>Provided by most wireless carriers</li>
+<li>Unique sound and vibration</li>
+<li>Will not interrupt your call</li>
+<li>No more than 90 characters</li>
+<li>Location aware</li>
+<li>Free text message</li>
+<li>Visit <a class="reference external" href="http://www.ctia.org/WEA">http://www.ctia.org/WEA</a></li>
+</ul>
+</div>
+<div class="slide" id="e911-enhanced-911">
+<h1>E911 - Enhanced 911</h1>
+<ul class="simple">
+<li>Location is associated with the caller automatically</li>
+<li>Both wireline and wireless is supported</li>
+<li>VOIP providers may require filling out a form</li>
+</ul>
+</div>
+<div class="slide" id="radio-transmitting">
+<h1>Radio Transmitting</h1>
+<div class="section" id="unlicensd">
+<h2>Unlicensd</h2>
+<ul class="simple">
+<li>CB - Citizens Band</li>
+<li>FRS - Family Radio Serice (&quot;Walkie Talkies&quot;)</li>
+<li>MURS - Multi-use Radio Service</li>
+</ul>
+</div>
+<div class="section" id="licensed">
+<h2>Licensed</h2>
+<ul class="simple">
+<li>Amateur &quot;Ham&quot; Radio</li>
+<li>GMRS - General Mobile Radio Service</li>
+</ul>
+</div>
+</div>
+<div class="slide" id="cb-citizens-band">
+<h1>CB - Citizens Band</h1>
+<ul class="simple">
+<li>Unlicensed</li>
+<li>Radios $40+</li>
+<li>External antennas without height restrictions</li>
+<li>4 watts AM, 12 Watts SSB (about 10-15 miles)</li>
+<li>40 channels in 27 Mhz</li>
+</ul>
+</div>
+<div class="slide" id="frs-family-radio-service">
+<h1>FRS - Family Radio Service</h1>
+<ul class="simple">
+<li>Unlicensed &quot;Walkie Talkies&quot;</li>
+<li>Radios as cheap as $5</li>
+<li>Fixed antennas</li>
+<li>500 milliwatts max (about 1 mile)</li>
+<li>14 channels in 462 - 467 Mhz</li>
+</ul>
+</div>
+<div class="slide" id="murs-multi-use-radio-service">
+<h1>MURS - Multi-use Radio Service</h1>
+<ul class="simple">
+<li>Unlicensed</li>
+<li>Radios $70+</li>
+<li>External antennas cannot exceed 60' above ground</li>
+<li>2 watts max (about 2-3 miles)</li>
+<li>5 channels in 151 &amp; 154 Mhz</li>
+</ul>
+</div>
+<div class="slide" id="amateur-radio">
+<h1>Amateur Radio</h1>
+<ul class="simple">
+<li>Licensed - $15 per exam. Free renewal every 10 years</li>
+<li>Unlicensed operators may use if the licensee is in control of the station</li>
+<li>Three classes: Technician, General and Extra</li>
+<li>1500 watts maximum (global)</li>
+<li>Radios $100+</li>
+<li>Several different bands</li>
+<li>2m and 70cm popular for local communications</li>
+<li>Repeaters may be used</li>
+</ul>
+</div>
+<div class="slide" id="gmrs-general-mobile-radio-service">
+<h1>GMRS - General Mobile Radio Service</h1>
+<ul class="simple">
+<li>Licensed - $85 per 5 years</li>
+<li>No exam required</li>
+<li>Shares 7 FRS channels</li>
+<li>1 license covers the whole family</li>
+<li>Radios $50+</li>
+<li>External antennas cannot exceed 20' above ground</li>
+<li>5 watts max (about 5-10 miles)</li>
+<li>Repeaters may be used</li>
+<li>15 frequencies in 462-467 Mhz</li>
+</ul>
+</div>
+<div class="slide" id="radio-receiving">
+<h1>Radio Receiving</h1>
+<ul class="simple">
+<li>NWR - National Weather Radio</li>
+<li>SDR - Software Defined Radio</li>
+<li>Shortwave Radio</li>
+</ul>
+</div>
+<div class="slide" id="nwr-national-weather-radio">
+<h1>NWR - National Weather Radio</h1>
+<ul class="simple">
+<li>Provided in many FRS and GMRS radios</li>
+<li>KEC78 callsign</li>
+<li>162.550 Mhz</li>
+<li>Box Elder, Davis, Salt Lake, Utah, and Weber Counties</li>
+</ul>
+</div>
+<div class="slide" id="sdr-software-defined-radio">
+<h1>SDR - Software Defined Radio</h1>
+<ul class="simple">
+<li>$40 USB dongle with pigtail antenna</li>
+<li>Can receive from 23 Mhz to 2.2 Ghz</li>
+<li>Requires software on your computer</li>
+<li>Can receive FM broadcast, NWR, Amateur Radio, GMRS, etc</li>
+</ul>
+</div>
+<div class="slide" id="shortwave-radio">
+<h1>Shortwave Radio</h1>
+<ul class="simple">
+<li>$50+ radios. ~$300 for memory control, external antennas, etc</li>
+<li>14 &quot;bands&quot; with thousands of frequencies: 2.3 Mhz - 26 Mhz</li>
+<li>Depends greatly on atmospheric conditions</li>
+<li>Great for world-wide emergencies</li>
+</ul>
+</div>
+<div class="slide" id="shortwave-radio-emergency-broadcasts">
+<h1>Shortwave Radio Emergency Broadcasts</h1>
+<ul class="simple">
+<li>Federal, State &amp; Local government agencies nationwide</li>
+<li>Operation Secure</li>
+<li>American Red Cross</li>
+<li>Federal Emergency Management Agency</li>
+<li>Air Force Global HF System</li>
+<li>U.S. Army Mars Emergency Network</li>
+<li>U.S. Navy</li>
+<li>Voice of America</li>
+</ul>
+</div>
+<div class="slide" id="baofeng-uv-5r">
+<h1>Baofeng UV-5R</h1>
+<ul class="simple">
+<li>$40</li>
+<li>65-108 MHz receive (FM broadcasts)</li>
+<li>136-174 / 400-520 MHz transmit (FRS, GMRS, MURS, 2m and 70cm Ham)</li>
+<li>NWR receive (manually typed in)</li>
+<li>1 watt and 4 watt output</li>
+<li>Dual receieve</li>
+<li>Memory allocation</li>
+<li>Antennal replacable</li>
+</ul>
+</div>
+<div class="slide" id="local-emergency-communication">
+<h1>Local Emergency Communication</h1>
+<div class="section" id="stake">
+<h2>Stake</h2>
+<ul class="simple">
+<li>General emergency ham radio checkin</li>
+<li>Every Sunday night at 21:00 on 146.520 Mhz</li>
+</ul>
+</div>
+<div class="section" id="ward">
+<h2>Ward</h2>
+<ul class="simple">
+<li>Block captain FRS checkin</li>
+<li>Every Fast Sunday at 20:00 on 462.5875 Mhz with PL 67.0 kHz</li>
+</ul>
+</div>
+</div>
+<div class="slide" id="fin">
+<h1>Fin</h1>
+<ul class="simple">
+<li>Questions?</li>
+<li>Comments?</li>
+<li>Rude Remarks?</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
