@@ -51,18 +51,17 @@ See http://creativecommons.org/licenses/by-sa/4.0/ for more details.
 Introduction
 ============
 
-* Why use random numbers?
-* Pseudorandom numbers
-* Cryptographically secure pseudorandom numbers
-* True random numbers
-* Randomness tests
+* This talk is...
+* Targeted towards developers.
+* Strongly theory based.
+* Assuming some algrebra knowledge.
 
 Why need random numbers?
 ========================
 
 * Lottery drawing
 * Generic gambling
-* Thermodynamics
+* Scientific models
 * Quantum mechanics
 * Pattern recognition
 * Game theory
@@ -85,16 +84,41 @@ Monte Carlo Simulations
 
 .. image:: images/monte_carlo_pi.gif
 
-Properties of Pseudorandom Numbers (PRNG)
-=========================================
+When in doubt use /dev/urandom
+==============================
+
+* The kernel has access to raw device entropy.
+* It can promise not to share state
+* It can promise not to feed data before seeding.
+* Userspace generators depend on kernelspace anyway.
+
+As a fallback, consider a TRNG
+==============================
+
+* Best case, but...
+* Can be expensive
+* Can be backdoored
+* Can be biased
+* Usually slow
+
+So why CSPRNG?
+==============
+
+* Cannot guarantee /dev/urandom exists
+* Hardware doesn't provide sufficient entropy
+* Browsers might not use the WebCrypto API
+* Need high throughput (prepping FDE, scientific modeling, etc.)
+
+PRNG Properties 
+===============
 
 * Must start with an initial seed.
 * Uniformally distributed.
 * Large period.
 * Fast generation.
 
-Some Pseudorandom Number Designs
-================================
+Some PRNG Designs
+=================
 
 * Middle-square method.
 * Linear congruential generator.
@@ -104,8 +128,8 @@ Some Pseudorandom Number Designs
 * Multiply with carry.
 * Xorshift.
 
-Properties of a CSPRNG
-======================
+CSPRNG Properties
+=================
 
 * Must start with an initial seed.
 * Uniformally distributed.
@@ -117,13 +141,16 @@ Properties of a CSPRNG
 How To Create A CSPRNG?
 =======================
 
-* Must be non-linear.
 * Can be built using existing cryptographic primitives.
-* Can address the discrete logarithm problem.
-* Can address the quadratic residuosity problem.
+* Can address:
+* The discrete logarithm problem.
+* The integer prime factorization problem.
+* The quadratic residuosity problem.
+* The RSA problem.
+* The Diffie-Hellman problem.
 
-Designs Based On Cryptographic Primitives
-=========================================
+Cryptographic Primitives Designs
+================================
 
 * A secure block cipher (AES, Twofish, Serpent)
 * A secure stream cipher (Salsa20, ISAAC, Rabbit)
@@ -132,9 +159,11 @@ Designs Based On Cryptographic Primitives
 Number Theoretic Designs
 ========================
 
-* Discrete logarithm (Blum-Micali)
+* Discrete logarithm (ECC, Blum-Micali)
 * Quadratic residue (Blum-Blum-Shub)
-* Diffie-Hellman (given g^x, g^y, find g^(xy))
+* Prime factorization hardness (Blum-Goldwasser)
+* RSA problem
+* Diffie-Hellman
 
 Discrete Logarithm Problem
 ==========================
@@ -143,12 +172,50 @@ Discrete Logarithm Problem
 * Find an integer 'k' which solves 'g = b^k'
 * Where 'b' is an element of the same finite group
 
+Think Clock Math
+================
+
+* 23-hour clock (the modulus)
+* "g" must be a primitive root (5)
+* 5^x mod 23 distributes uniformly
+* Results to trial and error (brute force)
+* EG: 5^20 mod 23 ≡ y (easy)
+* EG: 5^x mod 23 ≡ 12 (hard)
+
 Quadratic Residuosity Problem
 =============================
 
-* Given integers 'a' and 'T'
+* Given integers 'a' and 'T = p1*p2'
 * 'a' is a quadratic residue modulo 'T' if
 * an integer 'b' exists such that 'a ≡ b^2 mod T'
+* The value of 'b' need not be calculated
+
+Prime Factorization
+===================
+
+* Giver two primes 'p' and 'q'
+* p != q and p ≡ q ≡ 3 mod 4
+* N = p*q. N is the public key
+* (p, q) is the private key
+
+RSA Algorithm
+=============
+
+* Given two distinct primes 'p' and 'q'
+* Compute n = p*q
+* Compute φ(n) = (p − 1)(q − 1)
+* Choose 'e' s.t. 1 < e < φ(n)
+* Compute d = 1/(e mod φ(n))
+* (n, e) is the public key
+* d is the private key
+
+RSA Problem
+===========
+
+* Given ciphertext 'C'
+* Give the public key (n, e)
+* Find plaintext where C = P^e
+* Finding the private key 'd' is computationally equivalent (but not necessary).
 
 Diffie-Hellman Problem
 ======================
@@ -156,9 +223,10 @@ Diffie-Hellman Problem
 * Given a generator 'g' over some group
 * And given 'm = g^x' and 'n = g^y'
 * Find 'p' such that 'p = g^(xy)'
+* Variants exist
 
-Cryptographic Primitive In Counter Mode
-=======================================
+Counter Mode
+============
 
 * Block cipher, stream cipher, or hash function.
 * Begin with an n-bit counter "i" and a key "k".
@@ -166,8 +234,8 @@ Cryptographic Primitive In Counter Mode
 * N = CP(i, k)
 * i += 1
 
-Counter Mode CSPRNG Example
-===========================
+Counter Mode Example
+====================
 
 * AES-128 in ECB mode (no IV).
 * i=(128-bits 0), k="n5kzb2npmqaadheh"
@@ -178,8 +246,8 @@ Counter Mode CSPRNG Example
 * AES-128(i+4, k) = PEVHWFBR0psbAxNuNiRzcA
 * etc.
 
-Counter Mode CSPRNG Observations
-================================
+Counter Mode Observations
+=========================
 
 * Only as secure as the primitive used.
 * The private key must have sufficient entropy.
@@ -188,7 +256,7 @@ Counter Mode CSPRNG Observations
 ANSI x9.17 CSPRNG
 =================
 
-* Initially defined with 64-bit 3DES.
+* Defined with 64-bit 3DES.
 * Block cipher, stream cipher, or hash function.
 * Begin with an n-bit seed "s" and an n-bit key "k".
 * while true:
@@ -230,9 +298,15 @@ ANSI x9.17 CSPRNG Observations
 * The private key must have sufficient entropy.
 * Adversary could set the clock
 
+NIST 800-90A Revision 1
+=======================
+
+* Hash_DRBG
+* HMAC_DRBG
+* CTR_DRBG
+* Not Dual_EC_DRBG (NSA backdoor)
+
 Fin
 ===
 
 Comments, questions, or rude remarks?
-
-:Email: aaron.toponce@gmail.com
