@@ -1,12 +1,13 @@
 .. include:: <s5defs.txt>
 
-=======
-systemd
-=======
+=====================
+Understanding systemd
+=====================
 
 :Author: Aaron Toponce
 :Email: aaron.toponce@gmail.com
-:Date: Jul 14, 2016
+:Date: Jul 15, 2016
+:URL: http://aarontoponce.org/presents
 
 License
 =======
@@ -54,18 +55,19 @@ Introduction
 * What is systmed?
 * systemd features
 
-What this presentation is not
-=============================
+This presentation
+=================
 
-* Not going to "sell" systemd.
-* Not going to "bash" systemd.
+* What it's not:
 
-What this presentation is
-=========================
+  * Not going to "sell" systemd.
+  * Not going to "bash" systemd.
 
-* An introduction.
-* An explanation of features.
-* A comparison to other init systems.
+* What it is:
+
+  * An introduction.
+  * An explanation of features.
+  * A comparison to other init systems.
 
 What is systemd?
 ================
@@ -108,7 +110,7 @@ systemd myths (page 2)
 * binary configuration files
 * feature creep
 
-systemd myths (page 2)
+systemd myths (page 3)
 ======================
 
 * forces you to do something
@@ -146,8 +148,8 @@ systemd units
 * Scope- An externally created process
 * Services- Standard system service
 
-system units cont.
-==================
+systemd units (cont.)
+=====================
 
 * Slice- A group of hierarchically organized units
 * Snapshots- Saved state of the system manager
@@ -156,8 +158,8 @@ system units cont.
 * Targets- Group of system units
 * Timers- systemd timer-based activation
 
-systemd units (cont.)
-=====================
+systemd unit files
+==================
 
 * Units are defined with unit files
 * Named "name.unit_type"
@@ -342,18 +344,280 @@ Installing the RTL-SDR TRNG Service
     # systemctl start rtl-entropy.service
     # systemctl status rtl-entropy.service
 
-Start, Stop, Restart a Service
-==============================
+Using SysV init service(8)
+==========================
 
 .. code::
 
-    # systemctl stop rtl-entropy.service
-    # systemctl start rtl-entropy.service
-    # systemctl restart rtl-entropy.service
+    # service rtl-entropy restart
+    [ ok ] Restarting rtl-entropy: rtl-entropy
+    # service rtl-entropy stop
+    [ ok ] Stopping rtl-entropy : rtl-entropy
+    # service rtl-entropy start
+    [ ok ] Starting rtl-entropy : rtl-entropy
 
-RTL-SDR TRNG Service
-====================
+Using systemctl(8)
+==================
+
+.. code::
+
+    # systemctl restart rtl-entropy
+    # systemctl stop rtl-entropy
+    # systemctl start rtl-entropy
+    # systemctl status rtl-entropy
+
+Using systemctl(8) cont.
+========================
 
 .. image:: images/rtl-entropy.png
+    :scale: 200%
 
+systemctl(8) vs service(8)
+==========================
+
+.. code::
+
+    # service --status-all
+    [ + ]  acpid
+    [ + ]  atd
+    [ ? ]  binfmt-support
+    [ ? ]  bitlbee
+    [ - ]  bootlogd.dpkg-bak
+    [ - ]  bootlogs
+    [ - ]  bootmisc.sh
+    ...
+
+systemctl(8) vs service(8)
+==========================
+
+.. code::
+
+    # systemctl --type service --state active
+      UNIT                        LOAD      ACTIVE SUB     DESCRIPTION
+      accounts-daemon.service     loaded    active running Accounts Service
+      acpid.service               loaded    active running ACPI event daemon
+      apache2.service             loaded    active running LSB: Apache2 web server
+      atd.service                 loaded    active running Deferred execution schedu
+      autofs.service              loaded    active running Automounts filesystems on
+      avahi-daemon.service        loaded    active running Avahi mDNS/DNS-SD Stack
+      console-setup.service       loaded    active exited  Set console font and keym
+      ...
+
+systemctl(8) vs chkconfig(8)
+============================
+
+.. code::
+
+    # chkconfig rsyslog on
+    # chkconfig --list rsyslog
+    rsyslog                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    # chkconfig rsyslog off
+
+systemctl(8) vs chkconfig(8)
+============================
+
+.. code::
+
+    # systemctl enable rsyslog.service
+    systemctl enable docker.service
+    Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    Executing: /lib/systemd/systemd-sysv-install enable docker
+    insserv: warning: current start runlevel(s) (empty) of script `docker' overrides LSB defaults (2 3 4 5).
+    insserv: warning: current stop runlevel(s) (0 1 2 3 4 5 6) of script `docker' overrides LSB defaults (0 1 6).
+    # ls /lib/systemd/system/docker.service 
+    /lib/systemd/system/docker.service
+
+systemctl(8) vs chkconfig(8)
+============================
+
+.. code::
+
+    # chkconfig --list
+    acpid                     0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    atd                       0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    binfmt-support            0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    bitlbee                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    bootlogd.dpkg-bak         0:off  1:off  2:off  3:off  4:off  5:off  6:off
+    bootlogs                  0:off  1:on   2:on   3:on   4:on   5:on   6:off
+    bootmisc.sh               0:off  1:off  2:off  3:off  4:off  5:off  6:off  S:on 
+    cgmanager                 0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    cgproxy                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+    ...
+
+systemctl(8) vs chkconfig(8)
+============================
+
+.. code::
+
+    # systemctl list-unit-files --type service
+    UNIT FILE                                  STATE    
+    accounts-daemon.service                    enabled  
+    acpid.service                              disabled 
+    alsa-restore.service                       static   
+    alsa-state.service                         static   
+    alsa-utils.service                         masked   
+    apache-htcacheclean.service                generated
+    apache2.service                            generated
+    apt-daily.service                          static   
+    ...
+
+More systemctl(8)
+=================
+
+* List dependencies by target:
+
+.. code::
+
+    # systemctl list-dependencies multi-user.target --no-pager
+    ● ├─unscd.service
+    ● ├─zfs-zed.service
+    ● ├─basic.target
+    ● │ ├─-.mount
+    ● │ ├─alsa-restore.service
+    ● │ ├─alsa-state.service
+    ● │ ├─tmp.mount
+    ● │ ├─paths.target
+    ● │ │ └─acpid.path
+    ...
+
+More systemctl(8)
+=================
+
+* Shell subcommand completion:
+
+.. code::
+
+    # systemctl <tab><tab>
+    cancel                               -- Cancel all, one, or more jobs         
+    cat                                  -- Show the source unit files and
+    drop-in
+    daemon-reexec                        -- Reexecute systemd manager             
+    daemon-reload                        -- Reload systemd manager
+    configuration  
+    default                              -- Enter system default mode             
+    disable                              -- Disable one or more unit files        
+    edit                                 -- Edit one or more unit files           
+    emergency                            -- Enter system emergency mode           
+    enable                               -- Enable one or more unit files         
+
+Additional system(8) commands
+=============================
+
+.. code::
+
+    # systemd-<tab><tab>
+    systemd-analyze                 systemd-machine-id-setup
+    systemd-ask-password            systemd-notify
+    systemd-cat                     systemd-path
+    systemd-cgls                    systemd-resolve
+    systemd-cgtop                   systemd-run
+    systemd-delta                   systemd-socket-activate
+    systemd-detect-virt             systemd-stdio-bridge
+    systemd-docker                  systemd-sysusers
+    systemd-escape                  systemd-tmpfiles
+    systemd-hwdb                    systemd-tty-ask-password-agent
+    systemd-inhibit                 
+
+Learning journalctl(8)
+======================
+
+* Timestamps converted to local timezone
+* All logged data is shown, including rotated logs
+
+.. code::
+
+    # journalctl
+    -- Logs begin at Sat 2016-07-09 23:38:15 MDT, end at Fri 2016-07-15 08:22:41 MDT
+    Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+    Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+    Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+    Jul 09 23:39:01 eightyeight CRON[19643]: pam_unix(cron:session): session opened 
+    Jul 09 23:39:01 eightyeight CRON[19644]: (root) CMD (  [ -x /usr/lib/php/session
+    Jul 09 23:39:01 eightyeight CRON[19643]: pam_unix(cron:session): session closed 
+    Jul 09 23:39:04 eightyeight sks[1030]: 2016-07-09 23:39:04 <recon as client> err
+
+journald logs are not persistent
+================================
+
+* Non-persistent by default
+
+  - Stored in a small ring buffer or in memory
+  - Stored in ``/run/log/journal/`` by default
+
+.. code::
+
+    # ls /run/systemd/journal 
+    dev-log=  flushed  kernel-seqnum  socket=  stdout=  streams/  syslog=
+
+* To enable persistence:
+
+.. code::
+
+    # mkdir /var/log/journal/
+    # systemctl restart systemd-journal
+
+More journalctl(8)
+==================
+
+* View the most recent logs (use -f to follow):
+
+.. code::
+
+    # journalctl -n 10
+
+* Specify verbosity:
+
+.. code::
+
+    # journalctl -o <tab>
+    cat              json-pretty      short-iso        verbose
+    export           json-sse         short-monotonic  
+    json             short            short-precise    
+
+More journalctl(8)
+==================
+
+* Filter by priority
+
+.. code::
+
+    # journalctl -p err
+
+* Filter by time and priority
+
+.. code::
+
+    # journalctl -p err --since "2016-7-14" --until "2016-7-15"
+
+* Advanced filtering by:
+
+  - field
+  - UUID
+  - unit
+  - ...
+
+Autorestarting services
+=======================
+
+.. code::
+
+    # grep start /lib/systemd/system/ssh.service 
+    Restart=on-failure
+    RestartPreventExitStatus=255
+    RestartSec=42
+
+* If SSH dies, it will autorestart after 42 seconds
+
+Review
+======
+
+* Replaces /sbin/init
+* Highly featured, very powerful
+* New set of commands and functionality
+* New journal logging
+
+Fin
+===
+
+* Comments, questions, rude remarks?
 

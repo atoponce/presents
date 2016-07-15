@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
 <meta name="version" content="S5 1.1" />
-<title>systemd</title>
+<title>Understanding systemd</title>
 <meta name="author" content="Aaron Toponce" />
-<meta name="date" content="Jul 14, 2016" />
+<meta name="date" content="Jul 15, 2016" />
 <style type="text/css">
 
 /*
@@ -365,13 +365,13 @@ ul.auto-toc {
 
 </div>
 <div id="footer">
-<h1>systemd</h1>
+<h1>Understanding systemd</h1>
 
 </div>
 </div>
 <div class="presentation">
 <div class="slide" id="slide0">
-<h1 class="title">systemd</h1>
+<h1 class="title">Understanding systemd</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -381,7 +381,9 @@ ul.auto-toc {
 <tr class="field"><th class="docinfo-name">Email:</th><td class="field-body"><a class="reference external" href="mailto:aaron.toponce&#64;gmail.com">aaron.toponce&#64;gmail.com</a></td>
 </tr>
 <tr><th class="docinfo-name">Date:</th>
-<td>Jul 14, 2016</td></tr>
+<td>Jul 15, 2016</td></tr>
+<tr class="field"><th class="docinfo-name">URL:</th><td class="field-body"><a class="reference external" href="http://aarontoponce.org/presents">http://aarontoponce.org/presents</a></td>
+</tr>
 </tbody>
 </table>
 <!-- Definitions of interpreted text roles (classes) for S5/HTML data. -->
@@ -460,19 +462,20 @@ legal document provided here:
 <li>systemd features</li>
 </ul>
 </div>
-<div class="slide" id="what-this-presentation-is-not">
-<h1>What this presentation is not</h1>
+<div class="slide" id="this-presentation">
+<h1>This presentation</h1>
 <ul class="simple">
+<li>What it's not:<ul>
 <li>Not going to &quot;sell&quot; systemd.</li>
 <li>Not going to &quot;bash&quot; systemd.</li>
 </ul>
-</div>
-<div class="slide" id="what-this-presentation-is">
-<h1>What this presentation is</h1>
-<ul class="simple">
+</li>
+<li>What it is:<ul>
 <li>An introduction.</li>
 <li>An explanation of features.</li>
 <li>A comparison to other init systems.</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="slide" id="what-is-systemd">
@@ -520,8 +523,8 @@ legal document provided here:
 <li>feature creep</li>
 </ul>
 </div>
-<div class="slide" id="id1">
-<h1>systemd myths (page 2)</h1>
+<div class="slide" id="systemd-myths-page-3">
+<h1>systemd myths (page 3)</h1>
 <ul class="simple">
 <li>forces you to do something</li>
 <li>impossible to run syslog</li>
@@ -560,8 +563,8 @@ legal document provided here:
 <li>Services- Standard system service</li>
 </ul>
 </div>
-<div class="slide" id="system-units-cont">
-<h1>system units cont.</h1>
+<div class="slide" id="systemd-units-cont">
+<h1>systemd units (cont.)</h1>
 <ul class="simple">
 <li>Slice- A group of hierarchically organized units</li>
 <li>Snapshots- Saved state of the system manager</li>
@@ -571,8 +574,8 @@ legal document provided here:
 <li>Timers- systemd timer-based activation</li>
 </ul>
 </div>
-<div class="slide" id="systemd-units-cont">
-<h1>systemd units (cont.)</h1>
+<div class="slide" id="systemd-unit-files">
+<h1>systemd unit files</h1>
 <ul class="simple">
 <li>Units are defined with unit files</li>
 <li>Named &quot;name.unit_type&quot;</li>
@@ -810,17 +813,276 @@ WantedBy=multi-user.target
 # systemctl status rtl-entropy.service
 </pre>
 </div>
-<div class="slide" id="start-stop-restart-a-service">
-<h1>Start, Stop, Restart a Service</h1>
+<div class="slide" id="using-sysv-init-service-8">
+<h1>Using SysV init service(8)</h1>
 <pre class="code literal-block">
-# systemctl stop rtl-entropy.service
-# systemctl start rtl-entropy.service
-# systemctl restart rtl-entropy.service
+# service rtl-entropy restart
+[ ok ] Restarting rtl-entropy: rtl-entropy
+# service rtl-entropy stop
+[ ok ] Stopping rtl-entropy : rtl-entropy
+# service rtl-entropy start
+[ ok ] Starting rtl-entropy : rtl-entropy
 </pre>
 </div>
-<div class="slide" id="rtl-sdr-trng-service">
-<h1>RTL-SDR TRNG Service</h1>
-<img alt="images/rtl-entropy.png" src="images/rtl-entropy.png" />
+<div class="slide" id="using-systemctl-8">
+<h1>Using systemctl(8)</h1>
+<pre class="code literal-block">
+# systemctl restart rtl-entropy
+# systemctl stop rtl-entropy
+# systemctl start rtl-entropy
+# systemctl status rtl-entropy
+</pre>
+</div>
+<div class="slide" id="using-systemctl-8-cont">
+<h1>Using systemctl(8) cont.</h1>
+<img alt="images/rtl-entropy.png" src="images/rtl-entropy.png" style="width: 1120.0px; height: 624.0px;" />
+</div>
+<div class="slide" id="systemctl-8-vs-service-8">
+<h1>systemctl(8) vs service(8)</h1>
+<pre class="code literal-block">
+# service --status-all
+[ + ]  acpid
+[ + ]  atd
+[ ? ]  binfmt-support
+[ ? ]  bitlbee
+[ - ]  bootlogd.dpkg-bak
+[ - ]  bootlogs
+[ - ]  bootmisc.sh
+...
+</pre>
+</div>
+<div class="slide" id="id1">
+<h1>systemctl(8) vs service(8)</h1>
+<pre class="code literal-block">
+# systemctl --type service --state active
+  UNIT                        LOAD      ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service     loaded    active running Accounts Service
+  acpid.service               loaded    active running ACPI event daemon
+  apache2.service             loaded    active running LSB: Apache2 web server
+  atd.service                 loaded    active running Deferred execution schedu
+  autofs.service              loaded    active running Automounts filesystems on
+  avahi-daemon.service        loaded    active running Avahi mDNS/DNS-SD Stack
+  console-setup.service       loaded    active exited  Set console font and keym
+  ...
+</pre>
+</div>
+<div class="slide" id="systemctl-8-vs-chkconfig-8">
+<h1>systemctl(8) vs chkconfig(8)</h1>
+<pre class="code literal-block">
+# chkconfig rsyslog on
+# chkconfig --list rsyslog
+rsyslog                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+# chkconfig rsyslog off
+</pre>
+</div>
+<div class="slide" id="id2">
+<h1>systemctl(8) vs chkconfig(8)</h1>
+<pre class="code literal-block">
+# systemctl enable rsyslog.service
+systemctl enable docker.service
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+insserv: warning: current start runlevel(s) (empty) of script `docker' overrides LSB defaults (2 3 4 5).
+insserv: warning: current stop runlevel(s) (0 1 2 3 4 5 6) of script `docker' overrides LSB defaults (0 1 6).
+# ls /lib/systemd/system/docker.service
+/lib/systemd/system/docker.service
+</pre>
+</div>
+<div class="slide" id="id3">
+<h1>systemctl(8) vs chkconfig(8)</h1>
+<pre class="code literal-block">
+# chkconfig --list
+acpid                     0:off  1:off  2:on   3:on   4:on   5:on   6:off
+atd                       0:off  1:off  2:on   3:on   4:on   5:on   6:off
+binfmt-support            0:off  1:off  2:on   3:on   4:on   5:on   6:off
+bitlbee                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+bootlogd.dpkg-bak         0:off  1:off  2:off  3:off  4:off  5:off  6:off
+bootlogs                  0:off  1:on   2:on   3:on   4:on   5:on   6:off
+bootmisc.sh               0:off  1:off  2:off  3:off  4:off  5:off  6:off  S:on
+cgmanager                 0:off  1:off  2:on   3:on   4:on   5:on   6:off
+cgproxy                   0:off  1:off  2:on   3:on   4:on   5:on   6:off
+...
+</pre>
+</div>
+<div class="slide" id="id4">
+<h1>systemctl(8) vs chkconfig(8)</h1>
+<pre class="code literal-block">
+# systemctl list-unit-files --type service
+UNIT FILE                                  STATE
+accounts-daemon.service                    enabled
+acpid.service                              disabled
+alsa-restore.service                       static
+alsa-state.service                         static
+alsa-utils.service                         masked
+apache-htcacheclean.service                generated
+apache2.service                            generated
+apt-daily.service                          static
+...
+</pre>
+</div>
+<div class="slide" id="more-systemctl-8">
+<h1>More systemctl(8)</h1>
+<ul class="simple">
+<li>List dependencies by target:</li>
+</ul>
+<pre class="code literal-block">
+# systemctl list-dependencies multi-user.target --no-pager
+● ├─unscd.service
+● ├─zfs-zed.service
+● ├─basic.target
+● │ ├─-.mount
+● │ ├─alsa-restore.service
+● │ ├─alsa-state.service
+● │ ├─tmp.mount
+● │ ├─paths.target
+● │ │ └─acpid.path
+...
+</pre>
+</div>
+<div class="slide" id="id5">
+<h1>More systemctl(8)</h1>
+<ul class="simple">
+<li>Shell subcommand completion:</li>
+</ul>
+<pre class="code literal-block">
+# systemctl &lt;tab&gt;&lt;tab&gt;
+cancel                               -- Cancel all, one, or more jobs
+cat                                  -- Show the source unit files and
+drop-in
+daemon-reexec                        -- Reexecute systemd manager
+daemon-reload                        -- Reload systemd manager
+configuration
+default                              -- Enter system default mode
+disable                              -- Disable one or more unit files
+edit                                 -- Edit one or more unit files
+emergency                            -- Enter system emergency mode
+enable                               -- Enable one or more unit files
+</pre>
+</div>
+<div class="slide" id="additional-system-8-commands">
+<h1>Additional system(8) commands</h1>
+<pre class="code literal-block">
+# systemd-&lt;tab&gt;&lt;tab&gt;
+systemd-analyze                 systemd-machine-id-setup
+systemd-ask-password            systemd-notify
+systemd-cat                     systemd-path
+systemd-cgls                    systemd-resolve
+systemd-cgtop                   systemd-run
+systemd-delta                   systemd-socket-activate
+systemd-detect-virt             systemd-stdio-bridge
+systemd-docker                  systemd-sysusers
+systemd-escape                  systemd-tmpfiles
+systemd-hwdb                    systemd-tty-ask-password-agent
+systemd-inhibit
+</pre>
+</div>
+<div class="slide" id="learning-journalctl-8">
+<h1>Learning journalctl(8)</h1>
+<ul class="simple">
+<li>Timestamps converted to local timezone</li>
+<li>All logged data is shown, including rotated logs</li>
+</ul>
+<pre class="code literal-block">
+# journalctl
+-- Logs begin at Sat 2016-07-09 23:38:15 MDT, end at Fri 2016-07-15 08:22:41 MDT
+Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+Jul 09 23:38:15 eightyeight icinga2[2063]: [2016-07-09 23:38:15 -0600] warning/P
+Jul 09 23:39:01 eightyeight CRON[19643]: pam_unix(cron:session): session opened
+Jul 09 23:39:01 eightyeight CRON[19644]: (root) CMD (  [ -x /usr/lib/php/session
+Jul 09 23:39:01 eightyeight CRON[19643]: pam_unix(cron:session): session closed
+Jul 09 23:39:04 eightyeight sks[1030]: 2016-07-09 23:39:04 &lt;recon as client&gt; err
+</pre>
+</div>
+<div class="slide" id="journald-logs-are-not-persistent">
+<h1>journald logs are not persistent</h1>
+<ul class="simple">
+<li>Non-persistent by default<ul>
+<li>Stored in a small ring buffer or in memory</li>
+<li>Stored in <tt class="docutils literal">/run/log/journal/</tt> by default</li>
+</ul>
+</li>
+</ul>
+<pre class="code literal-block">
+# ls /run/systemd/journal
+dev-log=  flushed  kernel-seqnum  socket=  stdout=  streams/  syslog=
+</pre>
+<ul class="simple">
+<li>To enable persistence:</li>
+</ul>
+<pre class="code literal-block">
+# mkdir /var/log/journal/
+# systemctl restart systemd-journal
+</pre>
+</div>
+<div class="slide" id="more-journalctl-8">
+<h1>More journalctl(8)</h1>
+<ul class="simple">
+<li>View the most recent logs (use -f to follow):</li>
+</ul>
+<pre class="code literal-block">
+# journalctl -n 10
+</pre>
+<ul class="simple">
+<li>Specify verbosity:</li>
+</ul>
+<pre class="code literal-block">
+# journalctl -o &lt;tab&gt;
+cat              json-pretty      short-iso        verbose
+export           json-sse         short-monotonic
+json             short            short-precise
+</pre>
+</div>
+<div class="slide" id="id6">
+<h1>More journalctl(8)</h1>
+<ul class="simple">
+<li>Filter by priority</li>
+</ul>
+<pre class="code literal-block">
+# journalctl -p err
+</pre>
+<ul class="simple">
+<li>Filter by time and priority</li>
+</ul>
+<pre class="code literal-block">
+# journalctl -p err --since &quot;2016-7-14&quot; --until &quot;2016-7-15&quot;
+</pre>
+<ul class="simple">
+<li>Advanced filtering by:<ul>
+<li>field</li>
+<li>UUID</li>
+<li>unit</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="slide" id="autorestarting-services">
+<h1>Autorestarting services</h1>
+<pre class="code literal-block">
+# grep start /lib/systemd/system/ssh.service
+Restart=on-failure
+RestartPreventExitStatus=255
+RestartSec=42
+</pre>
+<ul class="simple">
+<li>If SSH dies, it will autorestart after 42 seconds</li>
+</ul>
+</div>
+<div class="slide" id="review">
+<h1>Review</h1>
+<ul class="simple">
+<li>Replaces /sbin/init</li>
+<li>Highly featured, very powerful</li>
+<li>New set of commands and functionality</li>
+<li>New journal logging</li>
+</ul>
+</div>
+<div class="slide" id="fin">
+<h1>Fin</h1>
+<ul class="simple">
+<li>Comments, questions, rude remarks?</li>
+</ul>
 </div>
 </div>
 </body>
