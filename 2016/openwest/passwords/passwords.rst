@@ -51,9 +51,11 @@ See http://creativecommons.org/licenses/by-sa/4.0/ for more details.
 Introduction
 ============
 
+* Not passwords managers (KeePass, LastPass, etc.)
+* Password hashing algorithms
 * History of storing passwords to disk
 * The threat model and adversary
-* Plaintext, crypt(3), NTLM, LANMAN, MD5, md5crypt, SHA-1, 
+* Plaintext, crypt(3), NTLM, LANMAN, MD5, md5crypt, SHA-1
 * The threat model and adversary revised
 * bcrypt, sha256crypt, sha512crypt, PBKDF2
 * scrypt
@@ -76,13 +78,13 @@ Windows Password Storage
 
 * Windows NT introduced LANMAN and NTLM.
 * NTLM and LANMAN not salted.
+* Rainbow tables exist due to LM and NTLM.
 * Weaker than crypt(3).
 * Fast and lightweight.
 * Converted to uppercase, then pads to 14-bytes.
 * The 14-byte password is split into two 7-byte chunks.
 * Two 7-byte passwords are easier to find.
 * NTLMv2 is still used in Windows systems.
-* Rainbow tables exist due to LM and NTLM.
 
 The Attackers Threat Model
 ==========================
@@ -151,19 +153,20 @@ Why Argon2 Is Not 1st
 * Needs at least 5 years of analysis.
 * Deploy for testing, but not to production.
 
-What is sha{256,512}crypt?
-==========================
+What is sha2crypt?
+==================
 
+* sha256crypt based on SHA-256
+* sha512crypt based on SHA-512
 * Developed by Urlich Drepper for GNU libc.
 * Modeled after md5crypt.
-* Uses SHA-256 or SHA-512.
 * Unless provided, autogenerates a salt of 16 characters max.
 * Has a customizable linear work factor.
 * Default iterations is 5,000.
 * Default on almost all GNU/Linux operating systems.
 
-sha{256,512}crypt Benchmarks
-============================
+sha2crypt Benchmarks
+====================
 
 * sha256crypt (5,000 iterations): 3 MH/s
 * sha512crypt (5,000 iterations): 1 MH/s
@@ -196,7 +199,7 @@ What is PBKDF2?
 * Cost is CPU, RAM, and product.
 * Has a customizable linear work factor.
 * Recommended iterations in 2000 was 1,000.
-* Password hash for OS X with 10,000 iterations.
+* Password hash for OS X with 30k-50k iterations.
 
 PBKDF2 Benchmarks
 =================
@@ -212,7 +215,6 @@ Comparison Table
 
 .. image:: pics/cpu_table.png
     :align: center
-    :scale: 200%
 
 What is scrypt?
 ===============
@@ -237,7 +239,6 @@ scrypt Table
 
 .. image:: pics/scrypt_table.png
     :align: center
-    :scale: 200%
 
 What is Argon2?
 ===============
@@ -264,7 +265,6 @@ Argon2 Table
 
 .. image:: pics/argon2_table.png
     :align: center
-    :scale: 150%
 
 bcrypt Weakness
 ===============
@@ -295,14 +295,21 @@ Argon2i Weakness
 Best Practices
 ==============
 
-* Target .5s for interactive logins.
-* Target 5s for symmetric key derivation.
-* bcrypt cost of 13 to 16
-* sha2crypt iterations 640k to 5,120k
-* PBKDF2 iterations 640k to 5,120k
+* Target:
 
-Best Practices (cont.)
-======================
+  * .5s for interactive logins.
+  * 5s for symmetric key derivation.
 
-* scrypt: 16 MiB RAM (N=16384, r=8, p=1)
-* scrypt: 16 MiB RAM (N=131072, r=1, p=1)
+* Algorithm costs:
+
+  * bcrypt: 13 - 16
+  * sha2crypt: 640k - 5,120k iterations
+  * PBKDF2: 640k - 5,120k iterations
+  * scrypt: 16 MiB RAM (N=16384, r=8, p=1)
+  * scrypt: 16 MiB RAM (N=131072, r=1, p=1)
+  * Argon2: Balance between CPU and RAM cost
+
+Fin
+===
+
+* Comments, questions, or rude remarks?

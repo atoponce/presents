@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
 <meta name="version" content="S5 1.1" />
-<title>Security Through Obesity</title>
+<title>Btrfs vs ZFS</title>
 <meta name="author" content="Aaron Toponce" />
 <meta name="date" content="Jul 14, 2016" />
 <style type="text/css">
@@ -365,13 +365,13 @@ ul.auto-toc {
 
 </div>
 <div id="footer">
-<h1>Security Through Obesity</h1>
+<h1>Btrfs vs ZFS</h1>
 
 </div>
 </div>
 <div class="presentation">
 <div class="slide" id="slide0">
-<h1 class="title">Security Through Obesity</h1>
+<h1 class="title">Btrfs vs ZFS</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -456,290 +456,316 @@ legal document provided here:
 <div class="slide" id="introduction">
 <h1>Introduction</h1>
 <ul class="simple">
-<li>Not passwords managers (KeePass, LastPass, etc.)</li>
-<li>Password hashing algorithms</li>
-<li>History of storing passwords to disk</li>
-<li>The threat model and adversary</li>
-<li>Plaintext, crypt(3), NTLM, LANMAN, MD5, md5crypt, SHA-1</li>
-<li>The threat model and adversary revised</li>
-<li>bcrypt, sha256crypt, sha512crypt, PBKDF2</li>
-<li>scrypt</li>
-<li>Argon2</li>
-<li>PHC candidates</li>
+<li>Overview of Btrfs and ZFS</li>
+<li>Common features</li>
+<li>Distinct features</li>
+<li>Common command examples</li>
 </ul>
 </div>
-<div class="slide" id="history-of-password-storage">
-<h1>History of Password Storage</h1>
+<div class="slide" id="overview">
+<h1>Overview</h1>
 <ul class="simple">
-<li>Multics used the square of the password.</li>
-<li>Switched to the square ANDed with a mask.</li>
-<li>Unix initially stored plaintext (/etc/passwd)</li>
-<li>Unix used crypt(3) based on DES in 1974 in /etc/passwd</li>
-<li>Unix created /etc/shadow to prevent global viewing.</li>
-<li>One-way functions looked promising.</li>
-<li>Salts added to thwart precomputation attacks.</li>
-</ul>
-</div>
-<div class="slide" id="windows-password-storage">
-<h1>Windows Password Storage</h1>
-<ul class="simple">
-<li>Windows NT introduced LANMAN and NTLM.</li>
-<li>NTLM and LANMAN not salted.</li>
-<li>Rainbow tables exist due to LM and NTLM.</li>
-<li>Weaker than crypt(3).</li>
-<li>Fast and lightweight.</li>
-<li>Converted to uppercase, then pads to 14-bytes.</li>
-<li>The 14-byte password is split into two 7-byte chunks.</li>
-<li>Two 7-byte passwords are easier to find.</li>
-<li>NTLMv2 is still used in Windows systems.</li>
-</ul>
-</div>
-<div class="slide" id="the-attackers-threat-model">
-<h1>The Attackers Threat Model</h1>
-<ul class="simple">
-<li>Attackers hav always been more powerful than defenders.</li>
-<li>Defense is only as strong as the weakest link.</li>
-<li>Have all the time they need.</li>
-<li>Variable and large resevoirs of resources.</li>
-<li>Current threat is highly threaded GPUs, FPGAs, and ASICs.</li>
-</ul>
-</div>
-<div class="slide" id="the-defense">
-<h1>The Defense</h1>
-<ul class="simple">
-<li>Enforce password complexity.</li>
-<li>Rotation policies.</li>
-<li>Restrict attack vector.</li>
-</ul>
-</div>
-<div class="slide" id="avoid">
-<h1>Avoid</h1>
-<ul class="simple">
-<li>None (plaintext, hexadecimal, base64, rot13, etc.).</li>
-<li>Vanilla MD5, SHA-1/2/3.</li>
-<li>crypt(3), md5crypt.</li>
-<li>Any general purpose one-way hashing function.</li>
-<li>Any encryption algorithm.</li>
-<li>Your own design.</li>
-</ul>
-</div>
-<div class="slide" id="why-not-to-use-generic-hashes">
-<h1>Why Not To Use Generic Hashes</h1>
-<ul class="simple">
-<li>These algorithms are designed to be fast, fast, fast.</li>
-<li>We don't want speed, because crackers have speed too.</li>
-<li>Without a cost factor, billions of guesses per second practical.</li>
-</ul>
-</div>
-<div class="slide" id="vanilla-benchmark-example">
-<h1>Vanilla Benchmark Example</h1>
-<ul class="simple">
-<li>8x Nvidia GTX 1080 with Hashcat</li>
-<li>MD5: 200 GH/s</li>
-<li>SHA-1: 68 GH/s</li>
-<li>SHA-256: 23 GH/s</li>
-<li>SHA-512: 9 GH/s</li>
-<li>SHA-3: 6 GH/s</li>
-</ul>
-</div>
-<div class="slide" id="why-not-to-use-md5crypt">
-<h1>Why Not to use md5crypt</h1>
-<ul class="simple">
-<li>Cost factor hard coded to 1,000 rounds</li>
-<li>80 MH/s benchmark</li>
-</ul>
-</div>
-<div class="slide" id="best-practice">
-<h1>Best Practice</h1>
-<ul class="simple">
-<li>In order of preference:</li>
-<li>scrypt</li>
-<li>bcrypt</li>
-<li>Argon2</li>
-<li>sha512crypt</li>
-<li>sha256crypt</li>
-<li>PBKDF2</li>
-</ul>
-</div>
-<div class="slide" id="why-argon2-is-not-1st">
-<h1>Why Argon2 Is Not 1st</h1>
-<ul class="simple">
-<li>2015 Password Hashing Contest winner.</li>
-<li>Needs at least 5 years of analysis.</li>
-<li>Deploy for testing, but not to production.</li>
-</ul>
-</div>
-<div class="slide" id="what-is-sha2crypt">
-<h1>What is sha2crypt?</h1>
-<ul class="simple">
-<li>sha256crypt based on SHA-256</li>
-<li>sha512crypt based on SHA-512</li>
-<li>Developed by Urlich Drepper for GNU libc.</li>
-<li>Modeled after md5crypt.</li>
-<li>Unless provided, autogenerates a salt of 16 characters max.</li>
-<li>Has a customizable linear work factor.</li>
-<li>Default iterations is 5,000.</li>
-<li>Default on almost all GNU/Linux operating systems.</li>
-</ul>
-</div>
-<div class="slide" id="sha2crypt-benchmarks">
-<h1>sha2crypt Benchmarks</h1>
-<ul class="simple">
-<li>sha256crypt (5,000 iterations): 3 MH/s</li>
-<li>sha512crypt (5,000 iterations): 1 MH/s</li>
-</ul>
-</div>
-<div class="slide" id="what-is-bcrypt">
-<h1>What is bcrypt?</h1>
-<ul class="simple">
-<li>Developed by Niels Provos and David Mazières.</li>
-<li>Designed after the expensive key setup in Blowfish.</li>
-<li>Blowfish was developed by Bruce Schneier.</li>
-<li>Unless provided, autogenerates a salt.</li>
-<li>Has a customizable exponential work factor.</li>
-<li>Available for GNU/Linux in libpam-unix2.</li>
-<li>Recommended work factor is at least 10.</li>
-</ul>
-</div>
-<div class="slide" id="bcrypt-benchmarks">
-<h1>bcrypt Benchmarks</h1>
-<ul class="simple">
-<li>bcrypt (cost: 5): 105 KH/s</li>
-<li>bcrypt (cost 10): 3 KH/s</li>
-</ul>
-</div>
-<div class="slide" id="what-is-pbkdf2">
-<h1>What is PBKDF2?</h1>
-<ul class="simple">
-<li>Developed by RSA Laboratories.</li>
-<li>Standardized as PKCS#5 v2.0 and RFC 2898.</li>
-<li>Relies on any PRF (hash, cipher, HMAC).</li>
-<li>Key derivation function with arbitrary length.</li>
-<li>Manual salt must be provided.</li>
-<li>Cost is CPU, RAM, and product.</li>
-<li>Has a customizable linear work factor.</li>
-<li>Recommended iterations in 2000 was 1,000.</li>
-<li>Password hash for OS X with 30k-50k iterations.</li>
-</ul>
-</div>
-<div class="slide" id="pbkdf2-benchmarks">
-<h1>PBKDF2 Benchmarks</h1>
-<ul class="simple">
-<li>1,000 rounds (default)</li>
-<li>PBKDF2-HMAC-MD5: 59 MHps</li>
-<li>PBKDF2-HMAC-SHA1: 26 MHps</li>
-<li>PBKDF2-HMAC-SHA256: 9 MHps</li>
-<li>PBKDF2-HMAC-SHA512: 3 MHps</li>
-</ul>
-</div>
-<div class="slide" id="comparison-table">
-<h1>Comparison Table</h1>
-<img alt="pics/cpu_table.png" class="align-center" src="pics/cpu_table.png" />
-</div>
-<div class="slide" id="what-is-scrypt">
-<h1>What is scrypt?</h1>
-<ul class="simple">
-<li>Developed by Colin Percival for the Tarsnap backup service.</li>
-<li>Designed to be expensive both on the CPU and in RAM.</li>
-<li>Both the CPU and RAM cost controlled together.</li>
-<li>Unless provided, autogenerates a salt.</li>
-<li>Has a customizable exponential work factor.</li>
-<li>Recommend cost: (N=16384, r=8, p=1) (16 MiB RAM).</li>
-</ul>
-</div>
-<div class="slide" id="scrypt-benchmarks">
-<h1>scrypt Benchmarks</h1>
-<ul class="simple">
-<li>scrypt (N=1024, r=1, p=1) (128 KiB RAM): 3 MH/s</li>
-<li>scrypt (N=16384, r=8, p=1) (16 MiB RAM): 24 KH/s</li>
-</ul>
-</div>
-<div class="slide" id="scrypt-table">
-<h1>scrypt Table</h1>
-<ul class="simple">
-<li>See <a class="reference external" href="https://ae7.st/s/passwords">https://ae7.st/s/passwords</a></li>
-</ul>
-<img alt="pics/scrypt_table.png" class="align-center" src="pics/scrypt_table.png" />
-</div>
-<div class="slide" id="what-is-argon2">
-<h1>What is Argon2?</h1>
-<ul class="simple">
-<li>Winner of the PHC in July 2015.</li>
-<li>Designed by Alex Biryukov, Daniel Dinu, and Dmitry Khovratovich.</li>
-<li>Comes in two versions- Argon2d and Argon2i.</li>
-<li>Argon2d maximized GPU cracking resistance.</li>
-<li>Argon2i resistant to side-channel attacks.</li>
-<li>Cost is: CPU, RAM, parallelism.</li>
-<li>Should balance CPU and RAM together.</li>
-<li>Attacks on Argon2i, fixed in 1.3.</li>
-</ul>
-</div>
-<div class="slide" id="argon2-benchmarks">
-<h1>Argon2 Benchmarks</h1>
-<ul class="simple">
-<li>Argon2 (n=128, m=12, p=4) for interactive login (.5s).</li>
-<li>Argon2 (n=4096, m=12, p=4) for symmetric key derivation (5s).</li>
-</ul>
-</div>
-<div class="slide" id="argon2-table">
-<h1>Argon2 Table</h1>
-<ul class="simple">
-<li>See <a class="reference external" href="https://ae7.st/s/passwords">https://ae7.st/s/passwords</a></li>
-</ul>
-<img alt="pics/argon2_table.png" class="align-center" src="pics/argon2_table.png" />
-</div>
-<div class="slide" id="bcrypt-weakness">
-<h1>bcrypt Weakness</h1>
-<ul class="simple">
-<li>C NULL repoints pointer</li>
-<li>ASCII encode</li>
-<li>72 character max password length</li>
-<li>Pre-hash with SHA-512</li>
-<li>bcrypt(base64(sha-512(password)))</li>
-</ul>
-</div>
-<div class="slide" id="scrypt-weakness">
-<h1>scrypt Weakness</h1>
-<ul class="simple">
-<li>See <a class="reference external" href="https://ae7.st/s/scrypt">https://ae7.st/s/scrypt</a></li>
-<li>Reduction of strength by weak params.</li>
-<li>4 MiB RAM or less weaker than bcrypt.</li>
-<li>Recommended 16 MiB or greater.</li>
-</ul>
-</div>
-<div class="slide" id="argon2i-weakness">
-<h1>Argon2i Weakness</h1>
-<ul class="simple">
-<li>Not applicable to Argon2d (passwords).</li>
-<li>Single pass with 1/4 to 1/5 desired RAM.</li>
-<li>Fixed in 1.3</li>
-<li>Complexity O(n^7/4 log(n)) for all parameters</li>
-<li>Not effective for 3+ iterations.</li>
-</ul>
-</div>
-<div class="slide" id="best-practices">
-<h1>Best Practices</h1>
-<ul class="simple">
-<li>Target:<ul>
-<li>.5s for interactive logins.</li>
-<li>5s for symmetric key derivation.</li>
+<li>Btrfs<ul>
+<li>Designed by Oracle</li>
+<li>Marked stable in mainline in 2014</li>
+<li>Actively developed</li>
 </ul>
 </li>
-<li>Algorithm costs:<ul>
-<li>bcrypt: 13 - 16</li>
-<li>sha2crypt: 640k - 5,120k iterations</li>
-<li>PBKDF2: 640k - 5,120k iterations</li>
-<li>scrypt: 16 MiB RAM (N=16384, r=8, p=1)</li>
-<li>scrypt: 16 MiB RAM (N=131072, r=1, p=1)</li>
-<li>Argon2: Balance between CPU and RAM cost</li>
+<li>ZFS<ul>
+<li>Designed by Sun Microsystems</li>
+<li>Now owned by Oracle</li>
+<li>Initially CDDL (GPL incompatible)</li>
+<li>Now proprietary</li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="slide" id="openzfs-fork">
+<h1>OpenZFS fork</h1>
+<ul class="simple">
+<li>2008: ZFS version 5, Zpool version 28</li>
+<li>2008: LLNL porting ZFS to native Linux kernel module</li>
+<li>2008: FreeBSD active development</li>
+<li>2009: Oracle acquires Sun Microsystems</li>
+<li>2010: OpenSolaris discontinued</li>
+<li>2010: Illumos continued as the OpenSolaris successor</li>
+<li>2013: OpenZFS project begins</li>
+</ul>
+</div>
+<div class="slide" id="openzfs-contributors">
+<h1>OpenZFS contributors</h1>
+<ul class="simple">
+<li>Delphix</li>
+<li>Illumos</li>
+<li>Joyent</li>
+<li>Intel</li>
+<li>FreeBSD</li>
+<li>LLNL (ZFS on Linux)</li>
+<li>OpenZFS on OS X</li>
+</ul>
+</div>
+<div class="slide" id="shared-features">
+<h1>Shared Features</h1>
+<ul class="simple">
+<li>Copy-on-write</li>
+<li>Volume &amp; RAID management</li>
+<li>Snapshots</li>
+<li>Sending and receiving filesystems</li>
+<li>Transparent compression</li>
+<li>Online scrubbing</li>
+<li>File integrity through checksums</li>
+<li>Data deduplication</li>
+<li>TRIM support for SSDs (currently just FreeBSD)</li>
+<li>Encryption coming (maybe)???</li>
+</ul>
+</div>
+<div class="slide" id="zfs-distinct-features">
+<h1>ZFS Distinct Features</h1>
+<ul class="simple">
+<li>ZFS<ul>
+<li>ARC is an advanced cache different from LRU/MRU</li>
+<li>L2ARC as a hot read cache or ghosted ARC pages</li>
+<li>ZIL can be on a fast SSD (SLOG)</li>
+<li>Checksum is Fletcher-4, SHA-256, or Edon-R (ugh)</li>
+<li>Compression is zle, zlib, lzjb, or lz4</li>
+<li>RAIDZ-1/2/3</li>
+<li>Slab allocator</li>
+<li>Integrated NFS/CIFS/iSCSI exports</li>
+<li>Automatic checksum healing</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="slide" id="btrfs-distinct-features">
+<h1>Btrfs Distinct Features</h1>
+<ul class="simple">
+<li>Btrfs<ul>
+<li>Cache is LRU/MRU (FIFO)</li>
+<li>Bcache requires preformatting logical disk</li>
+<li>Checksum is CRC32c (256-bit, hardware support)</li>
+<li>Compression is zlib or lzo</li>
+<li>Standard RAID-5/6 (no triple distributed parity)</li>
+<li>Generic B-tree allocator</li>
+<li>Rebalancing data</li>
+<li><tt class="docutils literal">cp <span class="pre">--reflink</span></tt></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="slide" id="missing-btrfs-features">
+<h1>Missing Btrfs Features</h1>
+<ul class="simple">
+<li>Fast offline filesystem check</li>
+<li>Online filesystem check</li>
+<li>Object-level mirroring and striping</li>
+<li>Alternative checksum algorithms</li>
+<li>In-band deduplication (happens during writes)</li>
+<li>Other compression methods (snappy, LZ4)</li>
+<li>Hot data tracking and moving to faster devices</li>
+</ul>
+</div>
+<div class="slide" id="zfs-commands">
+<h1>ZFS Commands</h1>
+<ul class="simple">
+<li>3 commands, one of which you'll never use<ul>
+<li><tt class="docutils literal">zpool</tt>- Configures storage pools</li>
+<li><tt class="docutils literal">zfs</tt>- Configures filesystems</li>
+<li><tt class="docutils literal">zdb</tt>- Display pool debugging and consistency information</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="slide" id="btrfs-commands">
+<h1>Btrfs Commands</h1>
+<ul class="simple">
+<li>A few more commands than ZFS:<ul>
+<li><tt class="docutils literal">mkfs.btrfs</tt>- Creating a Btrfs filesystem</li>
+<li><tt class="docutils literal">btrfs</tt>- The main Btrfs administration tool</li>
+<li><tt class="docutils literal"><span class="pre">btrfs-debug-tree</span></tt>- Print out Btrfs metadata in text form</li>
+<li><tt class="docutils literal"><span class="pre">btrfs-image</span></tt>- Create a zeroed image of the filesystem with metadata</li>
+<li><tt class="docutils literal">mount <span class="pre">-t</span> btrfs</tt>- Mount a Btrfs filesystem</li>
+<li>Et cetera</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="slide" id="creating-a-mirrored-pool">
+<h1>Creating a mirrored pool</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zpool create tank mirror sda sdb
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# mkfs.btrfs -L tank -d raid1 -m raid1 /dev/sda /dev/sdb
+# mkdir /tank
+# mount -t btrfs /dev/sda /tank
+</pre>
+</div>
+<div class="slide" id="importing-a-pool">
+<h1>Importing a pool</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zpool import -a
+# zpool import tank
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs device scan
+# btrfs device scan /dev/sda
+</pre>
+</div>
+<div class="slide" id="returning-the-status-of-a-pool">
+<h1>Returning the status of a pool</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zpool status
+# zpool status tank
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs filesystem show
+# btrfs filesystem show /dev/sda
+</pre>
+</div>
+<div class="slide" id="creating-subvolumes">
+<h1>Creating subvolumes</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs create tank/videos
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs subvolume create /tank/videos
+# mount -t btrfs -o subvol=videos /dev/sda /tank/videos
+</pre>
+</div>
+<div class="slide" id="returning-the-status-of-a-subvolume">
+<h1>Returning the status of a subvolume</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs list
+# zfs list tank/videos
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs subvolume show /tank/videos
+</pre>
+</div>
+<div class="slide" id="creating-snapshots">
+<h1>Creating snapshots</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs snapshot tank/videos&#64;snap_001
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs subvolume snapshot /tank/videos /tank/videos/snap_001
+</pre>
+<p>OR</p>
+<pre class="code literal-block">
+# cp --reflink /tank/videos/file.mp4 /tank/videos/snapshot_file.mp4
+</pre>
+</div>
+<div class="slide" id="sending-snapshots">
+<h1>Sending snapshots</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs send tank/videos&#64;snap_001
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs send /tank/videos/snap_001
+</pre>
+</div>
+<div class="slide" id="receiving-snapshots">
+<h1>Receiving snapshots</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs recv tank/videos
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs receive /tank/videos
+</pre>
+</div>
+<div class="slide" id="enable-compression">
+<h1>Enable compression</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs get compression tank/videos
+# zfs set compression=(off|on|lzjb|lz4|gzip|gzip-N|zle)
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# mount -t btrfs -o compress=(no|lzo|zlib) /dev/sda /tank
+</pre>
+</div>
+<div class="slide" id="online-scrubbing">
+<h1>Online scrubbing</h1>
+<ul class="simple">
+<li>ZFS</li>
+</ul>
+<pre class="code literal-block">
+# zfs scrub tank/videos
+</pre>
+<ul class="simple">
+<li>Btrfs</li>
+</ul>
+<pre class="code literal-block">
+# btrfs scrub /dev/sda
+</pre>
+</div>
+<div class="slide" id="recommendation">
+<h1>Recommendation</h1>
+<ul class="simple">
+<li>Test and benchmark both</li>
+<li>ZFS is good as a short term stop-gap</li>
+<li>ZFS is in Arch AUR, Debian and Ubuntu repos</li>
+<li>Btrfs will be the long-term storage for Linux</li>
+<li>Btrfs is largely feature-complete</li>
 </ul>
 </div>
 <div class="slide" id="fin">
 <h1>Fin</h1>
 <ul class="simple">
-<li>Comments, questions, or rude remarks?</li>
+<li>Comments, questions, rude remarks</li>
 </ul>
 </div>
 </div>

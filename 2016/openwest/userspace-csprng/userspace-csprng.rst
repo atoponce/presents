@@ -306,6 +306,11 @@ NIST 800-90A Revision 1
 * CTR_DRBG
 * Not Dual_EC_DRBG (NSA backdoor)
 
+Proof of Concepts
+=================
+
+https://github.com/atoponce/csprng
+
 Fin
 ===
 
